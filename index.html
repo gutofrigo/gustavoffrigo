@@ -6,6 +6,7 @@
 <title>Gustavo Frigo | Gerente de Projetos Sênior, PMP</title>
 <meta name="description" content="Gustavo Frigo, gerente de projetos com mais de 15 anos em TI, segurança da informação e IA aplicada. PMP, CSPO e PRINCE2. Cases na SSP-SP, CPTM e Porto Seguro.">
 <meta name="author" content="Gustavo Frigo">
+<meta name="theme-color" content="#12263f">
 <link rel="canonical" href="https://gutofrigo.github.io/gustavoffrigo/">
 
 <meta property="og:type" content="profile">
@@ -18,7 +19,7 @@
 <meta property="profile:last_name" content="Frigo">
 <meta name="twitter:card" content="summary">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2314b8a6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='white' text-anchor='middle'%3EGF%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312263f'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='%23d4a84b' text-anchor='middle'%3EGF%3C/text%3E%3C/svg%3E">
 
 <script type="application/ld+json">
 {
@@ -40,374 +41,364 @@
 </script>
 
 <script>
-  // Aplica o tema salvo antes de desenhar a página, para não piscar
+  // Aplica o tema salvo antes de desenhar a página (padrão: claro)
   (function () {
     var t = null;
     try { t = localStorage.getItem('theme'); } catch (e) {}
-    if (!t) t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', t);
+    document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
   })();
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-  :root, :root[data-theme="dark"] {
-    --bg: #070711;
-    --surface: #0d0d1a;
-    --surface-2: rgba(255,255,255,0.04);
-    --surface-3: rgba(255,255,255,0.07);
-    --border: rgba(255,255,255,0.08);
-    --text: #f1f5f9;
-    --text-2: #cbd5e1;
-    --muted: #94a3b8;
-    --blue: #60a5fa;
-    --teal: #2dd4bf;
-    --indigo: #a5b4fc;
-    --green: #4ade80;
-    --blue-bg: rgba(59,130,246,0.12);
-    --teal-bg: rgba(20,184,166,0.12);
-    --indigo-bg: rgba(99,102,241,0.14);
-    --glow: rgba(59,130,246,0.12);
-    --grad: linear-gradient(135deg, #3b82f6, #6366f1 50%, #14b8a6);
-    color-scheme: dark;
-  }
-  :root[data-theme="light"] {
-    --bg: #eef1f7;
+  :root, :root[data-theme="light"] {
+    --bg: #ffffff;
+    --bg-alt: #f5f7fa;
     --surface: #ffffff;
-    --surface-2: #f4f6fa;
-    --surface-3: #e9edf4;
-    --border: #e2e8f0;
-    --text: #0f172a;
-    --text-2: #334155;
-    --muted: #5b6474;
-    --blue: #2563eb;
-    --teal: #0f766e;
-    --indigo: #4f46e5;
-    --green: #15803d;
-    --blue-bg: rgba(37,99,235,0.08);
-    --teal-bg: rgba(15,118,110,0.08);
-    --indigo-bg: rgba(79,70,229,0.08);
-    --glow: rgba(37,99,235,0.07);
-    --grad: linear-gradient(135deg, #2563eb, #4f46e5 50%, #0d9488);
+    --border: #e3e8ef;
+    --text: #0f1b2d;
+    --text-2: #3b4a5e;
+    --muted: #5f6b7a;
+    --strong: #12263f;
+    --navy: #12263f;
+    --navy-2: #1b3a5c;
+    --on-navy: #ffffff;
+    --on-navy-muted: #b9c6d6;
+    --gold: #c09233;
+    --gold-text: #8a6516;
+    --gold-bg: #f7f0e1;
+    --link: #1f4e8c;
+    --shadow: 0 1px 2px rgba(15,27,45,.04), 0 8px 24px rgba(15,27,45,.06);
     color-scheme: light;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b1220;
+    --bg-alt: #0f1829;
+    --surface: #131e32;
+    --border: rgba(255,255,255,0.09);
+    --text: #e8edf4;
+    --text-2: #c2ccd9;
+    --muted: #93a0b2;
+    --strong: #ffffff;
+    --navy: #0f1f36;
+    --navy-2: #17304f;
+    --on-navy: #ffffff;
+    --on-navy-muted: #a9b7c9;
+    --gold: #d4a84b;
+    --gold-text: #dcb663;
+    --gold-bg: rgba(212,168,75,0.12);
+    --link: #8ab6f5;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    color-scheme: dark;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
-    background: var(--bg);
-    color: var(--text);
+    background: var(--bg); color: var(--text);
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    line-height: 1.5;
-    padding: 40px 16px;
-    min-height: 100vh;
+    font-size: 16px; line-height: 1.6;
     transition: background .2s, color .2s;
   }
   a { color: inherit; }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
   .icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  section[id] { scroll-margin-top: 72px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
 
-  /* ─── TOOLBAR ─── */
-  .toolbar {
-    max-width: 1080px; margin: 0 auto 14px;
-    display: flex; justify-content: flex-end; gap: 8px;
-  }
-  .tool-btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: var(--surface); color: var(--text-2);
-    border: 1px solid var(--border); border-radius: 99px;
-    padding: 7px 14px; font: 600 13px/1 inherit; font-family: inherit;
-    cursor: pointer; transition: border-color .15s, color .15s;
-  }
-  .tool-btn:hover { color: var(--text); border-color: var(--blue); }
-  .tool-btn .icon { width: 15px; height: 15px; }
-  :root[data-theme="dark"] .i-sun-show { display: inline; }
-  :root[data-theme="dark"] .i-moon-show { display: none; }
-  :root[data-theme="light"] .i-sun-show { display: none; }
-  :root[data-theme="light"] .i-moon-show { display: inline; }
-
-  /* ─── CARD ─── */
-  .card {
-    max-width: 1080px; margin: 0 auto;
-    background: var(--surface);
-    border-radius: 24px; overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-  }
-  .top-strip { height: 5px; background: linear-gradient(90deg, #3b82f6, #6366f1 40%, #14b8a6 70%, #3b82f6); }
-  section, .block { border-bottom: 1px solid var(--border); }
-
-  .label {
-    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
-    color: var(--muted); font-weight: 700; margin-bottom: 18px;
-  }
-
-  /* ─── HEADER ─── */
-  .header {
-    padding: 48px 56px 40px;
-    display: flex; gap: 32px; justify-content: space-between; align-items: center;
-    position: relative; overflow: hidden;
+  /* ─── NAV ─── */
+  .nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
     border-bottom: 1px solid var(--border);
   }
-  .header::before {
-    content: ''; position: absolute; top: -140px; right: -100px;
-    width: 420px; height: 420px; border-radius: 50%;
-    background: radial-gradient(circle, var(--glow), transparent 65%);
-    pointer-events: none;
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 16px; color: var(--strong); }
+  .brand-mark {
+    width: 34px; height: 34px; border-radius: 8px;
+    background: var(--navy); color: var(--gold);
+    display: grid; place-items: center; font-size: 13px; font-weight: 800; letter-spacing: .5px;
   }
-  .header-main { display: flex; gap: 28px; align-items: center; position: relative; }
-  .avatar {
-    width: 104px; height: 104px; border-radius: 50%; flex-shrink: 0;
-    background: var(--grad); color: #fff;
-    display: grid; place-items: center;
-    font-size: 38px; font-weight: 800; letter-spacing: -1px;
-    box-shadow: 0 0 0 4px var(--surface), 0 0 0 6px var(--border);
+  :root[data-theme="dark"] .brand-mark { background: var(--navy-2); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--text-2); }
+  .nav-links a:hover { color: var(--strong); }
+  .nav-tools { display: flex; gap: 6px; }
+  .tool-btn {
+    display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px;
+    background: transparent; color: var(--text-2);
+    border: 1px solid var(--border); border-radius: 8px;
+    font-size: 13px; font-weight: 600; line-height: 1; font-family: inherit; cursor: pointer;
   }
-  h1 {
-    font-size: 52px; font-weight: 900; letter-spacing: -2px;
-    line-height: 1; margin-bottom: 10px;
-  }
-  h1 span {
-    background: var(--grad);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .headline { font-size: 16px; font-weight: 600; color: var(--text-2); margin-bottom: 14px; }
-  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
-  .tag {
-    background: var(--surface-2); border: 1px solid var(--border);
-    border-radius: 99px; padding: 5px 12px;
-    font-size: 12px; font-weight: 600; color: var(--muted);
-  }
-  .tag.blue { background: var(--blue-bg); color: var(--blue); border-color: transparent; }
-  .tag.teal { background: var(--teal-bg); color: var(--teal); border-color: transparent; }
+  .tool-btn:hover { color: var(--strong); border-color: var(--muted); }
+  .tool-btn .icon { width: 15px; height: 15px; }
+  :root[data-theme="dark"] .i-light { display: none; }
+  :root[data-theme="light"] .i-dark { display: none; }
 
-  .cta { display: flex; flex-direction: column; gap: 10px; position: relative; min-width: 210px; }
+  /* ─── BOTÕES ─── */
   .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    padding: 11px 18px; border-radius: 12px;
-    font-size: 14px; font-weight: 700; text-decoration: none;
-    border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
-    transition: transform .15s, border-color .15s;
-    cursor: pointer; font-family: inherit;
+    height: 46px; padding: 0 20px; border-radius: 8px;
+    font-size: 15px; font-weight: 600; line-height: 1; font-family: inherit; text-decoration: none; cursor: pointer;
+    border: 1px solid var(--border); background: var(--surface); color: var(--strong);
+    transition: background .15s, border-color .15s, transform .15s;
   }
-  .btn:hover { transform: translateY(-1px); border-color: var(--blue); }
-  .btn.primary { background: var(--grad); color: #fff; border-color: transparent; }
+  .btn:hover { border-color: var(--strong); }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn.primary:hover { background: var(--navy-2); }
+  :root[data-theme="dark"] .btn.primary { background: var(--gold); color: #1a1405; border-color: var(--gold); }
+  :root[data-theme="dark"] .btn.primary:hover { background: #e0b861; }
 
-  /* ─── STATS ─── */
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); }
-  .stat { padding: 28px 24px; text-align: center; border-right: 1px solid var(--border); }
-  .stat:last-child { border-right: none; }
-  .stat-num { font-size: 44px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
-  .stat-num.b { color: var(--blue); }
-  .stat-num.t { color: var(--teal); }
-  .stat-num.i { color: var(--indigo); }
-  .stat-label { font-size: 13px; color: var(--muted); margin-top: 8px; font-weight: 500; }
+  /* ─── HERO ─── */
+  .hero { padding: 72px 0 80px; border-bottom: 1px solid var(--border); }
+  .hero-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 56px; align-items: center; }
+  .hero-id { display: flex; align-items: center; gap: 18px; margin-bottom: 26px; }
+  .avatar {
+    width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0;
+    background: var(--navy); color: var(--gold);
+    display: grid; place-items: center; font-size: 26px; font-weight: 800;
+    border: 3px solid var(--gold-bg);
+  }
+  :root[data-theme="dark"] .avatar { background: var(--navy-2); }
+  .eyebrow { font-size: 14px; font-weight: 600; color: var(--gold-text); letter-spacing: .3px; }
+  .eyebrow + .eyebrow { color: var(--muted); font-weight: 500; }
+  h1 { font-size: 60px; font-weight: 800; letter-spacing: -2px; line-height: 1.05; color: var(--strong); margin-bottom: 14px; }
+  .headline { font-size: 20px; font-weight: 500; color: var(--text-2); margin-bottom: 22px; }
+  .hero-summary { font-size: 17px; color: var(--text-2); max-width: 600px; margin-bottom: 30px; }
+  .hero-summary strong { color: var(--strong); }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+  .creds-line { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+  .creds-line li {
+    font-size: 13px; font-weight: 600; color: var(--text-2);
+    border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; background: var(--bg-alt);
+  }
+  .print-contact { display: none; }
 
-  /* ─── SUMMARY ─── */
-  .summary { display: grid; grid-template-columns: 1.7fr 1fr; }
-  .summary-text { padding: 36px 40px; border-right: 1px solid var(--border); }
-  .summary-text p { font-size: 16px; color: var(--text-2); line-height: 1.7; }
-  .summary-text p + p { margin-top: 12px; }
-  .summary-text strong { color: var(--text); font-weight: 700; }
+  .stats-panel {
+    background: var(--navy); color: var(--on-navy);
+    border-radius: 14px; padding: 36px 34px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 30px 24px;
+    position: relative; overflow: hidden;
+  }
+  .stats-panel::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--gold);
+  }
+  .stat-num { font-size: 40px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; color: #fff; }
+  .stat-num em { font-style: normal; color: var(--gold); }
+  .stat-label { font-size: 14px; color: var(--on-navy-muted); margin-top: 8px; line-height: 1.4; }
+
+  /* ─── SEÇÕES ─── */
+  .section { padding: 88px 0; border-bottom: 1px solid var(--border); }
+  .section.alt { background: var(--bg-alt); }
+  .section-head { max-width: 680px; margin-bottom: 44px; }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-text);
+    margin-bottom: 12px;
+  }
+  .kicker::before { content: ''; width: 24px; height: 2px; background: var(--gold); }
+  h2 { font-size: 36px; font-weight: 800; letter-spacing: -1px; line-height: 1.15; color: var(--strong); }
+  .section-head p { font-size: 17px; color: var(--text-2); margin-top: 12px; }
+
+  /* ─── DESTAQUES ─── */
+  .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .hl {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: var(--shadow); padding: 30px 28px 26px;
+    display: flex; flex-direction: column; position: relative;
+    border-top: 4px solid var(--gold);
+  }
+  .hl-top { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+  .hl-org { font-size: 12.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+  .hl-period { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+  .hl h3 { font-size: 20px; font-weight: 700; color: var(--strong); line-height: 1.3; margin-bottom: 22px; }
+  .hl-big { padding: 18px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+  .hl-big .num { display: block; font-size: 52px; font-weight: 800; letter-spacing: -2px; line-height: 1; color: var(--strong); }
+  .hl-big .cap { display: block; font-size: 15px; font-weight: 600; color: var(--gold-text); margin-top: 8px; }
+  .hl p { font-size: 15px; color: var(--text-2); margin-bottom: 20px; }
+  .hl-metrics { list-style: none; margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+  .hl-metrics li { display: flex; align-items: baseline; gap: 10px; font-size: 14.5px; color: var(--text-2); }
+  .hl-metrics b { min-width: 74px; font-size: 16px; font-weight: 800; color: var(--strong); }
+
+  /* ─── SOBRE ─── */
+  .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: start; }
   .motto {
-    padding: 36px 40px; display: flex; flex-direction: column; justify-content: center;
-    background: linear-gradient(135deg, var(--blue-bg), var(--indigo-bg));
+    border-left: 3px solid var(--gold); padding: 6px 0 6px 24px;
   }
-  .motto blockquote { font-size: 18px; font-weight: 700; font-style: italic; color: var(--text); line-height: 1.5; }
-
-  /* ─── EXPERTISE ─── */
-  .pad { padding: 32px 40px; }
-  .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .exp {
-    background: var(--surface-2); border: 1px solid var(--border);
-    border-radius: 14px; padding: 18px;
+  .motto blockquote { font-size: 24px; font-weight: 600; line-height: 1.4; color: var(--strong); letter-spacing: -.3px; }
+  .motto p { font-size: 15px; color: var(--muted); margin-top: 14px; }
+  .areas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .area {
     display: flex; gap: 14px; align-items: flex-start;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px;
   }
-  .exp-icon {
+  .area-icon {
     width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
-    display: grid; place-items: center;
-    background: var(--blue-bg); color: var(--blue);
+    display: grid; place-items: center; background: var(--gold-bg); color: var(--gold-text);
   }
-  .exp:nth-child(3n+2) .exp-icon { background: var(--teal-bg); color: var(--teal); }
-  .exp:nth-child(3n) .exp-icon { background: var(--indigo-bg); color: var(--indigo); }
-  .exp-icon .icon { width: 20px; height: 20px; }
-  .exp h3 { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.3; }
-  .exp p { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+  .area-icon .icon { width: 20px; height: 20px; }
+  .area h3 { font-size: 15.5px; font-weight: 700; color: var(--strong); line-height: 1.3; }
+  .area p { font-size: 13.5px; color: var(--muted); margin-top: 3px; }
 
-  /* ─── CASES ─── */
-  .cases-head {
-    padding: 28px 40px 0; display: flex; justify-content: space-between;
-    align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;
+  /* ─── TRAJETÓRIA ─── */
+  .timeline { list-style: none; max-width: 860px; }
+  .job { display: grid; grid-template-columns: 170px 28px 1fr; }
+  .job-period { font-size: 14px; font-weight: 600; color: var(--muted); padding-top: 1px; font-variant-numeric: tabular-nums; }
+  .job-rail { display: flex; flex-direction: column; align-items: center; padding-top: 6px; }
+  .job-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--strong); flex-shrink: 0; }
+  .job.current .job-dot { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 4px var(--gold-bg); }
+  .job-line { width: 2px; flex: 1; background: var(--border); margin: 6px 0; }
+  .job:last-child .job-line { display: none; }
+  .job-body { padding: 0 0 34px 14px; }
+  .job h3 { font-size: 18px; font-weight: 700; color: var(--strong); line-height: 1.3; }
+  .job-role { font-size: 15px; font-weight: 600; color: var(--gold-text); margin-top: 2px; }
+  .job-note { font-size: 15px; color: var(--text-2); margin-top: 6px; }
+  .badge {
+    display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+    color: var(--gold-text); background: var(--gold-bg); border-radius: 4px; padding: 2px 7px; margin-left: 8px; vertical-align: 2px;
   }
-  .cases-head .label { margin-bottom: 0; }
-  .cases-total { font-size: 13px; color: var(--muted); }
-  .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border); }
-  .case { padding: 28px 30px; border-right: 1px solid var(--border); position: relative; }
-  .case:last-child { border-right: none; }
-  .case::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-  .case.c1::before { background: linear-gradient(90deg, #3b82f6, #6366f1); }
-  .case.c2::before { background: linear-gradient(90deg, #14b8a6, #3b82f6); }
-  .case.c3::before { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
-  .case-org { font-size: 11.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 6px; }
-  .c1 .case-org { color: var(--blue); }
-  .c2 .case-org { color: var(--teal); }
-  .c3 .case-org { color: var(--indigo); }
-  .case h3 { font-size: 17px; font-weight: 800; color: var(--text); line-height: 1.3; margin-bottom: 8px; }
-  .case-desc { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; }
-  .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .m { background: var(--surface-2); border-radius: 10px; padding: 12px 8px; text-align: center; }
-  .m-val { font-size: 21px; font-weight: 900; letter-spacing: -0.5px; line-height: 1.1; }
-  .c1 .m-val { color: var(--blue); }
-  .c2 .m-val { color: var(--teal); }
-  .c3 .m-val { color: var(--indigo); }
-  .m-val.g { color: var(--green); }
-  .m-label { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
 
-  /* ─── TIMELINE ─── */
-  .timeline { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
-  .tl { display: flex; gap: 14px; padding-bottom: 20px; }
-  .tl-rail { display: flex; flex-direction: column; align-items: center; padding-top: 5px; }
-  .tl-dot {
-    width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0;
-    background: var(--blue); box-shadow: 0 0 0 4px var(--blue-bg);
+  /* ─── FORMAÇÃO ─── */
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  h3.col-title { font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .certs { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .cert {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;
   }
-  .tl.current .tl-dot { background: var(--teal); box-shadow: 0 0 0 4px var(--teal-bg); }
-  .tl-line { width: 1px; flex: 1; background: var(--border); margin-top: 6px; }
-  .tl-period { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
-  .tl h3 { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.3; }
-  .tl-role { font-size: 13.5px; color: var(--blue); font-weight: 600; }
-  .tl.current .tl-role { color: var(--teal); }
-  .tl-note { font-size: 13px; color: var(--muted); margin-top: 3px; }
+  .cert .icon { color: var(--gold-text); width: 20px; height: 20px; }
+  .cert b { display: block; font-size: 15.5px; color: var(--strong); }
+  .cert span { display: block; font-size: 13px; color: var(--muted); }
+  .cert.top { border-color: var(--gold); }
+  .courses { margin-top: 18px; font-size: 14.5px; color: var(--text-2); }
+  .courses b { color: var(--strong); font-weight: 600; }
+  .edu { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .edu li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .edu li:last-child { border-bottom: none; }
+  .edu-year { font-size: 15px; font-weight: 700; color: var(--gold-text); }
+  .edu h4 { font-size: 15.5px; font-weight: 700; color: var(--strong); line-height: 1.35; }
+  .edu-inst { font-size: 14px; color: var(--muted); }
 
-  /* ─── CREDENTIALS ─── */
-  .creds { display: grid; grid-template-columns: 1.15fr 0.85fr; }
-  .creds > div:first-child { border-right: 1px solid var(--border); }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
-  .chip {
-    display: inline-flex; align-items: center; gap: 7px;
-    background: var(--surface-2); border: 1px solid var(--border);
-    border-radius: 99px; padding: 7px 14px;
-    font-size: 13px; font-weight: 700; color: var(--text-2);
-  }
-  .chip .icon { width: 14px; height: 14px; }
-  .chip small { font-weight: 500; color: var(--muted); font-size: 12px; }
-  .chip.blue { background: var(--blue-bg); color: var(--blue); border-color: transparent; }
-  .chip.teal { background: var(--teal-bg); color: var(--teal); border-color: transparent; }
-  .chip.indigo { background: var(--indigo-bg); color: var(--indigo); border-color: transparent; }
-  .chip.blue small, .chip.teal small, .chip.indigo small { color: inherit; opacity: .8; }
-  .chip.course { font-weight: 600; }
-  .sublabel { font-size: 12px; font-weight: 700; color: var(--muted); margin: 22px 0 10px; }
+  /* ─── CONTATO ─── */
+  .contact { background: var(--navy); color: var(--on-navy); padding: 80px 0; }
+  .contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+  .contact h2 { color: #fff; }
+  .contact p { color: var(--on-navy-muted); font-size: 17px; margin-top: 10px; }
+  .contact .kicker { color: var(--gold); }
+  .contact-cta { display: flex; gap: 10px; flex-wrap: wrap; }
+  .contact .btn { background: transparent; color: #fff; border-color: rgba(255,255,255,.3); }
+  .contact .btn:hover { border-color: #fff; }
+  .contact .btn.primary { background: var(--gold); color: #1a1405; border-color: var(--gold); }
+  .contact .btn.primary:hover { background: #d9ad4f; }
 
-  .edu { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-  .edu li { border-left: 2px solid var(--blue-bg); padding-left: 14px; }
-  .edu-year { font-size: 12px; color: var(--blue); font-weight: 700; }
-  .edu h3 { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.35; }
-  .edu-inst { font-size: 13px; color: var(--muted); }
-
-  /* ─── FOOTER ─── */
-  footer {
-    padding: 24px 56px;
-    display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
-    background: var(--surface-2);
-  }
-  .contacts { display: flex; gap: 22px; flex-wrap: wrap; list-style: none; }
-  .contacts a {
-    display: inline-flex; align-items: center; gap: 7px;
-    font-size: 13.5px; color: var(--text-2); text-decoration: none; font-weight: 500;
-  }
-  .contacts a:hover { color: var(--blue); }
-  .contacts .icon { width: 16px; height: 16px; color: var(--muted); }
-  .copy { font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .5px; }
-  .print-only { display: none; }
-
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 8px; }
+  footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,.1); }
+  .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 22px 24px; font-size: 13.5px; color: var(--on-navy-muted); }
+  footer a { text-decoration: none; }
+  footer a:hover { color: #fff; }
 
   /* ─── RESPONSIVO ─── */
-  @media (max-width: 960px) {
-    .header { flex-direction: column; align-items: flex-start; padding: 40px 32px 32px; }
-    .cta { flex-direction: row; flex-wrap: wrap; min-width: 0; width: 100%; }
-    .cta .btn { flex: 1 1 180px; }
-    .summary, .creds { grid-template-columns: 1fr; }
-    .summary-text, .creds > div:first-child { border-right: none; border-bottom: 1px solid var(--border); }
-    .expertise-grid { grid-template-columns: 1fr 1fr; }
-    .cases-grid { grid-template-columns: 1fr; }
-    .case { border-right: none; border-bottom: 1px solid var(--border); }
-    .case:last-child { border-bottom: none; }
-    .pad, .summary-text, .motto { padding: 28px 32px; }
-    .cases-head { padding: 24px 32px 0; }
-    footer { padding: 22px 32px; }
+  @media (max-width: 980px) {
+    .nav-links { display: none; }
+    .hero { padding: 48px 0 56px; }
+    .hero-grid, .about-grid, .edu-grid { grid-template-columns: 1fr; gap: 36px; }
+    .highlights { grid-template-columns: 1fr; max-width: 640px; }
+    h1 { font-size: 48px; }
+    .section { padding: 64px 0; }
   }
-  @media (max-width: 640px) {
-    body { padding: 16px 12px; }
-    .card { border-radius: 18px; }
-    .header { padding: 28px 20px 24px; }
-    .header-main { flex-direction: column; align-items: flex-start; gap: 18px; }
-    .avatar { width: 76px; height: 76px; font-size: 28px; }
-    h1 { font-size: 38px; letter-spacing: -1.5px; }
-    .headline { font-size: 14.5px; }
-    .stat { padding: 20px 8px; }
-    .stat-num { font-size: 28px; letter-spacing: -1px; }
-    .stat-label { font-size: 11.5px; }
-    .expertise-grid, .timeline { grid-template-columns: 1fr; }
-    .pad, .summary-text, .motto, .case { padding: 24px 20px; }
-    .cases-head { padding: 22px 20px 0; }
-    .summary-text p { font-size: 15px; }
-    footer { padding: 20px; flex-direction: column; align-items: flex-start; }
-    .contacts { flex-direction: column; gap: 12px; }
+  @media (max-width: 600px) {
+    .container { padding: 0 16px; }
+    .brand-name { display: none; }
+    h1 { font-size: 38px; letter-spacing: -1.2px; }
+    .headline { font-size: 17px; }
+    .hero-summary { font-size: 16px; }
+    .hero-cta .btn { flex: 1 1 100%; }
+    .stats-panel { padding: 26px 22px; gap: 22px 16px; }
+    .stat-num { font-size: 30px; }
+    .stat-label { font-size: 13px; }
+    h2 { font-size: 28px; }
+    .section { padding: 52px 0; }
+    .hl { padding: 24px 20px 22px; }
+    .hl-big .num { font-size: 44px; }
+    .areas, .certs { grid-template-columns: 1fr; }
+    .job { grid-template-columns: 22px 1fr; }
+    .job-period { grid-column: 2; grid-row: 1; padding-left: 12px; font-size: 13px; }
+    .job-rail { grid-column: 1; grid-row: 1 / span 2; }
+    .job-body { grid-column: 2; grid-row: 2; padding-left: 12px; }
+    .contact { padding: 56px 0; }
+    .contact-cta .btn { flex: 1 1 100%; }
+    .footer-inner { padding: 20px 16px; }
   }
 
   /* ─── IMPRESSÃO / PDF ─── */
   @media print {
-    @page { size: A4; margin: 12mm; }
+    @page { size: A4; margin: 12mm 12mm; }
     :root, :root[data-theme] {
-      --bg: #fff; --surface: #fff; --surface-2: #f5f7fa; --surface-3: #eef1f5; --border: #e2e8f0;
-      --text: #0f172a; --text-2: #334155; --muted: #52596a;
-      --blue: #1d4ed8; --teal: #0f766e; --indigo: #4338ca; --green: #15803d;
-      --blue-bg: #e8effd; --teal-bg: #e6f4f2; --indigo-bg: #ecebfc; --glow: transparent;
-      color-scheme: light;
+      --bg: #fff; --bg-alt: #fff; --surface: #fff; --border: #dfe4eb;
+      --text: #0f1b2d; --text-2: #34404f; --muted: #5a6573; --strong: #12263f;
+      --navy: #12263f; --gold: #b8892b; --gold-text: #7d5c14; --gold-bg: #f5ecd8;
+      --shadow: none; color-scheme: light;
     }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    body { padding: 0; font-size: 12px; }
-    .toolbar, .cta, .screen-only { display: none !important; }
-    .print-only { display: inline-flex; }
-    .card { border: none; border-radius: 0; box-shadow: none; max-width: none; }
-    .header { padding: 0 0 20px; }
-    .header::before { display: none; }
-    h1 { font-size: 40px; }
-    h1 span { background: none; -webkit-text-fill-color: var(--blue); color: var(--blue); }
-    .avatar { width: 80px; height: 80px; font-size: 30px; }
-    .stat { padding: 16px 8px; }
-    .stat-num { font-size: 32px; }
-    .pad, .summary-text, .motto, .case { padding: 18px 20px; }
-    .cases-head { padding: 18px 20px 0; }
-    section, .case, .tl, .exp, .edu li { break-inside: avoid; }
-    footer { padding: 12px 20px; flex-direction: row; }
-    .contacts { flex-direction: row; gap: 16px; }
-
-    /* A página A4 cai nas regras de tela estreita; restaura o layout em colunas */
-    .header { flex-direction: row; align-items: center; }
-    .top-strip { margin-bottom: 20px; }
-    .summary { grid-template-columns: 1.7fr 1fr; }
-    .creds { grid-template-columns: 1.15fr 0.85fr; }
-    .summary-text, .creds > div:first-child { border-right: 1px solid var(--border); border-bottom: none; }
-    .expertise-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-    .exp { padding: 12px; }
-    .cases-grid { grid-template-columns: repeat(3, 1fr); }
-    .case { border-right: 1px solid var(--border); border-bottom: none; }
-    .case:last-child { border-right: none; }
-    .case h3 { font-size: 14px; }
-    .case-desc { font-size: 12px; margin-bottom: 12px; }
-    .m { padding: 8px 4px; }
-    .m-val { font-size: 17px; }
-    .m-label { font-size: 10.5px; }
-    .timeline { grid-template-columns: 1fr 1fr; }
-    .tl { padding-bottom: 12px; }
-    .summary-text p { font-size: 13px; line-height: 1.6; }
+    body { font-size: 12px; }
+    .nav, .hero-cta, .contact, .screen-only { display: none !important; }
+    .container { max-width: none; padding: 0; }
+    .print-contact { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; color: var(--text-2); margin-bottom: 14px; }
+    .print-contact span { display: inline-flex; align-items: center; gap: 5px; }
+    .print-contact .icon { width: 13px; height: 13px; }
+    .hero { padding: 0 0 18px; }
+    .hero-grid { grid-template-columns: 1.5fr 1fr; gap: 24px; }
+    h1 { font-size: 36px; margin-bottom: 6px; }
+    .headline { font-size: 14px; margin-bottom: 10px; }
+    .hero-summary { font-size: 12.5px; margin-bottom: 12px; }
+    .hero-id { margin-bottom: 14px; }
+    .avatar { width: 52px; height: 52px; font-size: 19px; }
+    .creds-line li { font-size: 11px; padding: 2px 8px; }
+    .stats-panel { padding: 20px; gap: 16px 14px; }
+    .stat-num { font-size: 26px; }
+    .stat-label { font-size: 11px; }
+    .section { padding: 22px 0; break-inside: auto; }
+    .section-head { margin-bottom: 16px; break-after: avoid; }
+    .section-head p { font-size: 12.5px; margin-top: 4px; }
+    h2 { font-size: 20px; }
+    .kicker { font-size: 10.5px; margin-bottom: 4px; }
+    .highlights { grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: none; }
+    .hl { padding: 14px 14px 12px; border-radius: 8px; }
+    .hl h3 { font-size: 13.5px; margin-bottom: 10px; }
+    .hl-org, .hl-period { font-size: 9.5px; }
+    .hl-big { padding: 10px 0; margin-bottom: 10px; }
+    .hl-big .num { font-size: 30px; letter-spacing: -1px; }
+    .hl-big .cap { font-size: 11.5px; margin-top: 4px; }
+    .hl p { font-size: 11.5px; margin-bottom: 10px; }
+    .hl-metrics { gap: 4px; }
+    .hl-metrics li { font-size: 11px; }
+    .hl-metrics b { font-size: 12px; min-width: 52px; }
+    .about-grid { grid-template-columns: 1fr 2fr; gap: 20px; }
     .motto blockquote { font-size: 15px; }
+    .motto p { font-size: 11.5px; }
+    .areas { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .area { padding: 10px; }
+    .area-icon { width: 30px; height: 30px; }
+    .area h3 { font-size: 12.5px; }
+    .area p { font-size: 11px; }
+    .job { grid-template-columns: 120px 24px 1fr; break-inside: avoid; }
+    .job-period { font-size: 11.5px; }
+    .job-body { padding-bottom: 14px; }
+    .job h3 { font-size: 13.5px; }
+    .job-role, .job-note { font-size: 12px; }
+    .edu-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .certs { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .cert { padding: 8px 10px; }
+    .cert b { font-size: 12.5px; }
+    .cert span, .courses { font-size: 11.5px; }
+    .edu li { padding: 8px 0; grid-template-columns: 44px 1fr; }
+    .edu h4 { font-size: 12.5px; }
+    .edu-year, .edu-inst { font-size: 11.5px; }
+    .hl, .area, .cert, .edu li { break-inside: avoid; }
+    footer { display: none; }
   }
 </style>
 </head>
@@ -430,273 +421,295 @@
   <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
   <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
-  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
 </svg>
 
-<nav class="toolbar" aria-label="Preferências">
-  <button class="tool-btn" id="lang-btn" type="button" aria-label="Switch to English">
-    <svg class="icon"><use href="#i-globe"/></svg><span id="lang-label">EN</span>
-  </button>
-  <button class="tool-btn" id="theme-btn" type="button" aria-label="Alternar tema claro/escuro">
-    <svg class="icon i-sun-show"><use href="#i-sun"/></svg>
-    <svg class="icon i-moon-show"><use href="#i-moon"/></svg>
-    <span data-i18n="theme">Tema</span>
-  </button>
-</nav>
-
-<main class="card">
-  <div class="top-strip"></div>
-
-  <!-- ─── HEADER ─── -->
-  <header class="header">
-    <div class="header-main">
-      <div class="avatar" aria-hidden="true">GF</div>
-      <div>
-        <h1>Gustavo <span>Frigo</span></h1>
-        <p class="headline" data-i18n="headline">Gerente de Projetos Sênior · PMO · Transformação Digital · IA</p>
-        <div class="tags">
-          <span class="tag blue" data-i18n="tag-pmp">Certificado PMP</span>
-          <span class="tag teal">CSPO · PRINCE2</span>
-          <span class="tag">São Paulo, SP</span>
-        </div>
-      </div>
-    </div>
-    <div class="cta">
-      <a class="btn primary" href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener">
-        <svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn
-      </a>
-      <a class="btn" href="mailto:gustavofrigo@gmail.com">
-        <svg class="icon"><use href="#i-mail"/></svg><span data-i18n="cta-mail">Enviar e-mail</span>
-      </a>
-      <button class="btn" type="button" id="pdf-btn">
-        <svg class="icon"><use href="#i-download"/></svg><span data-i18n="cta-pdf">Baixar CV em PDF</span>
+<!-- ─── NAV ─── -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="Gustavo Frigo, início">
+      <span class="brand-mark">GF</span><span class="brand-name">Gustavo Frigo</span>
+    </a>
+    <nav aria-label="Seções">
+      <ul class="nav-links">
+        <li><a href="#destaques" data-i18n="nav-1">Destaques</a></li>
+        <li><a href="#sobre" data-i18n="nav-2">Atuação</a></li>
+        <li><a href="#trajetoria" data-i18n="nav-3">Trajetória</a></li>
+        <li><a href="#formacao" data-i18n="nav-4">Formação</a></li>
+        <li><a href="#contato" data-i18n="nav-5">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-tools">
+      <button class="tool-btn" id="lang-btn" type="button" aria-label="Switch to English">
+        <svg class="icon"><use href="#i-globe"/></svg><span id="lang-label">EN</span>
+      </button>
+      <button class="tool-btn" id="theme-btn" type="button" aria-label="Alternar tema claro/escuro">
+        <svg class="icon i-light"><use href="#i-moon"/></svg>
+        <svg class="icon i-dark"><use href="#i-sun"/></svg>
       </button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- ─── NÚMEROS ─── -->
-  <section class="stats" aria-label="Números">
-    <div class="stat">
-      <div class="stat-num b">15+</div>
-      <div class="stat-label" data-i18n="stat-years">anos de experiência</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num t">R$80M+</div>
-      <div class="stat-label" data-i18n="stat-budget">em projetos entregues</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num i">100+</div>
-      <div class="stat-label" data-i18n="stat-people">profissionais liderados</div>
+<main id="top">
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-id">
+          <div class="avatar" aria-hidden="true">GF</div>
+          <div>
+            <div class="eyebrow" data-i18n="eyebrow">Gerente de Projetos Executivo · Serasa Experian</div>
+            <div class="eyebrow">São Paulo, SP</div>
+          </div>
+        </div>
+        <h1>Gustavo Frigo</h1>
+        <p class="headline" data-i18n="headline">Gerente de projetos sênior em TI, segurança da informação e IA aplicada</p>
+        <div class="print-contact">
+          <span><svg class="icon"><use href="#i-mail"/></svg>gustavofrigo@gmail.com</span>
+          <span><svg class="icon"><use href="#i-phone"/></svg>(11) 94455-7729</span>
+          <span><svg class="icon"><use href="#i-linkedin"/></svg>linkedin.com/in/gustavoffrigo</span>
+          <span><svg class="icon"><use href="#i-globe"/></svg>gutofrigo.github.io/gustavoffrigo</span>
+        </div>
+        <p class="hero-summary" data-i18n="summary">Há mais de 15 anos conduzo projetos de tecnologia em empresas privadas e no Governo do Estado de São Paulo. Entreguei o <strong>Muralha Paulista</strong> na SSP-SP 15% abaixo do orçamento e coordenei a <strong>recuperação da CPTM após um ataque de ransomware</strong> em 10 dias, sem perda de dados.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn
+          </a>
+          <a class="btn" href="mailto:gustavofrigo@gmail.com">
+            <svg class="icon"><use href="#i-mail"/></svg><span data-i18n="cta-mail">E-mail</span>
+          </a>
+          <button class="btn" type="button" id="pdf-btn">
+            <svg class="icon"><use href="#i-download"/></svg><span data-i18n="cta-pdf">Baixar CV (PDF)</span>
+          </button>
+        </div>
+        <ul class="creds-line" aria-label="Certificações principais">
+          <li>PMP</li><li>CSPO</li><li>PRINCE2</li><li>ITIL</li><li>COBIT</li><li>CCNA</li>
+        </ul>
+      </div>
+
+      <aside class="stats-panel" aria-label="Números da carreira">
+        <div><div class="stat-num">15<em>+</em></div><div class="stat-label" data-i18n="stat-years">anos em gestão de projetos</div></div>
+        <div><div class="stat-num">R$80M<em>+</em></div><div class="stat-label" data-i18n="stat-budget">em projetos entregues</div></div>
+        <div><div class="stat-num">100<em>+</em></div><div class="stat-label" data-i18n="stat-people">profissionais liderados</div></div>
+        <div><div class="stat-num">6</div><div class="stat-label" data-i18n="stat-certs">certificações internacionais</div></div>
+      </aside>
     </div>
   </section>
 
-  <!-- ─── RESUMO ─── -->
-  <section class="summary" aria-labelledby="h-summary">
-    <div class="summary-text">
-      <h2 class="label" id="h-summary" data-i18n="h-summary">Resumo</h2>
-      <p data-i18n="summary-1">Gerente de projetos com mais de 15 anos em TI, segurança da informação e IA aplicada, em empresas privadas e no Governo do Estado de São Paulo. Hoje sou <strong>Gerente de Projetos Executivo na Serasa Experian</strong>.</p>
-      <p data-i18n="summary-2">Na SSP-SP, entreguei o Muralha Paulista com 27 mil câmeras integradas a IA e 15% abaixo do orçamento. Na CPTM, coordenei a recuperação após um ataque de ransomware: 250 servidores de volta em 10 dias, sem perda de dados, numa operação que atende 3 milhões de passageiros por dia.</p>
-    </div>
-    <div class="motto">
-      <h2 class="label" data-i18n="h-motto">Como trabalho</h2>
-      <blockquote data-i18n="motto">"Um projeto bem gerenciado continua gerando valor depois da entrega."</blockquote>
+  <!-- ─── DESTAQUES ─── -->
+  <section class="section alt" id="destaques">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker" data-i18n="k-hl">Destaques</div>
+        <h2 data-i18n="h-hl">Resultados que entreguei</h2>
+        <p data-i18n="p-hl">Três projetos de alto risco, em segurança pública, infraestrutura crítica e proteção de dados, somando mais de R$40 milhões em orçamento.</p>
+      </div>
+      <div class="highlights">
+
+        <article class="hl">
+          <div class="hl-top"><span class="hl-org">SSP-SP</span><span class="hl-period">2023 – 2025</span></div>
+          <h3 data-i18n="c1-title">Muralha Paulista: IA na segurança pública</h3>
+          <div class="hl-big"><span class="num" data-i18n="c1-num">27 mil</span><span class="cap" data-i18n="c1-cap">câmeras integradas a IA</span></div>
+          <p data-i18n="c1-desc">Integração de câmeras públicas e privadas a uma plataforma de reconhecimento por IA do Governo do Estado.</p>
+          <ul class="hl-metrics">
+            <li><b>R$15M</b><span data-i18n="c1-m1">de orçamento</span></li>
+            <li><b>-15%</b><span data-i18n="c1-m2">abaixo do orçamento</span></li>
+            <li><b>-30%</b><span data-i18n="c1-m3">no tempo de resposta</span></li>
+          </ul>
+        </article>
+
+        <article class="hl">
+          <div class="hl-top"><span class="hl-org">CPTM</span><span class="hl-period">2022 – 2023</span></div>
+          <h3 data-i18n="c2-title">Recuperação após ataque de ransomware</h3>
+          <div class="hl-big"><span class="num" data-i18n="c2-num">10 dias</span><span class="cap" data-i18n="c2-cap">para recuperar a operação (previsão: 30)</span></div>
+          <p data-i18n="c2-desc">Restauração dos sistemas da companhia de trens metropolitanos de São Paulo, que atende 3 milhões de passageiros por dia.</p>
+          <ul class="hl-metrics">
+            <li><b>250</b><span data-i18n="c2-m1">servidores recuperados</span></li>
+            <li><b>-67%</b><span data-i18n="c2-m2">no prazo estimado</span></li>
+            <li><b data-i18n="c2-zero">Zero</b><span data-i18n="c2-m3">perda de dados</span></li>
+          </ul>
+        </article>
+
+        <article class="hl">
+          <div class="hl-top"><span class="hl-org">Porto Seguro</span><span class="hl-period">2013 – 2015</span></div>
+          <h3 data-i18n="c3-title">Isolamento do ambiente de produção</h3>
+          <div class="hl-big"><span class="num">100%</span><span class="cap" data-i18n="c3-cap">de conformidade com a ISO 27001</span></div>
+          <p data-i18n="c3-desc">Segmentação e proteção do ambiente de produção em 16 sites, dentro de um programa de segurança da informação.</p>
+          <ul class="hl-metrics">
+            <li><b>R$25M</b><span data-i18n="c3-m1">de programa</span></li>
+            <li><b data-i18n="c3-14k">14 mil</b><span data-i18n="c3-m2">ativos protegidos</span></li>
+            <li><b>16</b><span data-i18n="c3-m3">sites gerenciados</span></li>
+          </ul>
+        </article>
+
+      </div>
     </div>
   </section>
 
-  <!-- ─── ÁREAS DE ATUAÇÃO ─── -->
-  <section class="pad" aria-labelledby="h-areas">
-    <h2 class="label" id="h-areas" data-i18n="h-areas">Áreas de atuação</h2>
-    <div class="expertise-grid">
-      <div class="exp">
-        <div class="exp-icon"><svg class="icon"><use href="#i-target"/></svg></div>
-        <div><h3 data-i18n="a1">Gestão de projetos e PMO</h3><p>PMBOK · Scrum · Kanban · PRINCE2</p></div>
+  <!-- ─── ATUAÇÃO ─── -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker" data-i18n="k-about">Atuação</div>
+        <h2 data-i18n="h-about">Onde eu gero resultado</h2>
       </div>
-      <div class="exp">
-        <div class="exp-icon"><svg class="icon"><use href="#i-cpu"/></svg></div>
-        <div><h3 data-i18n="a2">IA e transformação digital</h3><p data-i18n="a2s">Analytics · Automação · Visão computacional</p></div>
-      </div>
-      <div class="exp">
-        <div class="exp-icon"><svg class="icon"><use href="#i-shield"/></svg></div>
-        <div><h3 data-i18n="a3">Segurança da informação</h3><p>ISO 27001 · LGPD · Ransomware recovery</p></div>
-      </div>
-      <div class="exp">
-        <div class="exp-icon"><svg class="icon"><use href="#i-landmark"/></svg></div>
-        <div><h3 data-i18n="a4">Governança e compliance</h3><p>ITIL · COBIT · OKR</p></div>
-      </div>
-      <div class="exp">
-        <div class="exp-icon"><svg class="icon"><use href="#i-users"/></svg></div>
-        <div><h3 data-i18n="a5">Liderança e stakeholders</h3><p data-i18n="a5s">Times de 100+ pessoas · Setor público e privado</p></div>
-      </div>
-      <div class="exp">
-        <div class="exp-icon"><svg class="icon"><use href="#i-cloud"/></svg></div>
-        <div><h3 data-i18n="a6">Infraestrutura e cloud</h3><p data-i18n="a6s">AWS · Data centers · Redes</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CASES ─── -->
-  <section aria-labelledby="h-cases">
-    <div class="cases-head">
-      <h2 class="label" id="h-cases" data-i18n="h-cases">Cases de alto impacto</h2>
-      <span class="cases-total" data-i18n="cases-total">3 projetos · R$40M+ em orçamento</span>
-    </div>
-    <div class="cases-grid">
-
-      <article class="case c1">
-        <div class="case-org" data-i18n="c1-org">SSP-SP · Governo do Estado</div>
-        <h3 data-i18n="c1-title">Muralha Paulista: IA na segurança pública</h3>
-        <p class="case-desc" data-i18n="c1-desc">Integração de câmeras públicas e privadas a uma plataforma de reconhecimento por IA.</p>
-        <div class="metrics">
-          <div class="m"><div class="m-val">R$15M</div><div class="m-label" data-i18n="m-budget">Orçamento</div></div>
-          <div class="m"><div class="m-val g">-15%</div><div class="m-label" data-i18n="m-under">Abaixo do orçamento</div></div>
-          <div class="m"><div class="m-val" data-i18n="m-27k">27 mil</div><div class="m-label" data-i18n="m-cams">Câmeras com IA</div></div>
-          <div class="m"><div class="m-val g">-30%</div><div class="m-label" data-i18n="m-resp">Tempo de resposta</div></div>
+      <div class="about-grid">
+        <div class="motto">
+          <blockquote data-i18n="motto">"Um projeto bem gerenciado continua gerando valor depois da entrega."</blockquote>
+          <p data-i18n="motto-p">Trabalho com metodologias tradicionais e ágeis, adaptando o método ao contexto: setor público, infraestrutura crítica ou produto digital.</p>
         </div>
-      </article>
-
-      <article class="case c2">
-        <div class="case-org" data-i18n="c2-org">CPTM · Infraestrutura crítica</div>
-        <h3 data-i18n="c2-title">Recuperação pós-ransomware</h3>
-        <p class="case-desc" data-i18n="c2-desc">Restauração dos sistemas da companhia de trens metropolitanos de São Paulo.</p>
-        <div class="metrics">
-          <div class="m"><div class="m-val">250</div><div class="m-label" data-i18n="m-servers">Servidores recuperados</div></div>
-          <div class="m"><div class="m-val g" data-i18n="m-10d">10 dias</div><div class="m-label" data-i18n="m-30d">Previsão era de 30</div></div>
-          <div class="m"><div class="m-val">3M</div><div class="m-label" data-i18n="m-users">Passageiros/dia</div></div>
-          <div class="m"><div class="m-val g" data-i18n="m-zero">Zero</div><div class="m-label" data-i18n="m-loss">Perda de dados</div></div>
+        <div class="areas">
+          <div class="area">
+            <div class="area-icon"><svg class="icon"><use href="#i-target"/></svg></div>
+            <div><h3 data-i18n="a1">Gestão de projetos e PMO</h3><p>PMBOK · Scrum · Kanban · PRINCE2</p></div>
+          </div>
+          <div class="area">
+            <div class="area-icon"><svg class="icon"><use href="#i-cpu"/></svg></div>
+            <div><h3 data-i18n="a2">IA e transformação digital</h3><p data-i18n="a2s">Analytics · Automação · Visão computacional</p></div>
+          </div>
+          <div class="area">
+            <div class="area-icon"><svg class="icon"><use href="#i-shield"/></svg></div>
+            <div><h3 data-i18n="a3">Segurança da informação</h3><p data-i18n="a3s">ISO 27001 · LGPD · Resposta a incidentes</p></div>
+          </div>
+          <div class="area">
+            <div class="area-icon"><svg class="icon"><use href="#i-landmark"/></svg></div>
+            <div><h3 data-i18n="a4">Governança e compliance</h3><p>ITIL · COBIT · OKR</p></div>
+          </div>
+          <div class="area">
+            <div class="area-icon"><svg class="icon"><use href="#i-users"/></svg></div>
+            <div><h3 data-i18n="a5">Liderança e stakeholders</h3><p data-i18n="a5s">Times de 100+ pessoas · Setor público e privado</p></div>
+          </div>
+          <div class="area">
+            <div class="area-icon"><svg class="icon"><use href="#i-cloud"/></svg></div>
+            <div><h3 data-i18n="a6">Infraestrutura e cloud</h3><p data-i18n="a6s">AWS · Data centers · Redes</p></div>
+          </div>
         </div>
-      </article>
-
-      <article class="case c3">
-        <div class="case-org" data-i18n="c3-org">Porto Seguro · Segurança da informação</div>
-        <h3 data-i18n="c3-title">Isolamento do ambiente de produção</h3>
-        <p class="case-desc" data-i18n="c3-desc">Segmentação e proteção da produção em 16 sites, com adequação à ISO 27001.</p>
-        <div class="metrics">
-          <div class="m"><div class="m-val">R$25M</div><div class="m-label" data-i18n="m-program">Programa</div></div>
-          <div class="m"><div class="m-val g">100%</div><div class="m-label" data-i18n="m-iso">Conformidade ISO 27001</div></div>
-          <div class="m"><div class="m-val" data-i18n="m-14k">14 mil</div><div class="m-label" data-i18n="m-assets">Ativos protegidos</div></div>
-          <div class="m"><div class="m-val">16</div><div class="m-label" data-i18n="m-sites">Sites</div></div>
-        </div>
-      </article>
-
+      </div>
     </div>
   </section>
 
   <!-- ─── TRAJETÓRIA ─── -->
-  <section class="pad" aria-labelledby="h-career">
-    <h2 class="label" id="h-career" data-i18n="h-career">Trajetória</h2>
-    <ol class="timeline">
-      <li class="tl current">
-        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
-        <div>
-          <div class="tl-period" data-i18n="p1">02/2026 · atual</div>
-          <h3>Serasa Experian</h3>
-          <div class="tl-role" data-i18n="r1">Gerente de Projetos Executivo</div>
-        </div>
-      </li>
-      <li class="tl">
-        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
-        <div>
-          <div class="tl-period">06/2023 · 08/2025</div>
-          <h3 data-i18n="o2">Governo de SP · SSP-SP</h3>
-          <div class="tl-role" data-i18n="r2">Gerente de Fábrica de Software</div>
-          <div class="tl-note" data-i18n="n2">Muralha Paulista</div>
-        </div>
-      </li>
-      <li class="tl">
-        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
-        <div>
-          <div class="tl-period">03/2022 · 06/2023</div>
-          <h3 data-i18n="o3">CPTM · via PRODESP/G&amp;P</h3>
-          <div class="tl-role" data-i18n="r3">Gerente de Projetos e Coordenador de TI</div>
-          <div class="tl-note" data-i18n="n3">Recuperação pós-ransomware</div>
-        </div>
-      </li>
-      <li class="tl">
-        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
-        <div>
-          <div class="tl-period">01/2016 · 06/2021</div>
-          <h3>DM · Brasil&amp;Sabor</h3>
-          <div class="tl-role" data-i18n="r4">Sócio-proprietário</div>
-          <div class="tl-note" data-i18n="n4">Gestão de P&amp;L, operação e equipe. Faturamento de R$250 mil/mês e mais de 70 mil clientes.</div>
-        </div>
-      </li>
-      <li class="tl">
-        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
-        <div>
-          <div class="tl-period">11/2013 · 05/2015</div>
-          <h3>Porto Seguro</h3>
-          <div class="tl-role" data-i18n="r5">Gerente de Projetos</div>
-          <div class="tl-note" data-i18n="n5">Isolamento do ambiente de produção</div>
-        </div>
-      </li>
-      <li class="tl">
-        <div class="tl-rail"><span class="tl-dot"></span></div>
-        <div>
-          <div class="tl-period">11/2011 · 11/2013</div>
-          <h3>INBRA Aerospace</h3>
-          <div class="tl-role" data-i18n="r6">Gerente de Projetos e Coordenador de TI</div>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ─── CERTIFICAÇÕES + FORMAÇÃO ─── -->
-  <section class="creds">
-    <div class="pad">
-      <h2 class="label" data-i18n="h-certs">Certificações</h2>
-      <ul class="chips">
-        <li class="chip blue"><svg class="icon"><use href="#i-award"/></svg>PMP <small>PMI</small></li>
-        <li class="chip teal"><svg class="icon"><use href="#i-award"/></svg>CSPO <small>Scrum Alliance</small></li>
-        <li class="chip indigo"><svg class="icon"><use href="#i-award"/></svg>PRINCE2</li>
-        <li class="chip"><svg class="icon"><use href="#i-award"/></svg>ITIL</li>
-        <li class="chip"><svg class="icon"><use href="#i-award"/></svg>COBIT <small>ISACA</small></li>
-        <li class="chip"><svg class="icon"><use href="#i-award"/></svg>CCNA <small>Cisco</small></li>
-      </ul>
-      <h3 class="sublabel" data-i18n="h-courses">Cursos complementares</h3>
-      <ul class="chips">
-        <li class="chip course"><svg class="icon"><use href="#i-book"/></svg>Design Thinking</li>
-        <li class="chip course"><svg class="icon"><use href="#i-book"/></svg><span data-i18n="course-metrics">Métricas Ágeis</span></li>
-      </ul>
-    </div>
-    <div class="pad">
-      <h2 class="label" data-i18n="h-edu">Formação</h2>
-      <ul class="edu">
-        <li>
-          <div class="edu-year">2024</div>
-          <h3 data-i18n="e1">MBA em Business Strategy &amp; Transformation</h3>
-          <div class="edu-inst">FIAP</div>
+  <section class="section alt" id="trajetoria">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker" data-i18n="k-career">Trajetória</div>
+        <h2 data-i18n="h-career">Experiência profissional</h2>
+      </div>
+      <ol class="timeline">
+        <li class="job current">
+          <div class="job-period" data-i18n="p1">02/2026 – atual</div>
+          <div class="job-rail"><span class="job-dot"></span><span class="job-line"></span></div>
+          <div class="job-body">
+            <h3>Serasa Experian <span class="badge" data-i18n="now">Atual</span></h3>
+            <div class="job-role" data-i18n="r1">Gerente de Projetos Executivo</div>
+          </div>
         </li>
-        <li>
-          <div class="edu-year">2023</div>
-          <h3 data-i18n="e2">Pós-graduação em BI e Analytics</h3>
-          <div class="edu-inst" data-i18n="metodista">Universidade Metodista de São Paulo</div>
+        <li class="job">
+          <div class="job-period">06/2023 – 08/2025</div>
+          <div class="job-rail"><span class="job-dot"></span><span class="job-line"></span></div>
+          <div class="job-body">
+            <h3 data-i18n="o2">Governo do Estado de SP · SSP-SP</h3>
+            <div class="job-role" data-i18n="r2">Gerente de Fábrica de Software</div>
+            <p class="job-note" data-i18n="n2">Muralha Paulista: 27 mil câmeras integradas a IA, R$15M de orçamento, entregue 15% abaixo do previsto.</p>
+          </div>
         </li>
-        <li>
-          <div class="edu-year">2012</div>
-          <h3 data-i18n="e3">MBA em Gerenciamento de Projetos (PMI)</h3>
-          <div class="edu-inst">FIAP</div>
+        <li class="job">
+          <div class="job-period">03/2022 – 06/2023</div>
+          <div class="job-rail"><span class="job-dot"></span><span class="job-line"></span></div>
+          <div class="job-body">
+            <h3 data-i18n="o3">CPTM · via PRODESP/G&amp;P</h3>
+            <div class="job-role" data-i18n="r3">Gerente de Projetos e Coordenador de TI</div>
+            <p class="job-note" data-i18n="n3">Recuperação pós-ransomware: 250 servidores restaurados em 10 dias, sem perda de dados.</p>
+          </div>
         </li>
-        <li>
-          <div class="edu-year">2004</div>
-          <h3 data-i18n="e4">Bacharelado em Ciência da Computação</h3>
-          <div class="edu-inst" data-i18n="metodista2">Universidade Metodista de São Paulo</div>
+        <li class="job">
+          <div class="job-period">01/2016 – 06/2021</div>
+          <div class="job-rail"><span class="job-dot"></span><span class="job-line"></span></div>
+          <div class="job-body">
+            <h3>DM · Brasil&amp;Sabor</h3>
+            <div class="job-role" data-i18n="r4">Sócio-proprietário</div>
+            <p class="job-note" data-i18n="n4">Gestão de P&amp;L, operação e equipe. Faturamento de R$250 mil/mês e mais de 70 mil clientes.</p>
+          </div>
         </li>
-      </ul>
+        <li class="job">
+          <div class="job-period">11/2013 – 05/2015</div>
+          <div class="job-rail"><span class="job-dot"></span><span class="job-line"></span></div>
+          <div class="job-body">
+            <h3>Porto Seguro</h3>
+            <div class="job-role" data-i18n="r5">Gerente de Projetos</div>
+            <p class="job-note" data-i18n="n5">Isolamento do ambiente de produção em 16 sites, programa de R$25M, 100% de conformidade ISO 27001.</p>
+          </div>
+        </li>
+        <li class="job">
+          <div class="job-period">11/2011 – 11/2013</div>
+          <div class="job-rail"><span class="job-dot"></span><span class="job-line"></span></div>
+          <div class="job-body">
+            <h3>INBRA Aerospace</h3>
+            <div class="job-role" data-i18n="r6">Gerente de Projetos e Coordenador de TI</div>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- ─── RODAPÉ ─── -->
-  <footer>
-    <ul class="contacts">
-      <li><a href="mailto:gustavofrigo@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>gustavofrigo@gmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener"><svg class="icon"><use href="#i-linkedin"/></svg>linkedin.com/in/gustavoffrigo</a></li>
-      <li class="screen-only"><a href="https://wa.me/5511944557729" target="_blank" rel="noopener"><svg class="icon"><use href="#i-chat"/></svg>WhatsApp</a></li>
-      <li class="print-only"><a href="tel:+5511944557729"><svg class="icon"><use href="#i-phone"/></svg>(11) 94455-7729</a></li>
-      <li class="print-only"><a href="https://gutofrigo.github.io/gustavoffrigo/"><svg class="icon"><use href="#i-globe"/></svg>gutofrigo.github.io/gustavoffrigo</a></li>
-    </ul>
-    <div class="copy">© 2026 Gustavo Frigo</div>
-  </footer>
+  <!-- ─── FORMAÇÃO ─── -->
+  <section class="section" id="formacao">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker" data-i18n="k-edu">Formação</div>
+        <h2 data-i18n="h-edu">Certificações e estudos</h2>
+      </div>
+      <div class="edu-grid">
+        <div>
+          <h3 class="col-title" data-i18n="h-certs">Certificações</h3>
+          <ul class="certs">
+            <li class="cert top"><svg class="icon"><use href="#i-award"/></svg><div><b>PMP</b><span>PMI</span></div></li>
+            <li class="cert top"><svg class="icon"><use href="#i-award"/></svg><div><b>CSPO</b><span>Scrum Alliance</span></div></li>
+            <li class="cert top"><svg class="icon"><use href="#i-award"/></svg><div><b>PRINCE2</b><span data-i18n="cert-p2">Gestão de projetos</span></div></li>
+            <li class="cert"><svg class="icon"><use href="#i-award"/></svg><div><b>ITIL</b><span data-i18n="cert-itil">Gestão de serviços de TI</span></div></li>
+            <li class="cert"><svg class="icon"><use href="#i-award"/></svg><div><b>COBIT</b><span>ISACA</span></div></li>
+            <li class="cert"><svg class="icon"><use href="#i-award"/></svg><div><b>CCNA</b><span>Cisco</span></div></li>
+          </ul>
+          <p class="courses" data-i18n="courses"><b>Cursos complementares:</b> Design Thinking e Métricas Ágeis.</p>
+        </div>
+        <div>
+          <h3 class="col-title" data-i18n="h-degrees">Formação acadêmica</h3>
+          <ul class="edu">
+            <li><span class="edu-year">2024</span><div><h4 data-i18n="e1">MBA em Business Strategy &amp; Transformation</h4><div class="edu-inst">FIAP</div></div></li>
+            <li><span class="edu-year">2023</span><div><h4 data-i18n="e2">Pós-graduação em BI e Analytics</h4><div class="edu-inst" data-i18n="metodista">Universidade Metodista de São Paulo</div></div></li>
+            <li><span class="edu-year">2012</span><div><h4 data-i18n="e3">MBA em Gerenciamento de Projetos (PMI)</h4><div class="edu-inst">FIAP</div></div></li>
+            <li><span class="edu-year">2004</span><div><h4 data-i18n="e4">Bacharelado em Ciência da Computação</h4><div class="edu-inst" data-i18n="metodista2">Universidade Metodista de São Paulo</div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTATO ─── -->
+  <section class="contact" id="contato">
+    <div class="container contact-inner">
+      <div>
+        <div class="kicker" data-i18n="k-contact">Contato</div>
+        <h2 data-i18n="h-contact">Vamos conversar</h2>
+        <p data-i18n="p-contact">Respondo por e-mail, LinkedIn ou WhatsApp.</p>
+      </div>
+      <div class="contact-cta">
+        <a class="btn primary" href="mailto:gustavofrigo@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>gustavofrigo@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener"><svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn</a>
+        <a class="btn" href="https://wa.me/5511944557729" target="_blank" rel="noopener"><svg class="icon"><use href="#i-chat"/></svg>WhatsApp</a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© 2026 Gustavo Frigo</span>
+    <a href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener">linkedin.com/in/gustavoffrigo</a>
+  </div>
+</footer>
 
 <script>
   // ─── Tema ───
@@ -712,80 +725,74 @@
 
   // ─── Idioma ───
   var EN = {
-    'theme': 'Theme',
-    'headline': 'Senior Project Manager · PMO · Digital Transformation · AI',
-    'tag-pmp': 'PMP Certified',
-    'cta-mail': 'Send an e-mail',
+    'nav-1': 'Highlights', 'nav-2': 'Expertise', 'nav-3': 'Career', 'nav-4': 'Education', 'nav-5': 'Contact',
+    'eyebrow': 'Executive Project Manager · Serasa Experian',
+    'headline': 'Senior project manager in IT, information security and applied AI',
+    'summary': 'For over 15 years I have run technology projects in private companies and in the São Paulo State Government. I delivered <strong>Muralha Paulista</strong> at SSP-SP 15% under budget and coordinated <strong>CPTM\'s recovery from a ransomware attack</strong> in 10 days, with no data loss.',
+    'cta-mail': 'E-mail',
     'cta-pdf': 'Download CV (PDF)',
-    'stat-years': 'years of experience',
+    'stat-years': 'years in project management',
     'stat-budget': 'in delivered projects',
     'stat-people': 'professionals led',
-    'h-summary': 'Summary',
-    'summary-1': 'Project manager with 15+ years in IT, information security and applied AI, in private companies and in the São Paulo State Government. Currently <strong>Executive Project Manager at Serasa Experian</strong>.',
-    'summary-2': 'At SSP-SP, I delivered Muralha Paulista, connecting 27,000 cameras to an AI platform, 15% under budget. At CPTM, I coordinated the recovery from a ransomware attack: 250 servers back online in 10 days with no data loss, in a rail operation that carries 3 million passengers a day.',
-    'h-motto': 'How I work',
-    'motto': '"A well-managed project keeps delivering value after go-live."',
-    'h-areas': 'Areas of expertise',
-    'a1': 'Project management and PMO',
-    'a2': 'AI and digital transformation',
-    'a2s': 'Analytics · Automation · Computer vision',
-    'a3': 'Information security',
-    'a4': 'Governance and compliance',
-    'a5': 'Leadership and stakeholders',
-    'a5s': 'Teams of 100+ people · Public and private sector',
-    'a6': 'Infrastructure and cloud',
-    'a6s': 'AWS · Data centers · Networks',
-    'h-cases': 'High-impact cases',
-    'cases-total': '3 projects · R$40M+ in budget',
-    'c1-org': 'SSP-SP · São Paulo State Government',
+    'stat-certs': 'international certifications',
+    'k-hl': 'Highlights',
+    'h-hl': 'Results I delivered',
+    'p-hl': 'Three high-risk projects in public safety, critical infrastructure and data protection, with more than R$40 million in combined budget.',
     'c1-title': 'Muralha Paulista: AI for public safety',
-    'c1-desc': 'Public and private cameras connected to an AI recognition platform.',
-    'm-budget': 'Budget',
-    'm-under': 'Under budget',
-    'm-27k': '27k',
-    'm-cams': 'AI-enabled cameras',
-    'm-resp': 'Response time',
-    'c2-org': 'CPTM · Critical infrastructure',
-    'c2-title': 'Post-ransomware recovery',
-    'c2-desc': 'System recovery for São Paulo\'s metropolitan rail company.',
-    'm-servers': 'Servers recovered',
-    'm-10d': '10 days',
-    'm-30d': 'Estimate was 30',
-    'm-users': 'Passengers/day',
-    'm-zero': 'Zero',
-    'm-loss': 'Data loss',
-    'c3-org': 'Porto Seguro · Information security',
+    'c1-num': '27k',
+    'c1-cap': 'cameras connected to AI',
+    'c1-desc': 'Public and private cameras connected to the State Government\'s AI recognition platform.',
+    'c1-m1': 'budget', 'c1-m2': 'under budget', 'c1-m3': 'in response time',
+    'c2-title': 'Recovery from a ransomware attack',
+    'c2-num': '10 days',
+    'c2-cap': 'to restore operations (estimate: 30)',
+    'c2-desc': 'System recovery for São Paulo\'s metropolitan rail company, which carries 3 million passengers a day.',
+    'c2-m1': 'servers recovered', 'c2-m2': 'vs. estimated timeline', 'c2-zero': 'Zero', 'c2-m3': 'data loss',
     'c3-title': 'Production environment isolation',
-    'c3-desc': 'Segmentation and protection of production across 16 sites, aligned with ISO 27001.',
-    'm-program': 'Program',
-    'm-iso': 'ISO 27001 compliance',
-    'm-14k': '14k',
-    'm-assets': 'Assets protected',
-    'm-sites': 'Sites',
-    'h-career': 'Career',
-    'p1': '02/2026 · present',
+    'c3-cap': 'ISO 27001 compliance',
+    'c3-desc': 'Segmentation and protection of the production environment across 16 sites, as part of an information security program.',
+    'c3-m1': 'program', 'c3-14k': '14k', 'c3-m2': 'assets protected', 'c3-m3': 'sites managed',
+    'k-about': 'Expertise',
+    'h-about': 'Where I deliver results',
+    'motto': '"A well-managed project keeps delivering value after go-live."',
+    'motto-p': 'I work with traditional and agile methods and adapt them to the context: public sector, critical infrastructure or digital product.',
+    'a1': 'Project management and PMO',
+    'a2': 'AI and digital transformation', 'a2s': 'Analytics · Automation · Computer vision',
+    'a3': 'Information security', 'a3s': 'ISO 27001 · LGPD · Incident response',
+    'a4': 'Governance and compliance',
+    'a5': 'Leadership and stakeholders', 'a5s': 'Teams of 100+ people · Public and private sector',
+    'a6': 'Infrastructure and cloud', 'a6s': 'AWS · Data centers · Networks',
+    'k-career': 'Career',
+    'h-career': 'Professional experience',
+    'p1': '02/2026 – present', 'now': 'Current',
     'r1': 'Executive Project Manager',
-    'o2': 'São Paulo State Gov. · SSP-SP',
+    'o2': 'São Paulo State Government · SSP-SP',
     'r2': 'Software Manufacturing Manager',
-    'n2': 'Muralha Paulista',
+    'n2': 'Muralha Paulista: 27,000 cameras connected to AI, R$15M budget, delivered 15% under plan.',
     'o3': 'CPTM · via PRODESP/G&amp;P',
     'r3': 'Project Manager and IT Coordinator',
-    'n3': 'Post-ransomware recovery',
+    'n3': 'Post-ransomware recovery: 250 servers restored in 10 days with no data loss.',
     'r4': 'Co-owner',
     'n4': 'P&amp;L, operations and team management. R$250k monthly revenue and 70k+ customers.',
     'r5': 'Project Manager',
-    'n5': 'Production environment isolation',
+    'n5': 'Production environment isolation across 16 sites, R$25M program, 100% ISO 27001 compliance.',
     'r6': 'Project Manager and IT Coordinator',
+    'k-edu': 'Education',
+    'h-edu': 'Certifications and studies',
     'h-certs': 'Certifications',
-    'h-courses': 'Additional courses',
-    'course-metrics': 'Agile Metrics',
-    'h-edu': 'Education',
+    'cert-p2': 'Project management',
+    'cert-itil': 'IT service management',
+    'courses': '<b>Additional courses:</b> Design Thinking and Agile Metrics.',
+    'h-degrees': 'Academic background',
     'e1': 'MBA in Business Strategy &amp; Transformation',
     'e2': 'Graduate certificate in BI and Analytics',
     'e3': 'MBA in Project Management (PMI)',
     'e4': 'B.Sc. in Computer Science',
     'metodista': 'Methodist University of São Paulo',
-    'metodista2': 'Methodist University of São Paulo'
+    'metodista2': 'Methodist University of São Paulo',
+    'k-contact': 'Contact',
+    'h-contact': 'Let\'s talk',
+    'p-contact': 'Reach me by e-mail, LinkedIn or WhatsApp.'
   };
 
   var nodes = document.querySelectorAll('[data-i18n]');
@@ -806,7 +813,7 @@
   }
 
   var current = 'pt';
-  try { current = localStorage.getItem('lang') || (location.hash === '#en' ? 'en' : 'pt'); } catch (e) {}
+  try { current = localStorage.getItem('lang') || 'pt'; } catch (e) {}
   if (location.hash === '#en') current = 'en';
   if (current === 'en') setLang('en');
 
