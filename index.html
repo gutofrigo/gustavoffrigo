@@ -3,519 +3,817 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Infográfico — Gustavo Frigo</title>
+<title>Gustavo Frigo | Gerente de Projetos Sênior, PMP</title>
+<meta name="description" content="Gustavo Frigo, gerente de projetos com mais de 15 anos em TI, segurança da informação e IA aplicada. PMP, CSPO e PRINCE2. Cases na SSP-SP, CPTM e Porto Seguro.">
+<meta name="author" content="Gustavo Frigo">
+<link rel="canonical" href="https://gutofrigo.github.io/gustavoffrigo/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Gustavo Frigo | Gerente de Projetos Sênior, PMP">
+<meta property="og:description" content="Mais de 15 anos em gestão de projetos de TI, segurança da informação e IA. Cases na SSP-SP, CPTM e Porto Seguro.">
+<meta property="og:url" content="https://gutofrigo.github.io/gustavoffrigo/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="profile:first_name" content="Gustavo">
+<meta property="profile:last_name" content="Frigo">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2314b8a6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='white' text-anchor='middle'%3EGF%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gustavo Frigo",
+  "jobTitle": "Gerente de Projetos Executivo",
+  "worksFor": { "@type": "Organization", "name": "Serasa Experian" },
+  "email": "mailto:gustavofrigo@gmail.com",
+  "url": "https://gutofrigo.github.io/gustavoffrigo/",
+  "sameAs": ["https://www.linkedin.com/in/gustavoffrigo"],
+  "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "FIAP" },
+    { "@type": "CollegeOrUniversity", "name": "Universidade Metodista de São Paulo" }
+  ],
+  "hasCredential": ["PMP", "CSPO", "PRINCE2", "ITIL", "COBIT", "CCNA"]
+}
+</script>
+
+<script>
+  // Aplica o tema salvo antes de desenhar a página, para não piscar
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
- 
+  :root, :root[data-theme="dark"] {
+    --bg: #070711;
+    --surface: #0d0d1a;
+    --surface-2: rgba(255,255,255,0.04);
+    --surface-3: rgba(255,255,255,0.07);
+    --border: rgba(255,255,255,0.08);
+    --text: #f1f5f9;
+    --text-2: #cbd5e1;
+    --muted: #94a3b8;
+    --blue: #60a5fa;
+    --teal: #2dd4bf;
+    --indigo: #a5b4fc;
+    --green: #4ade80;
+    --blue-bg: rgba(59,130,246,0.12);
+    --teal-bg: rgba(20,184,166,0.12);
+    --indigo-bg: rgba(99,102,241,0.14);
+    --glow: rgba(59,130,246,0.12);
+    --grad: linear-gradient(135deg, #3b82f6, #6366f1 50%, #14b8a6);
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --bg: #eef1f7;
+    --surface: #ffffff;
+    --surface-2: #f4f6fa;
+    --surface-3: #e9edf4;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --text-2: #334155;
+    --muted: #5b6474;
+    --blue: #2563eb;
+    --teal: #0f766e;
+    --indigo: #4f46e5;
+    --green: #15803d;
+    --blue-bg: rgba(37,99,235,0.08);
+    --teal-bg: rgba(15,118,110,0.08);
+    --indigo-bg: rgba(79,70,229,0.08);
+    --glow: rgba(37,99,235,0.07);
+    --grad: linear-gradient(135deg, #2563eb, #4f46e5 50%, #0d9488);
+    color-scheme: light;
+  }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
- 
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    background: #060610;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
-    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    padding: 40px 16px;
     min-height: 100vh;
+    transition: background .2s, color .2s;
   }
- 
+  a { color: inherit; }
+  .icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ─── TOOLBAR ─── */
+  .toolbar {
+    max-width: 1080px; margin: 0 auto 14px;
+    display: flex; justify-content: flex-end; gap: 8px;
+  }
+  .tool-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--surface); color: var(--text-2);
+    border: 1px solid var(--border); border-radius: 99px;
+    padding: 7px 14px; font: 600 13px/1 inherit; font-family: inherit;
+    cursor: pointer; transition: border-color .15s, color .15s;
+  }
+  .tool-btn:hover { color: var(--text); border-color: var(--blue); }
+  .tool-btn .icon { width: 15px; height: 15px; }
+  :root[data-theme="dark"] .i-sun-show { display: inline; }
+  :root[data-theme="dark"] .i-moon-show { display: none; }
+  :root[data-theme="light"] .i-sun-show { display: none; }
+  :root[data-theme="light"] .i-moon-show { display: inline; }
+
+  /* ─── CARD ─── */
   .card {
-    width: 1080px;
-    background: #0b0b16;
-    border-radius: 28px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.07);
-    position: relative;
+    max-width: 1080px; margin: 0 auto;
+    background: var(--surface);
+    border-radius: 24px; overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
   }
- 
-  /* ─── TOP GRADIENT STRIP ─── */
-  .top-strip {
-    height: 5px;
-    background: linear-gradient(90deg, #3b82f6 0%, #6366f1 40%, #14b8a6 70%, #3b82f6 100%);
+  .top-strip { height: 5px; background: linear-gradient(90deg, #3b82f6, #6366f1 40%, #14b8a6 70%, #3b82f6); }
+  section, .block { border-bottom: 1px solid var(--border); }
+
+  .label {
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); font-weight: 700; margin-bottom: 18px;
   }
- 
+
   /* ─── HEADER ─── */
   .header {
     padding: 48px 56px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    position: relative;
-    overflow: hidden;
+    display: flex; gap: 32px; justify-content: space-between; align-items: center;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border);
   }
   .header::before {
-    content: '';
-    position: absolute; top: -120px; right: -80px;
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 65%);
-    border-radius: 50%;
+    content: ''; position: absolute; top: -140px; right: -100px;
+    width: 420px; height: 420px; border-radius: 50%;
+    background: radial-gradient(circle, var(--glow), transparent 65%);
+    pointer-events: none;
   }
-  .header-left {}
-  .name {
+  .header-main { display: flex; gap: 28px; align-items: center; position: relative; }
+  .avatar {
+    width: 104px; height: 104px; border-radius: 50%; flex-shrink: 0;
+    background: var(--grad); color: #fff;
+    display: grid; place-items: center;
+    font-size: 38px; font-weight: 800; letter-spacing: -1px;
+    box-shadow: 0 0 0 4px var(--surface), 0 0 0 6px var(--border);
+  }
+  h1 {
     font-size: 52px; font-weight: 900; letter-spacing: -2px;
-    line-height: 1; color: #f1f5f9; margin-bottom: 10px;
+    line-height: 1; margin-bottom: 10px;
   }
-  .name span {
-    background: linear-gradient(135deg, #3b82f6, #6366f1, #14b8a6);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
+  h1 span {
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  .title-bar {
-    font-size: 14px; font-weight: 600; color: #64748b;
-    letter-spacing: 0.5px; margin-bottom: 16px;
-  }
-  .header-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .headline { font-size: 16px; font-weight: 600; color: var(--text-2); margin-bottom: 14px; }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
   .tag {
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 99px; padding: 5px 13px; font-size: 12px; color: #94a3b8;
-    font-weight: 500;
+    background: var(--surface-2); border: 1px solid var(--border);
+    border-radius: 99px; padding: 5px 12px;
+    font-size: 12px; font-weight: 600; color: var(--muted);
   }
-  .tag.blue { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.25); color: #93c5fd; }
-  .tag.teal { background: rgba(20,184,166,0.1); border-color: rgba(20,184,166,0.25); color: #5eead4; }
- 
-  /* Big stats right side */
-  .header-stats { display: flex; gap: 32px; align-items: center; }
-  .big-stat { text-align: center; }
-  .big-num {
-    font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1;
+  .tag.blue { background: var(--blue-bg); color: var(--blue); border-color: transparent; }
+  .tag.teal { background: var(--teal-bg); color: var(--teal); border-color: transparent; }
+
+  .cta { display: flex; flex-direction: column; gap: 10px; position: relative; min-width: 210px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 11px 18px; border-radius: 12px;
+    font-size: 14px; font-weight: 700; text-decoration: none;
+    border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
+    transition: transform .15s, border-color .15s;
+    cursor: pointer; font-family: inherit;
   }
-  .big-num.b { color: #3b82f6; }
-  .big-num.t { color: #14b8a6; }
-  .big-num.w { color: #f1f5f9; }
-  .big-label { font-size: 11px; color: #64748b; margin-top: 6px; font-weight: 500; line-height: 1.3; max-width: 80px; }
- 
-  .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.07); }
- 
-  /* ─── MAIN BODY ─── */
-  .body { padding: 0; }
- 
-  /* ─── ROW 1: MOTTO + EXPERTISE ─── */
-  .row-1 {
-    display: grid; grid-template-columns: 1.1fr 1.9fr;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+  .btn:hover { transform: translateY(-1px); border-color: var(--blue); }
+  .btn.primary { background: var(--grad); color: #fff; border-color: transparent; }
+
+  /* ─── STATS ─── */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stat { padding: 28px 24px; text-align: center; border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-size: 44px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
+  .stat-num.b { color: var(--blue); }
+  .stat-num.t { color: var(--teal); }
+  .stat-num.i { color: var(--indigo); }
+  .stat-label { font-size: 13px; color: var(--muted); margin-top: 8px; font-weight: 500; }
+
+  /* ─── SUMMARY ─── */
+  .summary { display: grid; grid-template-columns: 1.7fr 1fr; }
+  .summary-text { padding: 36px 40px; border-right: 1px solid var(--border); }
+  .summary-text p { font-size: 16px; color: var(--text-2); line-height: 1.7; }
+  .summary-text p + p { margin-top: 12px; }
+  .summary-text strong { color: var(--text); font-weight: 700; }
+  .motto {
+    padding: 36px 40px; display: flex; flex-direction: column; justify-content: center;
+    background: linear-gradient(135deg, var(--blue-bg), var(--indigo-bg));
   }
-  .motto-cell {
-    padding: 36px 40px;
-    border-right: 1px solid rgba(255,255,255,0.06);
-    display: flex; flex-direction: column; justify-content: center;
-    background: linear-gradient(135deg, rgba(59,130,246,0.05), rgba(99,102,241,0.05));
-    position: relative; overflow: hidden;
+  .motto blockquote { font-size: 18px; font-weight: 700; font-style: italic; color: var(--text); line-height: 1.5; }
+
+  /* ─── EXPERTISE ─── */
+  .pad { padding: 32px 40px; }
+  .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .exp {
+    background: var(--surface-2); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px;
+    display: flex; gap: 14px; align-items: flex-start;
   }
-  .motto-cell::before {
-    content: '"'; position: absolute; top: -30px; left: 10px;
-    font-size: 160px; color: rgba(59,130,246,0.06); font-weight: 900; line-height: 1;
+  .exp-icon {
+    width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+    display: grid; place-items: center;
+    background: var(--blue-bg); color: var(--blue);
   }
-  .motto-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #3b82f6; font-weight: 700; margin-bottom: 12px; }
-  .motto-text {
-    font-size: 17px; font-weight: 700; color: #e2e8f0;
-    line-height: 1.5; font-style: italic;
+  .exp:nth-child(3n+2) .exp-icon { background: var(--teal-bg); color: var(--teal); }
+  .exp:nth-child(3n) .exp-icon { background: var(--indigo-bg); color: var(--indigo); }
+  .exp-icon .icon { width: 20px; height: 20px; }
+  .exp h3 { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.3; }
+  .exp p { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+
+  /* ─── CASES ─── */
+  .cases-head {
+    padding: 28px 40px 0; display: flex; justify-content: space-between;
+    align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;
   }
-  .motto-author { font-size: 11px; color: #475569; margin-top: 10px; }
- 
-  .expertise-cell { padding: 32px 40px; }
-  .cell-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 20px; }
-  .expertise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-  .exp-item {
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 12px; padding: 14px 12px; text-align: center;
-  }
-  .exp-icon { font-size: 22px; margin-bottom: 6px; }
-  .exp-name { font-size: 11px; font-weight: 700; color: #cbd5e1; line-height: 1.3; }
-  .exp-sub { font-size: 10px; color: #475569; margin-top: 3px; }
- 
-  /* ─── ROW 2: CASES ─── */
-  .row-2 { border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .cases-header {
-    padding: 24px 40px 0;
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 20px;
-  }
-  .cases-grid-inf {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .case-col {
-    padding: 28px 32px;
-    border-right: 1px solid rgba(255,255,255,0.06);
-    position: relative; overflow: hidden;
-  }
-  .case-col:last-child { border-right: none; }
-  .case-col::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0;
-    height: 3px;
-  }
-  .case-col.c1::before { background: linear-gradient(90deg, #3b82f6, #6366f1); }
-  .case-col.c2::before { background: linear-gradient(90deg, #14b8a6, #3b82f6); }
-  .case-col.c3::before { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
-  .case-company { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
-  .case-company.c1 { color: #93c5fd; }
-  .case-company.c2 { color: #5eead4; }
-  .case-company.c3 { color: #a5b4fc; }
-  .case-name-inf { font-size: 14px; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; line-height: 1.3; }
-  .case-metrics-inf { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .cm {
-    background: rgba(255,255,255,0.04); border-radius: 8px;
-    padding: 10px 8px; text-align: center;
-  }
-  .cm-val { font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
-  .cm-val.b { color: #60a5fa; }
-  .cm-val.t { color: #2dd4bf; }
-  .cm-val.p { color: #a5b4fc; }
-  .cm-val.g { color: #4ade80; }
-  .cm-label { font-size: 9px; color: #475569; margin-top: 2px; line-height: 1.3; }
- 
-  /* ─── ROW 3: SKILLS + CAREER ─── */
-  .row-3 {
-    display: grid; grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .skills-cell {
-    padding: 32px 40px;
-    border-right: 1px solid rgba(255,255,255,0.06);
-  }
-  .skill-bars { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
-  .sb { }
-  .sb-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px; }
-  .sb-name { font-size: 12px; font-weight: 600; color: #cbd5e1; }
-  .sb-lvl { font-size: 10px; color: #475569; }
-  .sb-track { height: 5px; background: rgba(255,255,255,0.06); border-radius: 99px; overflow: hidden; }
-  .sb-fill { height: 100%; border-radius: 99px; }
-  .sb-fill.blue { background: linear-gradient(90deg, #3b82f6, #6366f1); }
-  .sb-fill.teal { background: linear-gradient(90deg, #14b8a6, #3b82f6); }
-  .sb-fill.purple { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
- 
-  .career-cell { padding: 32px 40px; }
-  .timeline-inf { margin-top: 16px; display: flex; flex-direction: column; gap: 16px; }
-  .tl-item { display: flex; gap: 14px; align-items: flex-start; }
-  .tl-dot-wrap { display: flex; flex-direction: column; align-items: center; padding-top: 4px; }
+  .cases-head .label { margin-bottom: 0; }
+  .cases-total { font-size: 13px; color: var(--muted); }
+  .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border); }
+  .case { padding: 28px 30px; border-right: 1px solid var(--border); position: relative; }
+  .case:last-child { border-right: none; }
+  .case::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .case.c1::before { background: linear-gradient(90deg, #3b82f6, #6366f1); }
+  .case.c2::before { background: linear-gradient(90deg, #14b8a6, #3b82f6); }
+  .case.c3::before { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
+  .case-org { font-size: 11.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 6px; }
+  .c1 .case-org { color: var(--blue); }
+  .c2 .case-org { color: var(--teal); }
+  .c3 .case-org { color: var(--indigo); }
+  .case h3 { font-size: 17px; font-weight: 800; color: var(--text); line-height: 1.3; margin-bottom: 8px; }
+  .case-desc { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; }
+  .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .m { background: var(--surface-2); border-radius: 10px; padding: 12px 8px; text-align: center; }
+  .m-val { font-size: 21px; font-weight: 900; letter-spacing: -0.5px; line-height: 1.1; }
+  .c1 .m-val { color: var(--blue); }
+  .c2 .m-val { color: var(--teal); }
+  .c3 .m-val { color: var(--indigo); }
+  .m-val.g { color: var(--green); }
+  .m-label { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+
+  /* ─── TIMELINE ─── */
+  .timeline { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .tl { display: flex; gap: 14px; padding-bottom: 20px; }
+  .tl-rail { display: flex; flex-direction: column; align-items: center; padding-top: 5px; }
   .tl-dot {
-    width: 10px; height: 10px; border-radius: 50%;
-    background: #3b82f6; flex-shrink: 0;
-    border: 2px solid #0b0b16;
-    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+    width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0;
+    background: var(--blue); box-shadow: 0 0 0 4px var(--blue-bg);
   }
-  .tl-dot.current { background: #14b8a6; box-shadow: 0 0 0 3px rgba(20,184,166,0.25); }
-  .tl-line { width: 1px; flex: 1; background: rgba(255,255,255,0.07); margin-top: 4px; min-height: 20px; }
-  .tl-item:last-child .tl-line { display: none; }
-  .tl-content { flex: 1; padding-bottom: 4px; }
-  .tl-period { font-size: 10px; color: #475569; margin-bottom: 2px; }
-  .tl-company { font-size: 13px; font-weight: 800; color: #e2e8f0; }
-  .tl-role { font-size: 11px; color: #3b82f6; font-weight: 600; }
- 
-  /* ─── ROW 4: CERTS + EDUCATION ─── */
-  .row-4 {
-    display: grid; grid-template-columns: 1.2fr 0.8fr;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .certs-cell {
-    padding: 32px 40px;
-    border-right: 1px solid rgba(255,255,255,0.06);
-  }
-  .certs-inf { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-  .cert-chip {
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  .tl.current .tl-dot { background: var(--teal); box-shadow: 0 0 0 4px var(--teal-bg); }
+  .tl-line { width: 1px; flex: 1; background: var(--border); margin-top: 6px; }
+  .tl-period { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .tl h3 { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.3; }
+  .tl-role { font-size: 13.5px; color: var(--blue); font-weight: 600; }
+  .tl.current .tl-role { color: var(--teal); }
+  .tl-note { font-size: 13px; color: var(--muted); margin-top: 3px; }
+
+  /* ─── CREDENTIALS ─── */
+  .creds { display: grid; grid-template-columns: 1.15fr 0.85fr; }
+  .creds > div:first-child { border-right: 1px solid var(--border); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--surface-2); border: 1px solid var(--border);
     border-radius: 99px; padding: 7px 14px;
-    display: flex; align-items: center; gap: 7px;
-    font-size: 12px; font-weight: 700; color: #cbd5e1;
+    font-size: 13px; font-weight: 700; color: var(--text-2);
   }
-  .cert-chip.pmp { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.25); color: #93c5fd; }
-  .cert-chip.cspo { background: rgba(20,184,166,0.1); border-color: rgba(20,184,166,0.25); color: #5eead4; }
-  .cert-chip.p2 { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.25); color: #a5b4fc; }
-  .cert-icon-sm { font-size: 13px; }
- 
-  .edu-cell { padding: 32px 40px; }
-  .edu-items { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
-  .edu-item { border-left: 2px solid rgba(59,130,246,0.3); padding-left: 14px; }
-  .edu-year-inf { font-size: 10px; color: #3b82f6; font-weight: 700; }
-  .edu-degree-inf { font-size: 12px; font-weight: 700; color: #e2e8f0; line-height: 1.3; margin-top: 1px; }
-  .edu-inst-inf { font-size: 11px; color: #475569; }
- 
-  /* ─── FOOTER STRIP ─── */
-  .footer-strip {
+  .chip .icon { width: 14px; height: 14px; }
+  .chip small { font-weight: 500; color: var(--muted); font-size: 12px; }
+  .chip.blue { background: var(--blue-bg); color: var(--blue); border-color: transparent; }
+  .chip.teal { background: var(--teal-bg); color: var(--teal); border-color: transparent; }
+  .chip.indigo { background: var(--indigo-bg); color: var(--indigo); border-color: transparent; }
+  .chip.blue small, .chip.teal small, .chip.indigo small { color: inherit; opacity: .8; }
+  .chip.course { font-weight: 600; }
+  .sublabel { font-size: 12px; font-weight: 700; color: var(--muted); margin: 22px 0 10px; }
+
+  .edu { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .edu li { border-left: 2px solid var(--blue-bg); padding-left: 14px; }
+  .edu-year { font-size: 12px; color: var(--blue); font-weight: 700; }
+  .edu h3 { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.35; }
+  .edu-inst { font-size: 13px; color: var(--muted); }
+
+  /* ─── FOOTER ─── */
+  footer {
     padding: 24px 56px;
-    display: flex; justify-content: space-between; align-items: center;
-    background: rgba(255,255,255,0.02);
+    display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+    background: var(--surface-2);
   }
-  .footer-contact { display: flex; gap: 28px; }
-  .fc-item { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #64748b; }
-  .fc-item span { color: #94a3b8; font-weight: 500; }
-  .footer-brand {
-    font-size: 11px; color: #334155; font-weight: 600; letter-spacing: 1px;
-    text-transform: uppercase;
+  .contacts { display: flex; gap: 22px; flex-wrap: wrap; list-style: none; }
+  .contacts a {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 13.5px; color: var(--text-2); text-decoration: none; font-weight: 500;
   }
- 
-  /* ─── PRINT TIP ─── */
-  .print-tip {
-    text-align: center; padding: 16px; color: #334155;
-    font-size: 12px; font-family: monospace;
+  .contacts a:hover { color: var(--blue); }
+  .contacts .icon { width: 16px; height: 16px; color: var(--muted); }
+  .copy { font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .5px; }
+  .print-only { display: none; }
+
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 8px; }
+
+  /* ─── RESPONSIVO ─── */
+  @media (max-width: 960px) {
+    .header { flex-direction: column; align-items: flex-start; padding: 40px 32px 32px; }
+    .cta { flex-direction: row; flex-wrap: wrap; min-width: 0; width: 100%; }
+    .cta .btn { flex: 1 1 180px; }
+    .summary, .creds { grid-template-columns: 1fr; }
+    .summary-text, .creds > div:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+    .expertise-grid { grid-template-columns: 1fr 1fr; }
+    .cases-grid { grid-template-columns: 1fr; }
+    .case { border-right: none; border-bottom: 1px solid var(--border); }
+    .case:last-child { border-bottom: none; }
+    .pad, .summary-text, .motto { padding: 28px 32px; }
+    .cases-head { padding: 24px 32px 0; }
+    footer { padding: 22px 32px; }
   }
-  @media print { .print-tip { display: none; } }
+  @media (max-width: 640px) {
+    body { padding: 16px 12px; }
+    .card { border-radius: 18px; }
+    .header { padding: 28px 20px 24px; }
+    .header-main { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .avatar { width: 76px; height: 76px; font-size: 28px; }
+    h1 { font-size: 38px; letter-spacing: -1.5px; }
+    .headline { font-size: 14.5px; }
+    .stat { padding: 20px 8px; }
+    .stat-num { font-size: 28px; letter-spacing: -1px; }
+    .stat-label { font-size: 11.5px; }
+    .expertise-grid, .timeline { grid-template-columns: 1fr; }
+    .pad, .summary-text, .motto, .case { padding: 24px 20px; }
+    .cases-head { padding: 22px 20px 0; }
+    .summary-text p { font-size: 15px; }
+    footer { padding: 20px; flex-direction: column; align-items: flex-start; }
+    .contacts { flex-direction: column; gap: 12px; }
+  }
+
+  /* ─── IMPRESSÃO / PDF ─── */
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    :root, :root[data-theme] {
+      --bg: #fff; --surface: #fff; --surface-2: #f5f7fa; --surface-3: #eef1f5; --border: #e2e8f0;
+      --text: #0f172a; --text-2: #334155; --muted: #52596a;
+      --blue: #1d4ed8; --teal: #0f766e; --indigo: #4338ca; --green: #15803d;
+      --blue-bg: #e8effd; --teal-bg: #e6f4f2; --indigo-bg: #ecebfc; --glow: transparent;
+      color-scheme: light;
+    }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { padding: 0; font-size: 12px; }
+    .toolbar, .cta, .screen-only { display: none !important; }
+    .print-only { display: inline-flex; }
+    .card { border: none; border-radius: 0; box-shadow: none; max-width: none; }
+    .header { padding: 0 0 20px; }
+    .header::before { display: none; }
+    h1 { font-size: 40px; }
+    h1 span { background: none; -webkit-text-fill-color: var(--blue); color: var(--blue); }
+    .avatar { width: 80px; height: 80px; font-size: 30px; }
+    .stat { padding: 16px 8px; }
+    .stat-num { font-size: 32px; }
+    .pad, .summary-text, .motto, .case { padding: 18px 20px; }
+    .cases-head { padding: 18px 20px 0; }
+    section, .case, .tl, .exp, .edu li { break-inside: avoid; }
+    footer { padding: 12px 20px; flex-direction: row; }
+    .contacts { flex-direction: row; gap: 16px; }
+
+    /* A página A4 cai nas regras de tela estreita; restaura o layout em colunas */
+    .header { flex-direction: row; align-items: center; }
+    .top-strip { margin-bottom: 20px; }
+    .summary { grid-template-columns: 1.7fr 1fr; }
+    .creds { grid-template-columns: 1.15fr 0.85fr; }
+    .summary-text, .creds > div:first-child { border-right: 1px solid var(--border); border-bottom: none; }
+    .expertise-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .exp { padding: 12px; }
+    .cases-grid { grid-template-columns: repeat(3, 1fr); }
+    .case { border-right: 1px solid var(--border); border-bottom: none; }
+    .case:last-child { border-right: none; }
+    .case h3 { font-size: 14px; }
+    .case-desc { font-size: 12px; margin-bottom: 12px; }
+    .m { padding: 8px 4px; }
+    .m-val { font-size: 17px; }
+    .m-label { font-size: 10.5px; }
+    .timeline { grid-template-columns: 1fr 1fr; }
+    .tl { padding-bottom: 12px; }
+    .summary-text p { font-size: 13px; line-height: 1.6; }
+    .motto blockquote { font-size: 15px; }
+  }
 </style>
 </head>
 <body>
- 
-<div>
-<div class="card">
- 
-  <!-- Gradient top strip -->
+
+<!-- Ícones (estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
+</svg>
+
+<nav class="toolbar" aria-label="Preferências">
+  <button class="tool-btn" id="lang-btn" type="button" aria-label="Switch to English">
+    <svg class="icon"><use href="#i-globe"/></svg><span id="lang-label">EN</span>
+  </button>
+  <button class="tool-btn" id="theme-btn" type="button" aria-label="Alternar tema claro/escuro">
+    <svg class="icon i-sun-show"><use href="#i-sun"/></svg>
+    <svg class="icon i-moon-show"><use href="#i-moon"/></svg>
+    <span data-i18n="theme">Tema</span>
+  </button>
+</nav>
+
+<main class="card">
   <div class="top-strip"></div>
- 
+
   <!-- ─── HEADER ─── -->
-  <div class="header">
-    <div class="header-left">
-      <div class="name">Gustavo <span>Frigo</span></div>
-      <div class="title-bar">Project Manager Sênior · PMO · Transformação Digital · IA</div>
-      <div class="header-tags">
-        <span class="tag blue">PMP Certified</span>
-        <span class="tag teal">CSPO · PRINCE2</span>
-        <span class="tag">São Paulo, SP</span>
-        <span class="tag">Serasa Experian</span>
-      </div>
-    </div>
-    <div class="header-stats">
-      <div class="big-stat">
-        <div class="big-num b">15+</div>
-        <div class="big-label">anos de experiência</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="big-stat">
-        <div class="big-num t">R$80M+</div>
-        <div class="big-label">em projetos entregues</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="big-stat">
-        <div class="big-num w">100+</div>
-        <div class="big-label">profissionais liderados</div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- ─── ROW 1: MOTTO + EXPERTISE ─── -->
-  <div class="row-1">
-    <div class="motto-cell">
-      <div class="motto-label">Filosofia</div>
-      <div class="motto-text">"Gerenciar projetos não é cumprir escopo, é gerar valor contínuo."</div>
-      <div class="motto-author">— Gustavo Frigo</div>
-    </div>
-    <div class="expertise-cell">
-      <div class="cell-label">Áreas de Atuação</div>
-      <div class="expertise-grid">
-        <div class="exp-item">
-          <div class="exp-icon">🎯</div>
-          <div class="exp-name">Gestão de Projetos & PMO</div>
-          <div class="exp-sub">PMBOK · Scrum · Kanban</div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon">🤖</div>
-          <div class="exp-name">IA & Transformação Digital</div>
-          <div class="exp-sub">Analytics · Automação</div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon">🔐</div>
-          <div class="exp-name">Segurança da Informação</div>
-          <div class="exp-sub">ISO 27001 · LGPD</div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon">🏛</div>
-          <div class="exp-name">Governança & Compliance</div>
-          <div class="exp-sub">ITIL · COBIT · OKR</div>
+  <header class="header">
+    <div class="header-main">
+      <div class="avatar" aria-hidden="true">GF</div>
+      <div>
+        <h1>Gustavo <span>Frigo</span></h1>
+        <p class="headline" data-i18n="headline">Gerente de Projetos Sênior · PMO · Transformação Digital · IA</p>
+        <div class="tags">
+          <span class="tag blue" data-i18n="tag-pmp">Certificado PMP</span>
+          <span class="tag teal">CSPO · PRINCE2</span>
+          <span class="tag">São Paulo, SP</span>
         </div>
       </div>
     </div>
-  </div>
- 
-  <!-- ─── ROW 2: CASES ─── -->
-  <div class="row-2">
-    <div class="cases-header">
-      <div class="cell-label" style="margin-bottom:0">Cases de Alto Impacto</div>
-      <div style="font-size:11px;color:#334155">3 projetos · R$42M+ gerenciados</div>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener">
+        <svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn
+      </a>
+      <a class="btn" href="mailto:gustavofrigo@gmail.com">
+        <svg class="icon"><use href="#i-mail"/></svg><span data-i18n="cta-mail">Enviar e-mail</span>
+      </a>
+      <button class="btn" type="button" id="pdf-btn">
+        <svg class="icon"><use href="#i-download"/></svg><span data-i18n="cta-pdf">Baixar CV em PDF</span>
+      </button>
     </div>
-    <div class="cases-grid-inf">
- 
-      <div class="case-col c1">
-        <div class="case-company c1">SSP-SP · Governo do Estado</div>
-        <div class="case-name-inf">Muralha Paulista<br>— IA em Segurança Pública</div>
-        <div class="case-metrics-inf">
-          <div class="cm"><div class="cm-val b">R$15M</div><div class="cm-label">Budget</div></div>
-          <div class="cm"><div class="cm-val g">-15%</div><div class="cm-label">Abaixo do orçamento</div></div>
-          <div class="cm"><div class="cm-val b">27k</div><div class="cm-label">Câmeras com IA</div></div>
-          <div class="cm"><div class="cm-val g">+30%</div><div class="cm-label">Response time</div></div>
-        </div>
-      </div>
- 
-      <div class="case-col c2">
-        <div class="case-company c2">CPTM · Infraestrutura Crítica</div>
-        <div class="case-name-inf">Recovery Pós-Ransomware<br>— 3M usuários/dia</div>
-        <div class="case-metrics-inf">
-          <div class="cm"><div class="cm-val t">250</div><div class="cm-label">Servidores recuperados</div></div>
-          <div class="cm"><div class="cm-val g">-67%</div><div class="cm-label">vs. prazo estimado</div></div>
-          <div class="cm"><div class="cm-val t">10d</div><div class="cm-label">vs. 30 dias previstos</div></div>
-          <div class="cm"><div class="cm-val g">Zero</div><div class="cm-label">Perda de dados</div></div>
-        </div>
-      </div>
- 
-      <div class="case-col c3">
-        <div class="case-company c3">Porto Seguro · Segurança</div>
-        <div class="case-name-inf">Isolamento da Produção<br>— 16 sites protegidos</div>
-        <div class="case-metrics-inf">
-          <div class="cm"><div class="cm-val p">R$25M</div><div class="cm-label">Programa</div></div>
-          <div class="cm"><div class="cm-val g">100%</div><div class="cm-label">ISO 27001 compliance</div></div>
-          <div class="cm"><div class="cm-val p">14k</div><div class="cm-label">Ativos protegidos</div></div>
-          <div class="cm"><div class="cm-val p">16</div><div class="cm-label">Sites gerenciados</div></div>
-        </div>
-      </div>
- 
+  </header>
+
+  <!-- ─── NÚMEROS ─── -->
+  <section class="stats" aria-label="Números">
+    <div class="stat">
+      <div class="stat-num b">15+</div>
+      <div class="stat-label" data-i18n="stat-years">anos de experiência</div>
     </div>
-  </div>
- 
-  <!-- ─── ROW 3: SKILLS + CAREER ─── -->
-  <div class="row-3">
- 
-    <div class="skills-cell">
-      <div class="cell-label">Proficiência</div>
-      <div class="skill-bars">
-        <div class="sb">
-          <div class="sb-top"><span class="sb-name">Gestão de Projetos & PMO</span><span class="sb-lvl">Especialista</span></div>
-          <div class="sb-track"><div class="sb-fill blue" style="width:97%"></div></div>
-        </div>
-        <div class="sb">
-          <div class="sb-top"><span class="sb-name">Liderança & Stakeholders</span><span class="sb-lvl">Especialista</span></div>
-          <div class="sb-track"><div class="sb-fill teal" style="width:95%"></div></div>
-        </div>
-        <div class="sb">
-          <div class="sb-top"><span class="sb-name">Transformação Digital</span><span class="sb-lvl">Sênior</span></div>
-          <div class="sb-track"><div class="sb-fill blue" style="width:92%"></div></div>
-        </div>
-        <div class="sb">
-          <div class="sb-top"><span class="sb-name">Segurança da Informação</span><span class="sb-lvl">Avançado</span></div>
-          <div class="sb-track"><div class="sb-fill purple" style="width:88%"></div></div>
-        </div>
-        <div class="sb">
-          <div class="sb-top"><span class="sb-name">IA Aplicada & Analytics</span><span class="sb-lvl">Avançado</span></div>
-          <div class="sb-track"><div class="sb-fill teal" style="width:85%"></div></div>
-        </div>
-        <div class="sb">
-          <div class="sb-top"><span class="sb-name">Infraestrutura & Cloud (AWS)</span><span class="sb-lvl">Sênior</span></div>
-          <div class="sb-track"><div class="sb-fill purple" style="width:82%"></div></div>
-        </div>
+    <div class="stat">
+      <div class="stat-num t">R$80M+</div>
+      <div class="stat-label" data-i18n="stat-budget">em projetos entregues</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num i">100+</div>
+      <div class="stat-label" data-i18n="stat-people">profissionais liderados</div>
+    </div>
+  </section>
+
+  <!-- ─── RESUMO ─── -->
+  <section class="summary" aria-labelledby="h-summary">
+    <div class="summary-text">
+      <h2 class="label" id="h-summary" data-i18n="h-summary">Resumo</h2>
+      <p data-i18n="summary-1">Gerente de projetos com mais de 15 anos em TI, segurança da informação e IA aplicada, em empresas privadas e no Governo do Estado de São Paulo. Hoje sou <strong>Gerente de Projetos Executivo na Serasa Experian</strong>.</p>
+      <p data-i18n="summary-2">Na SSP-SP, entreguei o Muralha Paulista com 27 mil câmeras integradas a IA e 15% abaixo do orçamento. Na CPTM, coordenei a recuperação após um ataque de ransomware: 250 servidores de volta em 10 dias, sem perda de dados, numa operação que atende 3 milhões de passageiros por dia.</p>
+    </div>
+    <div class="motto">
+      <h2 class="label" data-i18n="h-motto">Como trabalho</h2>
+      <blockquote data-i18n="motto">"Um projeto bem gerenciado continua gerando valor depois da entrega."</blockquote>
+    </div>
+  </section>
+
+  <!-- ─── ÁREAS DE ATUAÇÃO ─── -->
+  <section class="pad" aria-labelledby="h-areas">
+    <h2 class="label" id="h-areas" data-i18n="h-areas">Áreas de atuação</h2>
+    <div class="expertise-grid">
+      <div class="exp">
+        <div class="exp-icon"><svg class="icon"><use href="#i-target"/></svg></div>
+        <div><h3 data-i18n="a1">Gestão de projetos e PMO</h3><p>PMBOK · Scrum · Kanban · PRINCE2</p></div>
+      </div>
+      <div class="exp">
+        <div class="exp-icon"><svg class="icon"><use href="#i-cpu"/></svg></div>
+        <div><h3 data-i18n="a2">IA e transformação digital</h3><p data-i18n="a2s">Analytics · Automação · Visão computacional</p></div>
+      </div>
+      <div class="exp">
+        <div class="exp-icon"><svg class="icon"><use href="#i-shield"/></svg></div>
+        <div><h3 data-i18n="a3">Segurança da informação</h3><p>ISO 27001 · LGPD · Ransomware recovery</p></div>
+      </div>
+      <div class="exp">
+        <div class="exp-icon"><svg class="icon"><use href="#i-landmark"/></svg></div>
+        <div><h3 data-i18n="a4">Governança e compliance</h3><p>ITIL · COBIT · OKR</p></div>
+      </div>
+      <div class="exp">
+        <div class="exp-icon"><svg class="icon"><use href="#i-users"/></svg></div>
+        <div><h3 data-i18n="a5">Liderança e stakeholders</h3><p data-i18n="a5s">Times de 100+ pessoas · Setor público e privado</p></div>
+      </div>
+      <div class="exp">
+        <div class="exp-icon"><svg class="icon"><use href="#i-cloud"/></svg></div>
+        <div><h3 data-i18n="a6">Infraestrutura e cloud</h3><p data-i18n="a6s">AWS · Data centers · Redes</p></div>
       </div>
     </div>
- 
-    <div class="career-cell">
-      <div class="cell-label">Trajetória</div>
-      <div class="timeline-inf">
-        <div class="tl-item">
-          <div class="tl-dot-wrap"><div class="tl-dot current"></div><div class="tl-line"></div></div>
-          <div class="tl-content">
-            <div class="tl-period">02/2026 · Atual</div>
-            <div class="tl-company">Serasa Experian</div>
-            <div class="tl-role">Gerente de Projetos Executivo</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-content">
-            <div class="tl-period">06/2023 · 08/2025</div>
-            <div class="tl-company">Governo SP · SSP-SP</div>
-            <div class="tl-role">Software Manufacturing Manager</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-content">
-            <div class="tl-period">03/2022 · 06/2023</div>
-            <div class="tl-company">CPTM · via PRODESP/G&P</div>
-            <div class="tl-role">Project Manager | IT Coordinator</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-content">
-            <div class="tl-period">01/2016 · 06/2021</div>
-            <div class="tl-company">DM · Brasil&Sabor</div>
-            <div class="tl-role">Sócio-Proprietário · R$250k/mês · 70k+ clientes</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-content">
-            <div class="tl-period">11/2013 · 05/2015</div>
-            <div class="tl-company">Porto Seguro</div>
-            <div class="tl-role">Project Manager</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-content">
-            <div class="tl-period">11/2011 · 11/2013</div>
-            <div class="tl-company">INBRA Aerospace</div>
-            <div class="tl-role">Project Manager | IT Coordinator</div>
-          </div>
-        </div>
-      </div>
+  </section>
+
+  <!-- ─── CASES ─── -->
+  <section aria-labelledby="h-cases">
+    <div class="cases-head">
+      <h2 class="label" id="h-cases" data-i18n="h-cases">Cases de alto impacto</h2>
+      <span class="cases-total" data-i18n="cases-total">3 projetos · R$40M+ em orçamento</span>
     </div>
- 
-  </div>
- 
-  <!-- ─── ROW 4: CERTS + EDUCATION ─── -->
-  <div class="row-4">
- 
-    <div class="certs-cell">
-      <div class="cell-label">Certificações</div>
-      <div class="certs-inf">
-        <div class="cert-chip pmp"><span class="cert-icon-sm">🏆</span>PMP · PMI</div>
-        <div class="cert-chip cspo"><span class="cert-icon-sm">⚡</span>CSPO · Scrum Alliance</div>
-        <div class="cert-chip p2"><span class="cert-icon-sm">👑</span>PRINCE2</div>
-        <div class="cert-chip"><span class="cert-icon-sm">🔧</span>ITIL</div>
-        <div class="cert-chip"><span class="cert-icon-sm">🏛</span>COBIT · ISACA</div>
-        <div class="cert-chip"><span class="cert-icon-sm">🌐</span>CCNA · Cisco</div>
-        <div class="cert-chip"><span class="cert-icon-sm">💡</span>Design Thinking</div>
-        <div class="cert-chip"><span class="cert-icon-sm">📊</span>Métricas Ágeis</div>
-      </div>
+    <div class="cases-grid">
+
+      <article class="case c1">
+        <div class="case-org" data-i18n="c1-org">SSP-SP · Governo do Estado</div>
+        <h3 data-i18n="c1-title">Muralha Paulista: IA na segurança pública</h3>
+        <p class="case-desc" data-i18n="c1-desc">Integração de câmeras públicas e privadas a uma plataforma de reconhecimento por IA.</p>
+        <div class="metrics">
+          <div class="m"><div class="m-val">R$15M</div><div class="m-label" data-i18n="m-budget">Orçamento</div></div>
+          <div class="m"><div class="m-val g">-15%</div><div class="m-label" data-i18n="m-under">Abaixo do orçamento</div></div>
+          <div class="m"><div class="m-val" data-i18n="m-27k">27 mil</div><div class="m-label" data-i18n="m-cams">Câmeras com IA</div></div>
+          <div class="m"><div class="m-val g">-30%</div><div class="m-label" data-i18n="m-resp">Tempo de resposta</div></div>
+        </div>
+      </article>
+
+      <article class="case c2">
+        <div class="case-org" data-i18n="c2-org">CPTM · Infraestrutura crítica</div>
+        <h3 data-i18n="c2-title">Recuperação pós-ransomware</h3>
+        <p class="case-desc" data-i18n="c2-desc">Restauração dos sistemas da companhia de trens metropolitanos de São Paulo.</p>
+        <div class="metrics">
+          <div class="m"><div class="m-val">250</div><div class="m-label" data-i18n="m-servers">Servidores recuperados</div></div>
+          <div class="m"><div class="m-val g" data-i18n="m-10d">10 dias</div><div class="m-label" data-i18n="m-30d">Previsão era de 30</div></div>
+          <div class="m"><div class="m-val">3M</div><div class="m-label" data-i18n="m-users">Passageiros/dia</div></div>
+          <div class="m"><div class="m-val g" data-i18n="m-zero">Zero</div><div class="m-label" data-i18n="m-loss">Perda de dados</div></div>
+        </div>
+      </article>
+
+      <article class="case c3">
+        <div class="case-org" data-i18n="c3-org">Porto Seguro · Segurança da informação</div>
+        <h3 data-i18n="c3-title">Isolamento do ambiente de produção</h3>
+        <p class="case-desc" data-i18n="c3-desc">Segmentação e proteção da produção em 16 sites, com adequação à ISO 27001.</p>
+        <div class="metrics">
+          <div class="m"><div class="m-val">R$25M</div><div class="m-label" data-i18n="m-program">Programa</div></div>
+          <div class="m"><div class="m-val g">100%</div><div class="m-label" data-i18n="m-iso">Conformidade ISO 27001</div></div>
+          <div class="m"><div class="m-val" data-i18n="m-14k">14 mil</div><div class="m-label" data-i18n="m-assets">Ativos protegidos</div></div>
+          <div class="m"><div class="m-val">16</div><div class="m-label" data-i18n="m-sites">Sites</div></div>
+        </div>
+      </article>
+
     </div>
- 
-    <div class="edu-cell">
-      <div class="cell-label">Formação</div>
-      <div class="edu-items">
-        <div class="edu-item">
-          <div class="edu-year-inf">2024</div>
-          <div class="edu-degree-inf">MBA Business Strategy & Transformation</div>
-          <div class="edu-inst-inf">FIAP</div>
+  </section>
+
+  <!-- ─── TRAJETÓRIA ─── -->
+  <section class="pad" aria-labelledby="h-career">
+    <h2 class="label" id="h-career" data-i18n="h-career">Trajetória</h2>
+    <ol class="timeline">
+      <li class="tl current">
+        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
+        <div>
+          <div class="tl-period" data-i18n="p1">02/2026 · atual</div>
+          <h3>Serasa Experian</h3>
+          <div class="tl-role" data-i18n="r1">Gerente de Projetos Executivo</div>
         </div>
-        <div class="edu-item">
-          <div class="edu-year-inf">2023</div>
-          <div class="edu-degree-inf">Pós-Graduação BI & Analytics</div>
-          <div class="edu-inst-inf">Universidade Metodista de SP</div>
+      </li>
+      <li class="tl">
+        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
+        <div>
+          <div class="tl-period">06/2023 · 08/2025</div>
+          <h3 data-i18n="o2">Governo de SP · SSP-SP</h3>
+          <div class="tl-role" data-i18n="r2">Gerente de Fábrica de Software</div>
+          <div class="tl-note" data-i18n="n2">Muralha Paulista</div>
         </div>
-        <div class="edu-item">
-          <div class="edu-year-inf">2012</div>
-          <div class="edu-degree-inf">MBA Gerenciamento de Projetos PMI</div>
-          <div class="edu-inst-inf">FIAP</div>
+      </li>
+      <li class="tl">
+        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
+        <div>
+          <div class="tl-period">03/2022 · 06/2023</div>
+          <h3 data-i18n="o3">CPTM · via PRODESP/G&amp;P</h3>
+          <div class="tl-role" data-i18n="r3">Gerente de Projetos e Coordenador de TI</div>
+          <div class="tl-note" data-i18n="n3">Recuperação pós-ransomware</div>
         </div>
-        <div class="edu-item">
-          <div class="edu-year-inf">2004</div>
-          <div class="edu-degree-inf">Bacharelado Ciência da Computação</div>
-          <div class="edu-inst-inf">Universidade Metodista de SP</div>
+      </li>
+      <li class="tl">
+        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
+        <div>
+          <div class="tl-period">01/2016 · 06/2021</div>
+          <h3>DM · Brasil&amp;Sabor</h3>
+          <div class="tl-role" data-i18n="r4">Sócio-proprietário</div>
+          <div class="tl-note" data-i18n="n4">Gestão de P&amp;L, operação e equipe. Faturamento de R$250 mil/mês e mais de 70 mil clientes.</div>
         </div>
-      </div>
+      </li>
+      <li class="tl">
+        <div class="tl-rail"><span class="tl-dot"></span><span class="tl-line"></span></div>
+        <div>
+          <div class="tl-period">11/2013 · 05/2015</div>
+          <h3>Porto Seguro</h3>
+          <div class="tl-role" data-i18n="r5">Gerente de Projetos</div>
+          <div class="tl-note" data-i18n="n5">Isolamento do ambiente de produção</div>
+        </div>
+      </li>
+      <li class="tl">
+        <div class="tl-rail"><span class="tl-dot"></span></div>
+        <div>
+          <div class="tl-period">11/2011 · 11/2013</div>
+          <h3>INBRA Aerospace</h3>
+          <div class="tl-role" data-i18n="r6">Gerente de Projetos e Coordenador de TI</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ─── CERTIFICAÇÕES + FORMAÇÃO ─── -->
+  <section class="creds">
+    <div class="pad">
+      <h2 class="label" data-i18n="h-certs">Certificações</h2>
+      <ul class="chips">
+        <li class="chip blue"><svg class="icon"><use href="#i-award"/></svg>PMP <small>PMI</small></li>
+        <li class="chip teal"><svg class="icon"><use href="#i-award"/></svg>CSPO <small>Scrum Alliance</small></li>
+        <li class="chip indigo"><svg class="icon"><use href="#i-award"/></svg>PRINCE2</li>
+        <li class="chip"><svg class="icon"><use href="#i-award"/></svg>ITIL</li>
+        <li class="chip"><svg class="icon"><use href="#i-award"/></svg>COBIT <small>ISACA</small></li>
+        <li class="chip"><svg class="icon"><use href="#i-award"/></svg>CCNA <small>Cisco</small></li>
+      </ul>
+      <h3 class="sublabel" data-i18n="h-courses">Cursos complementares</h3>
+      <ul class="chips">
+        <li class="chip course"><svg class="icon"><use href="#i-book"/></svg>Design Thinking</li>
+        <li class="chip course"><svg class="icon"><use href="#i-book"/></svg><span data-i18n="course-metrics">Métricas Ágeis</span></li>
+      </ul>
     </div>
- 
-  </div>
- 
-  <!-- ─── FOOTER STRIP ─── -->
-  <div class="footer-strip">
-    <div class="footer-contact">
-      <div class="fc-item">✉ <span>gustavofrigo@gmail.com</span></div>
-      <div class="fc-item">📱 <span>(11) 94455-7729</span></div>
-      <div class="fc-item">in <span>linkedin.com/in/gustavoffrigo</span></div>
+    <div class="pad">
+      <h2 class="label" data-i18n="h-edu">Formação</h2>
+      <ul class="edu">
+        <li>
+          <div class="edu-year">2024</div>
+          <h3 data-i18n="e1">MBA em Business Strategy &amp; Transformation</h3>
+          <div class="edu-inst">FIAP</div>
+        </li>
+        <li>
+          <div class="edu-year">2023</div>
+          <h3 data-i18n="e2">Pós-graduação em BI e Analytics</h3>
+          <div class="edu-inst" data-i18n="metodista">Universidade Metodista de São Paulo</div>
+        </li>
+        <li>
+          <div class="edu-year">2012</div>
+          <h3 data-i18n="e3">MBA em Gerenciamento de Projetos (PMI)</h3>
+          <div class="edu-inst">FIAP</div>
+        </li>
+        <li>
+          <div class="edu-year">2004</div>
+          <h3 data-i18n="e4">Bacharelado em Ciência da Computação</h3>
+          <div class="edu-inst" data-i18n="metodista2">Universidade Metodista de São Paulo</div>
+        </li>
+      </ul>
     </div>
-    <div class="footer-brand">Gustavo Frigo · 2026</div>
-  </div>
- 
-</div><!-- /card -->
- 
-</div>
- 
+  </section>
+
+  <!-- ─── RODAPÉ ─── -->
+  <footer>
+    <ul class="contacts">
+      <li><a href="mailto:gustavofrigo@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>gustavofrigo@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener"><svg class="icon"><use href="#i-linkedin"/></svg>linkedin.com/in/gustavoffrigo</a></li>
+      <li class="screen-only"><a href="https://wa.me/5511944557729" target="_blank" rel="noopener"><svg class="icon"><use href="#i-chat"/></svg>WhatsApp</a></li>
+      <li class="print-only"><a href="tel:+5511944557729"><svg class="icon"><use href="#i-phone"/></svg>(11) 94455-7729</a></li>
+      <li class="print-only"><a href="https://gutofrigo.github.io/gustavoffrigo/"><svg class="icon"><use href="#i-globe"/></svg>gutofrigo.github.io/gustavoffrigo</a></li>
+    </ul>
+    <div class="copy">© 2026 Gustavo Frigo</div>
+  </footer>
+</main>
+
+<script>
+  // ─── Tema ───
+  document.getElementById('theme-btn').addEventListener('click', function () {
+    var root = document.documentElement;
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+
+  // ─── PDF (usa a folha de impressão) ───
+  document.getElementById('pdf-btn').addEventListener('click', function () { window.print(); });
+
+  // ─── Idioma ───
+  var EN = {
+    'theme': 'Theme',
+    'headline': 'Senior Project Manager · PMO · Digital Transformation · AI',
+    'tag-pmp': 'PMP Certified',
+    'cta-mail': 'Send an e-mail',
+    'cta-pdf': 'Download CV (PDF)',
+    'stat-years': 'years of experience',
+    'stat-budget': 'in delivered projects',
+    'stat-people': 'professionals led',
+    'h-summary': 'Summary',
+    'summary-1': 'Project manager with 15+ years in IT, information security and applied AI, in private companies and in the São Paulo State Government. Currently <strong>Executive Project Manager at Serasa Experian</strong>.',
+    'summary-2': 'At SSP-SP, I delivered Muralha Paulista, connecting 27,000 cameras to an AI platform, 15% under budget. At CPTM, I coordinated the recovery from a ransomware attack: 250 servers back online in 10 days with no data loss, in a rail operation that carries 3 million passengers a day.',
+    'h-motto': 'How I work',
+    'motto': '"A well-managed project keeps delivering value after go-live."',
+    'h-areas': 'Areas of expertise',
+    'a1': 'Project management and PMO',
+    'a2': 'AI and digital transformation',
+    'a2s': 'Analytics · Automation · Computer vision',
+    'a3': 'Information security',
+    'a4': 'Governance and compliance',
+    'a5': 'Leadership and stakeholders',
+    'a5s': 'Teams of 100+ people · Public and private sector',
+    'a6': 'Infrastructure and cloud',
+    'a6s': 'AWS · Data centers · Networks',
+    'h-cases': 'High-impact cases',
+    'cases-total': '3 projects · R$40M+ in budget',
+    'c1-org': 'SSP-SP · São Paulo State Government',
+    'c1-title': 'Muralha Paulista: AI for public safety',
+    'c1-desc': 'Public and private cameras connected to an AI recognition platform.',
+    'm-budget': 'Budget',
+    'm-under': 'Under budget',
+    'm-27k': '27k',
+    'm-cams': 'AI-enabled cameras',
+    'm-resp': 'Response time',
+    'c2-org': 'CPTM · Critical infrastructure',
+    'c2-title': 'Post-ransomware recovery',
+    'c2-desc': 'System recovery for São Paulo\'s metropolitan rail company.',
+    'm-servers': 'Servers recovered',
+    'm-10d': '10 days',
+    'm-30d': 'Estimate was 30',
+    'm-users': 'Passengers/day',
+    'm-zero': 'Zero',
+    'm-loss': 'Data loss',
+    'c3-org': 'Porto Seguro · Information security',
+    'c3-title': 'Production environment isolation',
+    'c3-desc': 'Segmentation and protection of production across 16 sites, aligned with ISO 27001.',
+    'm-program': 'Program',
+    'm-iso': 'ISO 27001 compliance',
+    'm-14k': '14k',
+    'm-assets': 'Assets protected',
+    'm-sites': 'Sites',
+    'h-career': 'Career',
+    'p1': '02/2026 · present',
+    'r1': 'Executive Project Manager',
+    'o2': 'São Paulo State Gov. · SSP-SP',
+    'r2': 'Software Manufacturing Manager',
+    'n2': 'Muralha Paulista',
+    'o3': 'CPTM · via PRODESP/G&amp;P',
+    'r3': 'Project Manager and IT Coordinator',
+    'n3': 'Post-ransomware recovery',
+    'r4': 'Co-owner',
+    'n4': 'P&amp;L, operations and team management. R$250k monthly revenue and 70k+ customers.',
+    'r5': 'Project Manager',
+    'n5': 'Production environment isolation',
+    'r6': 'Project Manager and IT Coordinator',
+    'h-certs': 'Certifications',
+    'h-courses': 'Additional courses',
+    'course-metrics': 'Agile Metrics',
+    'h-edu': 'Education',
+    'e1': 'MBA in Business Strategy &amp; Transformation',
+    'e2': 'Graduate certificate in BI and Analytics',
+    'e3': 'MBA in Project Management (PMI)',
+    'e4': 'B.Sc. in Computer Science',
+    'metodista': 'Methodist University of São Paulo',
+    'metodista2': 'Methodist University of São Paulo'
+  };
+
+  var nodes = document.querySelectorAll('[data-i18n]');
+  var PT = {};
+  nodes.forEach(function (el) { PT[el.getAttribute('data-i18n')] = el.innerHTML; });
+
+  function setLang(lang) {
+    var dict = lang === 'en' ? EN : PT;
+    nodes.forEach(function (el) {
+      var k = el.getAttribute('data-i18n');
+      if (dict[k] != null) el.innerHTML = dict[k];
+    });
+    document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+    document.getElementById('lang-label').textContent = lang === 'en' ? 'PT' : 'EN';
+    document.getElementById('lang-btn').setAttribute('aria-label', lang === 'en' ? 'Mudar para português' : 'Switch to English');
+    document.title = lang === 'en' ? 'Gustavo Frigo | Senior Project Manager, PMP' : 'Gustavo Frigo | Gerente de Projetos Sênior, PMP';
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  var current = 'pt';
+  try { current = localStorage.getItem('lang') || (location.hash === '#en' ? 'en' : 'pt'); } catch (e) {}
+  if (location.hash === '#en') current = 'en';
+  if (current === 'en') setLang('en');
+
+  document.getElementById('lang-btn').addEventListener('click', function () {
+    current = current === 'en' ? 'pt' : 'en';
+    setLang(current);
+  });
+</script>
 </body>
 </html>
