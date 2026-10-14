@@ -6,7 +6,7 @@
 <title>Gustavo Frigo | Gerente Executivo de Projetos, PMP</title>
 <meta name="description" content="Gustavo Frigo, gerente executivo de projetos com mais de 15 anos em portfólios de tecnologia: Serasa Experian, Governo de SP, CPTM e Porto Seguro. PMP, CSPO e PRINCE2.">
 <meta name="author" content="Gustavo Frigo">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#f3f6fc">
 <link rel="canonical" href="https://gutofrigo.github.io/gustavoffrigo/">
 
 <meta property="og:type" content="profile">
@@ -19,7 +19,7 @@
 <meta property="profile:last_name" content="Frigo">
 <meta name="twitter:card" content="summary">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f3a5f'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='600' fill='white' text-anchor='middle'%3EGF%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d4ed8'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='600' fill='white' text-anchor='middle'%3EGF%3C/text%3E%3C/svg%3E">
 
 <script type="application/ld+json">
 {
@@ -42,198 +42,479 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script>document.documentElement.className = 'js';</script>
 
 <style>
+  @property --ang { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+
   :root {
-    --bg: #ffffff;
-    --ink: #111827;
-    --text: #1f2937;
-    --text-2: #4b5563;
-    --muted: #6b7280;
-    --rule: #e5e7eb;
-    --soft: #f7f8fa;
-    --accent: #1f3a5f;
-    --accent-hover: #142840;
+    --bg: #f3f6fc;
+    --surface: #ffffff;
+    --ink: #081130;
+    --text: #26304a;
+    --text-2: #4f5a73;
+    --muted: #66708a;
+    --rule: #e1e7f2;
+    --rule-2: #c3d4f7;
+    --accent: #1d4ed8;
+    --accent-2: #3b82f6;
+    --accent-3: #93c5fd;
+    --accent-deep: #0b2470;
+    --tint: #edf3ff;
+    --tint-2: #dbe7ff;
+    --radius: 24px;
+    --shadow: 0 1px 2px rgba(8,17,48,.04), 0 18px 40px -20px rgba(11,36,112,.22);
+    --shadow-up: 0 2px 4px rgba(8,17,48,.05), 0 40px 70px -28px rgba(11,36,112,.38);
+    --ease: cubic-bezier(.2,.75,.2,1);
+    --grad: linear-gradient(120deg, var(--accent-deep) 0%, var(--accent) 45%, var(--accent-2) 80%, #60a5fa 100%);
+    --sans: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
     color-scheme: light;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body {
     background: var(--bg); color: var(--text);
-    font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    font-size: 15.5px; line-height: 1.55;
+    font-family: var(--sans); font-size: 16px; line-height: 1.6;
     font-variant-numeric: lining-nums tabular-nums;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
+  /* Grão leve sobre a página inteira */
+  body::after { content: ''; position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-  ul { list-style: none; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
-  section[id] { scroll-margin-top: 64px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 10px; }
+  ul, ol { list-style: none; }
+  ::selection { background: var(--tint-2); color: var(--ink); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+  section[id] { scroll-margin-top: 96px; }
+  [hidden] { display: none !important; }
 
-  /* ─── Topo ─── */
-  .top { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
-  .top-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
-  .top-name { font-weight: 600; color: var(--ink); font-size: 15px; }
+  /* Luz que acompanha o cursor */
+  .glow-cursor { position: fixed; left: 0; top: 0; z-index: 0; width: 640px; height: 640px; margin: -320px 0 0 -320px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(59,130,246,.10), rgba(59,130,246,0) 62%); opacity: 0; transition: opacity .6s; will-change: transform; }
+  .glow-cursor.on { opacity: 1; }
+  main, footer { position: relative; z-index: 1; }
+
+  /* ─── Barra de progresso e topo ─── */
+  .progress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 50; background: var(--grad); transform: scaleX(var(--scroll, 0)); transform-origin: 0 50%; }
+  .top { position: sticky; top: 12px; z-index: 40; padding: 0 16px; }
+  .top-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 0 16px; min-height: 60px; padding: 0 10px 0 12px; border-radius: 999px; background: rgba(255,255,255,.62); border: 1px solid rgba(195,212,247,.7); backdrop-filter: saturate(1.8) blur(18px); -webkit-backdrop-filter: saturate(1.8) blur(18px); box-shadow: 0 10px 30px -18px rgba(11,36,112,.35); transition: background .3s, box-shadow .3s; }
+  .top.stuck .top-inner { background: rgba(255,255,255,.84); box-shadow: 0 16px 40px -20px rgba(11,36,112,.45); }
+  .top-name { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); font-size: 15px; letter-spacing: -.01em; }
   .top-name:hover { text-decoration: none; }
-  .top-nav { display: flex; gap: 22px; }
-  .top-nav a { color: var(--text-2); font-size: 14px; }
-  .top-nav a:hover { color: var(--ink); text-decoration: none; }
+  .mark { position: relative; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--grad); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: .02em; box-shadow: inset 0 -6px 12px rgba(0,0,0,.18), inset 0 6px 10px rgba(255,255,255,.35), 0 6px 14px -6px rgba(29,78,216,.7); }
+  .top-nav { display: flex; gap: 2px; align-items: center; }
+  .top-nav a { display: inline-flex; align-items: center; height: 36px; padding: 0 13px; border-radius: 999px; color: var(--text-2); font-size: 14px; font-weight: 500; white-space: nowrap; transition: color .2s, background .2s; }
+  .top-nav a:hover { color: var(--ink); text-decoration: none; background: rgba(29,78,216,.07); }
+  .top-nav a[aria-current="true"] { color: #fff; background: var(--ink); }
   .top-tools { display: flex; align-items: center; gap: 6px; margin-left: auto; }
 
   .btn {
-    display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 14px;
-    border: 1px solid var(--rule); border-radius: 6px; background: #fff; color: var(--ink);
-    font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap;
+    position: relative; overflow: hidden;
+    display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 20px;
+    border: 1px solid var(--rule-2); border-radius: 999px; background: rgba(255,255,255,.8); color: var(--ink);
+    font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; white-space: nowrap;
+    transition: transform .3s var(--ease), box-shadow .3s, border-color .3s, background .3s, translate .25s var(--ease);
   }
-  .btn:hover { border-color: #c9ced6; text-decoration: none; }
-  .btn.solid { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .btn.solid:hover { background: var(--accent-hover); }
-  .btn.plain { border-color: transparent; color: var(--text-2); padding: 0 10px; }
-  .btn.plain:hover { color: var(--ink); }
-  .btn svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .btn:hover { border-color: var(--accent-3); text-decoration: none; box-shadow: var(--shadow); background: #fff; }
+  .btn:active { transform: scale(.97); }
+  .btn.solid { background: var(--grad); background-size: 160% 100%; border-color: transparent; color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 12px 26px -12px rgba(29,78,216,.85); transition: transform .3s var(--ease), box-shadow .3s, background-position .5s, translate .25s var(--ease); }
+  .btn.solid::after { content: ''; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.4), transparent); transform: skewX(-18deg); transition: left .7s var(--ease); }
+  .btn.solid:hover { background-position: 100% 0; box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 18px 34px -12px rgba(29,78,216,.9); }
+  .btn.solid:hover::after { left: 120%; }
+  .btn.sm { height: 40px; padding: 0 16px; font-size: 14px; }
+  .btn.plain { border-color: transparent; background: transparent; color: var(--text-2); padding: 0 12px; font-family: var(--mono); font-size: 13px; }
+  .btn.plain:hover { color: var(--ink); box-shadow: none; background: rgba(29,78,216,.07); }
+  .btn svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 
   /* Menu de currículos */
   .cv-menu { position: relative; }
   .cv-menu summary { list-style: none; }
   .cv-menu summary::-webkit-details-marker { display: none; }
-  .cv-menu .caret { transition: transform .15s; }
+  .cv-menu .caret { transition: transform .2s; }
   .cv-menu[open] .caret { transform: rotate(180deg); }
   .cv-list {
-    position: absolute; right: 0; top: calc(100% + 6px); z-index: 30; width: 290px;
-    background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 6px;
-    box-shadow: 0 10px 30px rgba(17,24,39,.10);
+    position: absolute; right: 0; top: calc(100% + 12px); z-index: 30; width: 300px;
+    background: rgba(255,255,255,.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--rule-2); border-radius: 20px; padding: 6px;
+    box-shadow: var(--shadow-up); animation: pop .25s var(--ease); transform-origin: 90% 0;
   }
-  .cv-menu.left .cv-list { left: 0; right: auto; }
-  .cv-list a { display: block; padding: 9px 10px; border-radius: 6px; color: var(--ink); font-size: 14px; font-weight: 500; }
-  .cv-list a:hover { background: var(--soft); text-decoration: none; }
+  @keyframes pop { from { opacity: 0; transform: perspective(600px) rotateX(-18deg) translateY(-6px); } }
+  .cv-list a { display: block; padding: 11px 14px; border-radius: 14px; color: var(--ink); font-size: 14px; font-weight: 500; }
+  .cv-list a:hover { background: var(--tint); text-decoration: none; }
   .cv-list small { display: block; color: var(--muted); font-weight: 400; font-size: 12.5px; }
 
-  /* ─── Apresentação ─── */
-  .intro { padding: 48px 0 36px; }
-  .intro-head { display: flex; align-items: center; gap: 22px; }
-  .photo { width: 92px; height: 92px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 1px solid var(--rule); }
-  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  h1 { font-size: 38px; font-weight: 600; letter-spacing: -.8px; line-height: 1.1; color: var(--ink); }
-  .title { font-size: 17px; color: var(--text); margin-top: 6px; }
-  .meta { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 10px; font-size: 14px; color: var(--muted); }
-  .meta a { color: var(--accent); }
-  .summary { margin-top: 24px; max-width: 760px; font-size: 16px; color: var(--text); }
-  .summary p + p { margin-top: 10px; }
-  .intro-cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  /* ─── Abertura ─── */
+  .hero { position: relative; margin-top: -72px; padding: 136px 0 0; isolation: isolate; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  .aurora { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .7; will-change: transform; }
+  .aurora.a1 { width: 760px; height: 760px; right: -200px; top: -220px; background: radial-gradient(circle, #b9d0ff 0%, rgba(185,208,255,0) 66%); animation: drift1 18s ease-in-out infinite alternate; }
+  .aurora.a2 { width: 620px; height: 620px; left: -240px; top: 140px; background: radial-gradient(circle, #d5e4ff 0%, rgba(213,228,255,0) 66%); animation: drift2 22s ease-in-out infinite alternate; }
+  @keyframes drift1 { to { transform: translate3d(-80px, 70px, 0) scale(1.12); } }
+  @keyframes drift2 { to { transform: translate3d(100px, -50px, 0) scale(1.08); } }
+  /* Chão em grade com perspectiva */
+  .floor { position: absolute; left: -30%; right: -30%; top: 62%; height: 60%; background-image: linear-gradient(rgba(29,78,216,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(29,78,216,.18) 1px, transparent 1px); background-size: 70px 70px; transform: perspective(520px) rotateX(64deg); transform-origin: 50% 0; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 30%, #000 55%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 30%, #000 55%, transparent 100%); animation: floor 5s linear infinite; }
+  @keyframes floor { to { background-position: 0 70px; } }
 
-  .figures { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 32px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-  .fig { padding: 16px 18px 16px 0; }
-  .fig + .fig { padding-left: 18px; border-left: 1px solid var(--rule); }
-  .fig b { display: block; font-size: 26px; font-weight: 600; color: var(--ink); letter-spacing: -.5px; line-height: 1.15; }
-  .fig span { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; line-height: 1.4; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+  .hero-copy > * { animation: rise 1s var(--ease) both; }
+  .hero-copy > :nth-child(2) { animation: none; }
+  .hero-copy > :nth-child(3) { animation-delay: .35s; }
+  .hero-copy > :nth-child(4) { animation-delay: .45s; }
+  .hero-copy > :nth-child(5) { animation-delay: .55s; }
+  .hero-copy > :nth-child(6) { animation-delay: .65s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(26px); filter: blur(6px); } }
 
-  /* ─── Seções em duas colunas ─── */
-  .sec { display: grid; grid-template-columns: 190px 1fr; gap: 28px; padding: 32px 0; border-top: 1px solid var(--rule); }
-  .intro + .sec { border-top: none; }
-  h2 { font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.4; padding-top: 2px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; min-height: 34px; padding: 5px 15px 5px 12px; line-height: 1.4; border: 1px solid var(--rule-2); border-radius: 18px; background: rgba(255,255,255,.72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); font-family: var(--mono); font-size: 12.5px; color: var(--accent-deep); letter-spacing: .01em; box-shadow: 0 6px 18px -12px rgba(11,36,112,.4); }
+  .dot { position: relative; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+  .dot::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: #22c55e; animation: ping 2s ease-out infinite; }
+  @keyframes ping { to { transform: scale(3.2); opacity: 0; } }
+
+  h1 { margin-top: 24px; font-size: clamp(54px, 8.6vw, 116px); font-weight: 700; letter-spacing: -.055em; line-height: .92; color: var(--ink); perspective: 900px; }
+  h1 .w { display: inline-block; transform-origin: 50% 100%; animation: flip 1.2s var(--ease) both; }
+  h1 .w + .w { animation-delay: .14s; }
+  @keyframes flip { from { opacity: 0; transform: rotateX(-95deg) translateY(30px); } }
+  .grad { background: var(--grad); background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 14px 22px rgba(29,78,216,.25)); animation: flip 1.2s var(--ease) .14s both, sheen 6s ease-in-out 1.4s infinite alternate !important; }
+  @keyframes sheen { from { background-position: 0 0; } to { background-position: 100% 0; } }
+  .title { margin-top: 20px; font-size: clamp(17px, 1.9vw, 21px); font-weight: 500; color: var(--ink); letter-spacing: -.01em; }
+
+  /* Seletor de perfil */
+  .lens { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; margin-top: 26px; }
+  .lens-label { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+  .seg { position: relative; display: inline-flex; padding: 4px; background: rgba(255,255,255,.75); border: 1px solid var(--rule-2); border-radius: 999px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: inset 0 1px 3px rgba(11,36,112,.08); }
+  .seg-pill { position: absolute; top: 4px; bottom: 4px; left: 0; width: 0; border-radius: 999px; background: var(--grad); box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 8px 18px -8px rgba(29,78,216,.85); transition: transform .45s var(--ease), width .45s var(--ease); }
+  .seg button { position: relative; z-index: 1; height: 36px; padding: 0 17px; border: 0; border-radius: 999px; background: transparent; color: var(--text-2); font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: color .3s; }
+  .seg button:hover { color: var(--ink); }
+  .seg button[aria-pressed="true"] { color: #fff; }
+  html:not(.js) .seg button[aria-pressed="true"] { background: var(--grad); }
+  .swap [data-i18n] { animation: swap .5s var(--ease); }
+  @keyframes swap { from { opacity: 0; filter: blur(6px); transform: translateY(5px); } }
+
+  .summary { margin-top: 22px; max-width: 600px; font-size: 16.5px; color: var(--text); }
+  .summary p + p { margin-top: 12px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+
+  /* Globo 3D */
+  .hero-visual { position: relative; width: 100%; max-width: 600px; aspect-ratio: 1 / 1; justify-self: center; --px: 0; --py: 0; animation: rise 1.4s var(--ease) .3s both; }
+  #globe { position: absolute; inset: -6%; touch-action: pan-y; cursor: grab; }
+  #globe:active { cursor: grabbing; }
+  #globe canvas { display: block; width: 100% !important; height: 100% !important; }
+  .orb-glow { position: absolute; inset: 14%; border-radius: 50%; background: radial-gradient(circle at 50% 50%, rgba(147,197,253,.55), rgba(147,197,253,0) 68%); filter: blur(20px); }
+  /* Esfera em CSS quando não há WebGL */
+  .orb { position: absolute; inset: 20%; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #fff 0%, #dbe7ff 22%, #7aa7f7 58%, #1d4ed8 100%); box-shadow: inset -30px -40px 80px rgba(11,36,112,.45), 0 40px 80px -30px rgba(29,78,216,.6); animation: bob 6s ease-in-out infinite alternate; }
+  .globe-on .orb { display: none; }
+  @keyframes bob { to { transform: translateY(-14px); } }
+  .hud { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 10px 14px 10px 10px; border-radius: 16px; background: rgba(255,255,255,.7); border: 1px solid rgba(195,212,247,.9); backdrop-filter: blur(12px) saturate(1.5); -webkit-backdrop-filter: blur(12px) saturate(1.5); box-shadow: 0 18px 36px -20px rgba(11,36,112,.5); line-height: 1.25; pointer-events: none; translate: calc(var(--px) * var(--z, 20px)) calc(var(--py) * var(--z, 20px)); animation: hover-y 5s ease-in-out infinite alternate; }
+  .hud::before { content: ''; width: 30px; height: 30px; border-radius: 10px; background: var(--grad); box-shadow: inset 0 -4px 8px rgba(0,0,0,.15), inset 0 4px 8px rgba(255,255,255,.35); flex-shrink: 0; }
+  .hud b { display: block; font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
+  .hud small { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .hud.h1 { left: -4%; top: 16%; --z: 34px; }
+  .hud.h2 { right: -2%; top: 40%; --z: -26px; animation-delay: -2s; }
+  .hud.h3 { left: 6%; bottom: 10%; --z: 22px; animation-delay: -3.5s; }
+  @keyframes hover-y { to { transform: translateY(-12px); } }
+  .drag-hint { position: absolute; left: 50%; bottom: -2%; transform: translateX(-50%); font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; display: none; }
+  .globe-on .drag-hint { display: block; }
+
+  /* Números da abertura */
+  .stats { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 56px; border-radius: 28px; background: rgba(255,255,255,.66); border: 1px solid rgba(195,212,247,.85); backdrop-filter: blur(16px) saturate(1.5); -webkit-backdrop-filter: blur(16px) saturate(1.5); box-shadow: var(--shadow-up); animation: rise 1.2s var(--ease) .7s both; }
+  .fig { padding: 24px 26px; }
+  .fig + .fig { border-left: 1px solid var(--rule); }
+  .fig b { display: block; font-size: clamp(30px, 3.4vw, 42px); font-weight: 700; letter-spacing: -.045em; line-height: 1.05; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .fig span { display: block; font-size: 13.5px; color: var(--text-2); margin-top: 6px; line-height: 1.4; }
+
+  /* Faixa de empresas */
+  .marquee { margin-top: 64px; padding: 26px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.5); }
+  .mq-inner { display: flex; align-items: center; gap: 28px; }
+  .mq-label { flex-shrink: 0; font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .mq-view { display: flex; overflow: hidden; flex: 1; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .mq-track { display: flex; flex-shrink: 0; min-width: 100%; justify-content: space-around; gap: 56px; padding-right: 56px; }
+  .mq-track li { font-size: 22px; font-weight: 700; letter-spacing: -.03em; color: transparent; -webkit-text-stroke: 1px #7f95c4; white-space: nowrap; transition: color .3s; }
+  .mq-track li:hover { color: var(--accent); -webkit-text-stroke-color: var(--accent); }
+  .js .mq-track { animation: mq 40s linear infinite; }
+  .mq-view:hover .mq-track { animation-play-state: paused; }
+  @keyframes mq { to { transform: translateX(-100%); } }
+
+  /* ─── Seções ─── */
+  .sec { padding: 120px 0 0; }
+  .sec-head { display: flex; align-items: flex-end; gap: 18px; margin-bottom: 40px; }
+  .idx { font-size: clamp(56px, 7vw, 92px); font-weight: 800; letter-spacing: -.06em; line-height: .8; color: transparent; -webkit-text-stroke: 1.5px var(--accent-3); background: linear-gradient(180deg, rgba(219,231,255,.9), rgba(219,231,255,0)); -webkit-background-clip: text; background-clip: text; }
+  h2 { font-size: clamp(30px, 4vw, 50px); font-weight: 700; letter-spacing: -.045em; line-height: 1.05; color: var(--ink); padding-bottom: 4px; }
+  h3 { font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
+
+  /* Cartões 3D: inclinam com o cursor, brilho e borda animada */
+  .card {
+    --rx: 0deg; --ry: 0deg;
+    position: relative; background: linear-gradient(180deg, #fff, rgba(255,255,255,.92)); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow);
+    transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry));
+    transform-style: preserve-3d;
+    transition: transform .7s var(--ease), box-shadow .4s, border-color .4s;
+  }
+  .card.tilting { transition: transform .12s linear, box-shadow .4s, border-color .4s; box-shadow: var(--shadow-up); border-color: var(--rule-2); }
+  .card::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(59,130,246,.14), transparent 62%); opacity: 0; transition: opacity .4s; pointer-events: none; }
+  .card::after { content: ''; position: absolute; inset: -1px; border-radius: inherit; padding: 1.5px; background: conic-gradient(from var(--ang), transparent 0 62%, var(--accent-2) 76%, var(--accent-3) 84%, transparent 92%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); opacity: 0; transition: opacity .4s; pointer-events: none; animation: spin 5s linear infinite; }
+  @keyframes spin { to { --ang: 360deg; } }
+  .card > * { position: relative; z-index: 1; }
+  .card.tilting::before, .card.tilting::after, .card.live::after { opacity: 1; }
+  .pop { transform: translateZ(36px); }
 
   /* Resultados */
-  .results li { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--rule); }
-  .results li:first-child { border-top: none; padding-top: 0; }
-  .results .num { font-size: 20px; font-weight: 600; color: var(--ink); letter-spacing: -.3px; line-height: 1.3; }
-  .results h3 { font-size: 15.5px; font-weight: 600; color: var(--ink); }
-  .results p { color: var(--text-2); }
+  .results { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+  .results li { grid-column: span 7; padding: 32px; min-height: 260px; display: flex; flex-direction: column; overflow: hidden; }
+  .results li:nth-child(2), .results li:nth-child(3) { grid-column: span 5; }
+  .results li .deco { position: absolute; z-index: 0; right: -10px; top: -10px; width: 220px; height: 220px; background-image: linear-gradient(rgba(29,78,216,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(29,78,216,.10) 1px, transparent 1px); background-size: 22px 22px; -webkit-mask-image: radial-gradient(circle at 70% 30%, #000, transparent 70%); mask-image: radial-gradient(circle at 70% 30%, #000, transparent 70%); pointer-events: none; }
+  .results h3 { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12.5px; font-weight: 500; color: var(--accent-deep); text-transform: uppercase; letter-spacing: .08em; }
+  .results h3::before { content: ''; width: 7px; height: 7px; border-radius: 2px; background: var(--accent-2); box-shadow: 0 0 0 4px rgba(59,130,246,.18); }
+  .results .num { margin-top: auto; padding-top: 30px; font-size: clamp(54px, 7vw, 88px); font-weight: 700; letter-spacing: -.06em; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 12px 18px rgba(29,78,216,.22)); }
+  .results p { margin-top: 12px; color: var(--text-2); max-width: 46ch; }
+  /* Os cartões de resultado precisam do recorte para a grade decorativa; o número continua saltando */
+  .results li { transform-style: flat; }
+  .results li .num { transform: none; }
+
+  /* IA */
+  .ai-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: center; padding: 44px; border-radius: 32px; background: linear-gradient(140deg, #fff 0%, var(--tint) 60%, var(--tint-2) 100%); border-color: var(--rule-2); overflow: hidden; transform-style: flat; }
+  .ai-panel .deco { position: absolute; z-index: 0; inset: 0; background-image: radial-gradient(rgba(29,78,216,.16) 1.2px, transparent 1.2px); background-size: 22px 22px; -webkit-mask-image: radial-gradient(ellipse at 80% 50%, #000, transparent 70%); mask-image: radial-gradient(ellipse at 80% 50%, #000, transparent 70%); }
+  .ai-tag { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border-radius: 999px; background: var(--ink); color: #fff; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; }
+  .ai-tag i { width: 6px; height: 6px; border-radius: 50%; background: #60a5fa; box-shadow: 0 0 10px 2px #60a5fa; animation: blink 1.6s ease-in-out infinite; }
+  @keyframes blink { 50% { opacity: .3; } }
+  .ai-lead { margin-top: 18px; font-size: clamp(18px, 1.8vw, 22px); line-height: 1.5; color: var(--ink); letter-spacing: -.01em; }
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .tools li { height: 34px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 999px; background: rgba(255,255,255,.85); border: 1px solid var(--rule-2); font-family: var(--mono); font-size: 13px; color: var(--accent-deep); }
+
+  /* Pilha isométrica: do dado ao reporte */
+  .stack-wrap { position: relative; height: 500px; display: grid; place-items: center; perspective: 1800px; --tx: 0deg; --ty: 0deg; --gap: 80px; }
+  .stack-wrap:hover { --gap: 96px; }
+  .flow-cap { position: absolute; top: 0; right: 0; font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .stack { position: relative; width: 250px; height: 250px; margin-top: 170px; transform-style: preserve-3d; transform: rotateX(calc(58deg + var(--ty))) rotateZ(calc(-40deg + var(--tx))); transition: transform .5s var(--ease); }
+  .stack::before { content: ''; position: absolute; inset: -10%; border-radius: 40px; background: radial-gradient(closest-side, rgba(29,78,216,.32), transparent); filter: blur(18px); transform: translateZ(-30px); }
+  .layer { --i: 0; position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; padding: 22px; border-radius: 30px; background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(219,231,255,.9)); border: 1px solid #b7cbf6; box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), 0 30px 40px -24px rgba(11,36,112,.5); transform: translateZ(calc(var(--i) * var(--gap))); transition: transform .6s var(--ease); animation: lift 4s ease-in-out infinite alternate; animation-delay: calc(var(--i) * -.6s); }
+  .layer::before { content: ''; position: absolute; inset: 14px; border-radius: 20px; background-image: linear-gradient(rgba(29,78,216,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(29,78,216,.10) 1px, transparent 1px); background-size: 18px 18px; -webkit-mask-image: linear-gradient(135deg, #000, transparent 70%); mask-image: linear-gradient(135deg, #000, transparent 70%); }
+  .layer::after { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 40%; border-radius: inherit; background: linear-gradient(180deg, rgba(59,130,246,.0), rgba(59,130,246,.18), rgba(59,130,246,0)); animation: scan 3.2s ease-in-out infinite; animation-delay: calc(var(--i) * .5s); }
+  @keyframes scan { 0% { transform: translateY(-20%); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(180%); opacity: 0; } }
+  @keyframes lift { to { transform: translateZ(calc(var(--i) * var(--gap) + 12px)); } }
+  .layer > * { position: relative; }
+  .layer em { font-style: normal; font-family: var(--mono); font-size: 12px; color: var(--accent); }
+  .layer span { font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -.02em; line-height: 1.2; }
+  .layer svg { width: 26px; height: 26px; stroke: var(--accent); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .layer:nth-child(2) { --i: 1; }
+  .layer:nth-child(3) { --i: 2; }
+  .layer:nth-child(4) { --i: 3; background: var(--grad); border-color: transparent; box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 40px 50px -24px rgba(29,78,216,.7); }
+  .layer:nth-child(4) span, .layer:nth-child(4) em { color: #fff; }
+  .layer:nth-child(4) svg { stroke: #fff; }
+  .layer:nth-child(4)::before { background-image: linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px); }
+
+  .ai-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 18px; }
+  .ai-grid li { padding: 26px; }
+  .ico { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 15px; background: var(--grad); color: #fff; margin-bottom: 20px; box-shadow: inset 0 -6px 12px rgba(0,0,0,.16), inset 0 6px 10px rgba(255,255,255,.3), 0 14px 22px -12px rgba(29,78,216,.8); transition: transform .5s var(--ease); }
+  .ico svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .card.tilting .ico { transform: translateZ(50px) rotate(-6deg); }
+  .ai-grid h3 { font-size: 17px; }
+  .ai-grid p { margin-top: 6px; font-size: 15px; color: var(--text-2); }
 
   /* Experiência */
-  .job + .job { margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--rule); }
-  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-  .job h3 { font-size: 16px; font-weight: 600; color: var(--ink); }
-  .job-date { font-size: 14px; color: var(--muted); white-space: nowrap; }
-  .job-role { color: var(--accent); font-weight: 500; margin-top: 1px; }
-  .job-scope { color: var(--text-2); margin-top: 6px; }
-  .bullets { margin-top: 8px; }
-  .bullets li { position: relative; padding-left: 16px; color: var(--text); }
-  .bullets li + li { margin-top: 4px; }
-  .bullets li::before { content: ''; position: absolute; left: 2px; top: .7em; width: 5px; height: 1px; background: var(--muted); }
-  .other li { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 7px 0; border-top: 1px solid var(--rule); }
+  .timeline { position: relative; padding-left: 44px; }
+  .timeline::before, .tl-fill { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; border-radius: 2px; }
+  .timeline::before { background: var(--rule); }
+  .tl-fill { background: var(--grad); transform: scaleY(var(--p, 0)); transform-origin: 50% 0; box-shadow: 0 0 14px 1px rgba(59,130,246,.55); }
+  .job { padding: 28px 30px; }
+  .job + .job { margin-top: 18px; }
+  .job .node-dot { position: absolute; left: -44px; top: 30px; width: 18px; height: 18px; border-radius: 50%; background: var(--bg); border: 2px solid var(--rule-2); transition: border-color .5s, box-shadow .5s, background .5s; }
+  .job.in .node-dot, html:not(.js) .job .node-dot { border-color: var(--accent); background: #fff; box-shadow: 0 0 0 6px rgba(29,78,216,.12), 0 0 18px 2px rgba(59,130,246,.5); }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 6px 16px; flex-wrap: wrap; }
+  .job h3 { font-size: 21px; letter-spacing: -.025em; }
+  .job-date { font-family: var(--mono); font-size: 12.5px; color: #fff; white-space: nowrap; padding: 4px 11px; border-radius: 999px; background: var(--ink); }
+  .job-role { color: var(--accent); font-weight: 500; margin-top: 3px; }
+  .job-scope { color: var(--text-2); margin-top: 10px; }
+  .bullets { margin-top: 12px; }
+  .bullets li { position: relative; padding-left: 22px; color: var(--text); }
+  .bullets li + li { margin-top: 7px; }
+  .bullets li::before { content: ''; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 2px; background: var(--grad); transform: rotate(45deg); }
+  .other { margin-top: 10px; }
+  .other li { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 11px 0; border-top: 1px solid var(--rule); }
   .other li:first-child { border-top: none; }
   .other b { font-weight: 600; color: var(--ink); }
   .other span { color: var(--text-2); }
-  .other time { color: var(--muted); font-size: 14px; white-space: nowrap; }
+  .other time { font-family: var(--mono); color: var(--muted); font-size: 12.5px; white-space: nowrap; padding-top: 3px; }
 
-  /* Listas de definição */
-  .dl > div { display: grid; grid-template-columns: 180px 1fr; gap: 16px; padding: 9px 0; border-top: 1px solid var(--rule); }
-  .dl > div:first-child { border-top: none; padding-top: 0; }
-  .dl dt { font-weight: 600; color: var(--ink); }
-  .dl dd { color: var(--text-2); }
-  .edu .dl > div { grid-template-columns: 56px 1fr; }
-  .edu dt { font-weight: 500; color: var(--muted); }
-  .edu dd b { display: block; color: var(--ink); font-weight: 600; }
-  .note { margin-top: 14px; color: var(--text-2); }
-  .note b { color: var(--ink); font-weight: 600; }
+  /* Liderança */
+  .lead { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .lead > div { grid-column: span 2; padding: 28px; }
+  .lead > div:nth-child(n+4) { grid-column: span 3; }
+  .step { display: block; font-size: 64px; font-weight: 800; letter-spacing: -.06em; line-height: .9; color: transparent; -webkit-text-stroke: 1.5px var(--accent-2); background: linear-gradient(180deg, rgba(59,130,246,.25), rgba(59,130,246,0)); -webkit-background-clip: text; background-clip: text; transition: transform .5s var(--ease); }
+  .card.tilting .step { transform: translateZ(60px); }
+  .lead dt { margin-top: 22px; font-size: 20px; font-weight: 600; color: var(--ink); letter-spacing: -.02em; }
+  .lead dd { margin-top: 6px; color: var(--text-2); font-size: 15.5px; }
 
-  .contact-list li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 8px 0; border-top: 1px solid var(--rule); }
-  .contact-list li:first-child { border-top: none; padding-top: 0; }
-  .contact-list span { color: var(--muted); }
+  /* Competências */
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .skills > div { padding: 28px; }
+  .skills dt { font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -.02em; }
+  .skills dd { margin-top: 16px; color: var(--text-2); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: center; min-height: 34px; padding: 4px 14px; border-radius: 999px; background: var(--bg); border: 1px solid var(--rule); font-size: 14px; color: var(--text); transition: border-color .25s, background .25s, color .25s, transform .3s var(--ease), box-shadow .3s; }
+  .chip:hover { border-color: transparent; background: var(--ink); color: #fff; transform: translateY(-3px); box-shadow: 0 10px 18px -10px rgba(8,17,48,.6); }
 
-  footer { border-top: 1px solid var(--rule); padding: 20px 0 28px; font-size: 13.5px; color: var(--muted); }
+  /* Formação */
+  .edu { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+  .edu-list { padding: 10px 30px; }
+  .edu-list li { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 19px 0; border-top: 1px solid var(--rule); }
+  .edu-list li:first-child { border-top: none; }
+  .edu-list time { font-family: var(--mono); font-size: 13px; color: var(--accent); padding-top: 3px; }
+  .edu-list b { display: block; color: var(--ink); font-weight: 600; letter-spacing: -.01em; }
+  .edu-list span { color: var(--text-2); font-size: 15px; }
+  .edu-side { display: grid; gap: 18px; }
+  .edu-side > div { padding: 28px; }
+  .edu-side h3 { font-size: 19px; letter-spacing: -.02em; margin-bottom: 14px; }
+  .edu-side p { color: var(--text-2); }
+
+  /* Contato */
+  .contact { position: relative; padding: 96px 48px; text-align: center; border-radius: 40px; background: linear-gradient(140deg, #fff 0%, var(--tint) 55%, var(--tint-2) 100%); border-color: var(--rule-2); overflow: hidden; transform-style: flat; }
+  .gyro-wrap { position: absolute; left: 50%; top: 50%; width: 620px; height: 620px; margin: -310px 0 0 -310px; perspective: 1200px; pointer-events: none; z-index: 0; }
+  .gyro { position: absolute; inset: 0; transform-style: preserve-3d; animation: gyro 30s linear infinite; }
+  .gyro i { position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid rgba(29,78,216,.22); transform-style: preserve-3d; }
+  .gyro i::after { content: ''; position: absolute; left: 50%; top: -6px; width: 11px; height: 11px; margin-left: -5px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 14px 3px rgba(59,130,246,.6); }
+  .gyro i:nth-child(1) { animation: r1 14s linear infinite; }
+  .gyro i:nth-child(2) { inset: 9%; border-style: dashed; border-color: rgba(29,78,216,.28); animation: r2 18s linear infinite; }
+  .gyro i:nth-child(3) { inset: 20%; border-color: rgba(59,130,246,.32); animation: r3 11s linear infinite; }
+  @keyframes gyro { to { transform: rotateY(360deg); } }
+  @keyframes r1 { from { transform: rotateX(72deg) rotateZ(0); } to { transform: rotateX(72deg) rotateZ(360deg); } }
+  @keyframes r2 { from { transform: rotateY(64deg) rotateZ(0); } to { transform: rotateY(64deg) rotateZ(-360deg); } }
+  @keyframes r3 { from { transform: rotateX(-30deg) rotateY(30deg) rotateZ(0); } to { transform: rotateX(-30deg) rotateY(30deg) rotateZ(360deg); } }
+  .contact h2 { font-size: clamp(40px, 6.4vw, 80px); letter-spacing: -.055em; }
+  .contact p { margin: 16px auto 0; max-width: 460px; color: var(--text-2); font-size: 18px; }
+  .contact .cta { justify-content: center; }
+  .contact .btn { height: 52px; padding: 0 24px; font-size: 15.5px; }
+  .cv-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; margin-top: 32px; font-size: 14.5px; }
+  .cv-row span { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; align-self: center; }
+
+  footer { margin-top: 80px; border-top: 1px solid var(--rule); padding: 24px 0 32px; font-size: 13.5px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  /* ─── Entrada ao rolar: o bloco tomba para trás e se levanta ─── */
+  .reveal { transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transform-origin: 50% 100%; }
+  .js .reveal { --rx: 22deg; opacity: 0; translate: 0 60px; transition: opacity .9s var(--ease) var(--d, 0ms), translate .9s var(--ease) var(--d, 0ms), transform 1s var(--ease) var(--d, 0ms), box-shadow .4s, border-color .4s; }
+  .js .reveal.in { --rx: 0deg; opacity: 1; translate: 0 0; }
+  .js .reveal.card.tilting { transition: transform .12s linear, box-shadow .4s, border-color .4s; }
 
   /* ─── Responsivo ─── */
-  @media (max-width: 860px) {
-    .top-nav { display: none; }
-    .figures { grid-template-columns: 1fr 1fr; }
-    .fig:nth-child(3) { border-left: none; padding-left: 0; }
-    .fig:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
-    .sec { grid-template-columns: 1fr; gap: 14px; padding: 28px 0; }
+  @media (max-width: 1020px) {
+    section[id] { scroll-margin-top: 130px; }
+    .top-inner { flex-wrap: wrap; border-radius: 26px; padding: 0 8px 0 12px; }
+    .top-name, .top-tools { height: 58px; }
+    .top-nav { order: 3; flex: 0 0 100%; height: 48px; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--rule); margin: 0 -8px 0 -12px; padding: 0 8px; }
+    .top-nav::-webkit-scrollbar { display: none; }
+    .hero { margin-top: -120px; padding-top: 160px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 8px; }
+    .hero-visual { max-width: 520px; }
+    .summary { max-width: 720px; }
+    .ai-panel { grid-template-columns: 1fr; padding: 36px 30px; }
+    .ai-grid { grid-template-columns: 1fr 1fr; }
+    .lead > div, .lead > div:nth-child(n+4) { grid-column: span 3; }
+    .lead > div:last-child { grid-column: span 6; }
+    .edu { grid-template-columns: 1fr; }
   }
-  @media (max-width: 560px) {
-    .wrap { padding: 0 18px; }
-    .top-name { display: none; }
-    .intro { padding: 32px 0 28px; }
-    .intro-head { gap: 16px; }
-    .photo { width: 68px; height: 68px; }
-    h1 { font-size: 30px; }
-    .title { font-size: 16px; }
-    .summary { font-size: 15.5px; }
-    .fig b { font-size: 22px; }
-    .results li { grid-template-columns: 1fr; gap: 2px; }
-    .dl > div, .contact-list li { grid-template-columns: 1fr; gap: 2px; }
-    .edu .dl > div { grid-template-columns: 48px 1fr; gap: 10px; }
+  @media (max-width: 720px) {
+    .wrap { padding: 0 20px; }
+    .top { padding: 0 10px; top: 8px; }
+    .top-name span.full { display: none; }
+    .sec { padding-top: 88px; }
+    .sec-head { margin-bottom: 28px; gap: 12px; }
+    .stats { grid-template-columns: 1fr 1fr; margin-top: 36px; }
+    .fig { padding: 20px; }
+    .fig:nth-child(3) { border-left: none; }
+    .fig:nth-child(n+3) { border-top: 1px solid var(--rule); }
+    .marquee { margin-top: 48px; }
+    .mq-label { display: none; }
+    .hud { padding: 8px 11px 8px 8px; }
+    .hud::before { width: 24px; height: 24px; }
+    .hud b { font-size: 13.5px; }
+    .hud.h1 { left: -2%; top: 8%; }
+    .hud.h2 { right: -2%; top: 44%; }
+    .hud.h3 { left: 2%; bottom: 6%; }
+    .results li, .results li:nth-child(2), .results li:nth-child(3) { grid-column: span 12; min-height: 0; padding: 28px; }
+    .eyebrow { font-size: 11.5px; }
+    .ai-panel { padding: 30px 22px; border-radius: 28px; }
+    .stack-wrap { height: 420px; --gap: 64px; }
+    .stack { width: 210px; height: 210px; margin-top: 150px; }
+    .layer { padding: 18px; border-radius: 24px; }
+    .layer span { font-size: 16px; }
+    .lead > div, .lead > div:nth-child(n+4), .lead > div:last-child { grid-column: span 6; }
+    .step { font-size: 52px; }
+    .skills { grid-template-columns: 1fr; }
+    .timeline { padding-left: 32px; }
+    .job { padding: 24px 22px; }
+    .job .node-dot { left: -32px; }
     .other li { grid-template-columns: 1fr; gap: 0; }
-    .intro-cta .btn, .intro-cta .cv-menu { flex: 1 1 100%; }
-    .intro-cta .cv-menu summary { width: 100%; justify-content: center; }
-    .intro-cta .btn { justify-content: center; }
-    .cv-list { width: 100%; min-width: 260px; }
+    .edu-list { padding: 6px 22px; }
+    .contact { padding: 64px 22px; border-radius: 30px; }
+    .gyro-wrap { width: 440px; height: 440px; margin: -220px 0 0 -220px; }
+  }
+  @media (max-width: 520px) {
+    .ai-grid { grid-template-columns: 1fr; }
+    .lens .seg { width: 100%; }
+    .lens .seg button { flex: 1; padding: 0 6px; }
+    .cta .btn { flex: 1 1 100%; justify-content: center; }
+    .cv-list { width: calc(100vw - 40px); max-width: 300px; }
+    .hud.h2 { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+    .js .reveal { --rx: 0deg; opacity: 1; translate: none; }
+    .glow-cursor { display: none; }
   }
 
   /* ─── Impressão ─── */
   @media print {
     @page { size: A4; margin: 14mm; }
-    body { font-size: 11.5px; }
-    .top, .intro-cta, .cv-menu, footer, #contato { display: none !important; }
+    body { font-size: 11.5px; background: #fff; }
+    body::after, .glow-cursor, .top, .progress, .hero-bg, .hero-visual, .lens, .cta, .cv-menu, .marquee, footer, #contato, .tl-fill, .stack-wrap, .deco { display: none !important; }
+    .reveal, .card { transform: none !important; opacity: 1 !important; translate: none !important; }
+    .hero-copy > *, .stats, h1 .w { animation: none !important; }
     .wrap { max-width: none; padding: 0; }
-    .intro { padding: 0 0 16px; }
-    .sec { grid-template-columns: 130px 1fr; gap: 16px; padding: 14px 0; break-inside: auto; }
-    .job, .results li, .dl > div { break-inside: avoid; }
+    .hero { padding: 0; margin: 0; }
+    .hero-grid { grid-template-columns: 1fr; gap: 14px; }
+    h1 { font-size: 30px; margin-top: 0; }
+    h2 { font-size: 16px; }
+    .idx { font-size: 16px; -webkit-text-stroke: 0; color: var(--accent); }
+    .eyebrow { border: 0; padding: 0; height: auto; box-shadow: none; }
+    .stats { margin-top: 10px; box-shadow: none; }
+    .sec { padding-top: 18px; }
+    .sec-head { margin-bottom: 10px; }
+    .card { box-shadow: none; border-radius: 8px; }
+    .ai-panel { display: block; padding: 10px 12px; }
+    .results li, .job, .lead > div, .skills > div, .ai-grid li, .edu-side > div { padding: 10px 12px; min-height: 0; break-inside: avoid; }
+    .results .num, .fig b { font-size: 20px; padding-top: 4px; }
+    .step { font-size: 16px; -webkit-text-stroke: 0; color: var(--accent); }
+    .grad, .fig b, .results .num { background: none; color: var(--accent-deep); filter: none; }
     a { color: var(--text); }
   }
 </style>
 </head>
 <body>
 
+<div class="progress" aria-hidden="true"></div>
+<div class="glow-cursor" aria-hidden="true"></div>
+
 <header class="top">
-  <div class="wrap top-inner">
-    <a class="top-name" href="#inicio">Gustavo Frigo</a>
+  <div class="top-inner">
+    <a class="top-name" href="#inicio"><span class="mark" aria-hidden="true">GF</span><span class="full">Gustavo Frigo</span></a>
     <nav class="top-nav" aria-label="Seções">
       <a href="#resultados" data-i18n="nav-1">Resultados</a>
+      <a href="#ia" data-i18n="nav-7">IA</a>
       <a href="#experiencia" data-i18n="nav-2">Experiência</a>
+      <a href="#lideranca" data-i18n="nav-6">Liderança</a>
       <a href="#competencias" data-i18n="nav-3">Competências</a>
       <a href="#formacao" data-i18n="nav-4">Formação</a>
       <a href="#contato" data-i18n="nav-5">Contato</a>
     </nav>
     <div class="top-tools">
-      <button class="btn plain" id="lang-btn" type="button" aria-label="Switch to English"><span id="lang-label">EN</span></button>
+      <button class="btn sm plain" id="lang-btn" type="button" aria-label="Switch to English"><span id="lang-label">EN</span></button>
       <details class="cv-menu">
-        <summary class="btn solid">
+        <summary class="btn sm solid">
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
           <span data-i18n="cv-btn">Baixar CV</span>
           <svg class="caret" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
@@ -248,183 +529,291 @@
   </div>
 </header>
 
-<main class="wrap" id="inicio">
+<main id="inicio">
 
-  <!-- ─── Apresentação ─── -->
-  <section class="intro">
-    <div class="intro-head">
-      <div class="photo"><img src="foto.jpg" alt="Foto de Gustavo Frigo" onerror="this.parentNode.remove()"></div>
-      <div>
-        <h1>Gustavo Frigo</h1>
+  <!-- ─── Abertura ─── -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="aurora a1"></div><div class="aurora a2"></div>
+      <div class="floor"></div>
+    </div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><i class="dot" aria-hidden="true"></i><span data-i18n="eyebrow">Hoje na Serasa Experian, BU Identity &amp; Fraud</span></p>
+        <h1><span class="w">Gustavo</span> <span class="w grad">Frigo</span></h1>
         <p class="title" data-i18n="title">Gerente Executivo de Projetos · PMO corporativo e gestão de portfólio</p>
-        <div class="meta">
-          <span data-i18n="loc">São Paulo, SP</span>
-          <a href="mailto:gustavofrigo@gmail.com">gustavofrigo@gmail.com</a>
-          <a href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener">linkedin.com/in/gustavoffrigo</a>
+
+        <div class="lens">
+          <span class="lens-label" id="lens-label" data-i18n="lens-label">Estou contratando para</span>
+          <div class="seg" role="group" aria-labelledby="lens-label">
+            <span class="seg-pill" aria-hidden="true"></span>
+            <button type="button" data-profile="pmo" aria-pressed="true" data-i18n="lens-pmo">Projetos e PMO</button>
+            <button type="button" data-profile="ti" aria-pressed="false" data-i18n="lens-ti">TI</button>
+            <button type="button" data-profile="engenharia" aria-pressed="false" data-i18n="lens-eng">Engenharia</button>
+          </div>
         </div>
+
+        <div class="summary" aria-live="polite">
+          <p data-i18n="sum-1">Mais de 15 anos à frente de portfólios de tecnologia em crédito e antifraude, seguros, segurança pública e transporte. Na Serasa Experian, reporto à diretoria e sou o ponto focal do PMO para a BU Identity &amp; Fraud: 40 squads, cerca de 400 pessoas e R$100M+ em iniciativas.</p>
+          <p data-i18n="sum-2">Meu ponto forte é fazer áreas diferentes decidirem juntas e no prazo. Foi assim no Muralha Paulista, entregue 15% abaixo do orçamento, e na CPTM, onde defini a estratégia que colocou a operação de volta em 10 dias depois de um ransomware.</p>
+        </div>
+
+        <div class="cta">
+          <a class="btn solid magnetic" href="mailto:gustavofrigo@gmail.com">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span data-i18n="cta-mail">Enviar e-mail</span>
+          </a>
+          <a class="btn magnetic" id="cv-main" href="cv/Gustavo_Frigo_CV_Gerente_Projetos_PMO.pdf" download>
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+            <span data-i18n="cv-main">Baixar CV de Gerente de Projetos e PMO</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb-glow"></div>
+        <div class="orb"></div>
+        <div id="globe"></div>
+        <div class="hud h1" data-i18n="hud-1"><span><b>40 squads</b><small>cerca de 400 pessoas</small></span></div>
+        <div class="hud h2" data-i18n="hud-2"><span><b>R$100M+</b><small>em portfólio</small></span></div>
+        <div class="hud h3" data-i18n="hud-3"><span><b>27 mil câmeras</b><small>com IA em produção</small></span></div>
+        <p class="drag-hint" data-i18n="drag">Arraste para girar</p>
       </div>
     </div>
 
-    <div class="summary">
-      <p data-i18n="sum-1">Mais de 15 anos à frente de portfólios de tecnologia em crédito e antifraude, seguros, segurança pública e transporte. Na Serasa Experian, reporto à diretoria e sou o ponto focal do PMO para a BU Identity &amp; Fraud: 40 squads, cerca de 400 pessoas e R$100M+ em iniciativas.</p>
-      <p data-i18n="sum-2">Meu ponto forte é fazer áreas diferentes decidirem juntas e no prazo. Foi assim no Muralha Paulista, entregue 15% abaixo do orçamento, e na CPTM, onde defini a estratégia que colocou a operação de volta em 10 dias depois de um ransomware.</p>
+    <div class="wrap">
+      <div class="stats">
+        <div class="fig"><b data-count>15+</b><span data-i18n="f1">anos em gestão de projetos de tecnologia</span></div>
+        <div class="fig"><b data-count>40</b><span data-i18n="f2">squads sob a governança atual, cerca de 400 pessoas</span></div>
+        <div class="fig"><b data-count>R$100M+</b><span data-i18n="f3">em iniciativas no portfólio atual</span></div>
+        <div class="fig"><b data-count>50+</b><span data-i18n="f4">profissionais contratados e formados</span></div>
+      </div>
     </div>
 
-    <div class="intro-cta">
-      <a class="btn solid" href="mailto:gustavofrigo@gmail.com" data-i18n="cta-mail">Enviar e-mail</a>
-      <a class="btn" href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener">LinkedIn</a>
-      <details class="cv-menu left">
-        <summary class="btn">
-          <span data-i18n="cv-btn2">Baixar currículo</span>
-          <svg class="caret" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
-        </summary>
-        <div class="cv-list">
-          <a href="cv/Gustavo_Frigo_CV_Gerente_Projetos_PMO.pdf" download><span data-i18n="cv-1b">Gerente de Projetos e PMO</span><small data-i18n="cv-1s">Portfólio, PMO e gestão executiva</small></a>
-          <a href="cv/Gustavo_Frigo_CV_Gerente_TI.pdf" download><span data-i18n="cv-2b">Gerente de TI</span><small data-i18n="cv-2s">Governança, riscos e operação crítica</small></a>
-          <a href="cv/Gustavo_Frigo_CV_Gerente_Engenharia.pdf" download><span data-i18n="cv-3b">Gerente de Engenharia</span><small data-i18n="cv-3s">Times de engenharia, DevOps e métricas</small></a>
+    <div class="marquee">
+      <div class="wrap mq-inner">
+        <p class="mq-label" data-i18n="mq-label">Onde trabalhei</p>
+        <div class="mq-view">
+          <ul class="mq-track">
+            <li>Serasa Experian</li>
+            <li data-i18n="mq-2">Governo do Estado de São Paulo</li>
+            <li>CPTM</li>
+            <li>PRODESP</li>
+            <li>Porto Seguro</li>
+            <li>Inbra Aerospace</li>
+            <li>AOL</li>
+          </ul>
         </div>
-      </details>
-    </div>
-
-    <div class="figures">
-      <div class="fig"><b>15+</b><span data-i18n="f1">anos em gestão de projetos de tecnologia</span></div>
-      <div class="fig"><b>40</b><span data-i18n="f2">squads sob a governança atual, cerca de 400 pessoas</span></div>
-      <div class="fig"><b>R$100M+</b><span data-i18n="f3">em iniciativas no portfólio atual</span></div>
-      <div class="fig"><b>50+</b><span data-i18n="f4">profissionais contratados e formados</span></div>
+      </div>
     </div>
   </section>
 
   <!-- ─── Resultados ─── -->
   <section class="sec" id="resultados">
-    <h2 data-i18n="h-res">Resultados em destaque</h2>
-    <ul class="results">
-      <li>
-        <div class="num">+30%</div>
-        <div><h3>Serasa Experian</h3><p data-i18n="res-1">Um só padrão de gestão para 40 squads e R$100M+ em iniciativas. As entregas no prazo subiram 30%.</p></div>
-      </li>
-      <li>
-        <div class="num" data-i18n="res-2n">27 mil</div>
-        <div><h3>Muralha Paulista · SSP-SP</h3><p data-i18n="res-2">Câmeras com IA entregues em 12 meses, 15% abaixo do orçamento de R$15M. O tempo de resposta a emergências policiais caiu 30%.</p></div>
-      </li>
-      <li>
-        <div class="num" data-i18n="res-3n">10 dias</div>
-        <div><h3>CPTM</h3><p data-i18n="res-3">Operação de volta após ransomware, contra 30 previstos: 250 servidores e 300 aplicações recuperados, sem perda de dados.</p></div>
-      </li>
-      <li>
-        <div class="num">R$25M</div>
-        <div><h3>Porto Seguro</h3><p data-i18n="res-4">Programa que isolou a produção em 16 sites e corrigiu vulnerabilidades em 14 mil ativos, dentro da ISO 27001.</p></div>
-      </li>
-    </ul>
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="idx" aria-hidden="true">01</span><h2 data-i18n="h-res">Resultados em destaque</h2></div>
+      <ul class="results">
+        <li class="card reveal"><span class="deco" aria-hidden="true"></span><h3 data-i18n="res-1h">Serasa Experian</h3><div class="num" data-count data-i18n="res-1n">+30%</div><p data-i18n="res-1">Um só padrão de gestão para 40 squads e R$100M+ em iniciativas. As entregas no prazo subiram 30%.</p></li>
+        <li class="card reveal"><span class="deco" aria-hidden="true"></span><h3 data-i18n="res-2h">Muralha Paulista · SSP-SP</h3><div class="num" data-count data-i18n="res-2n">27 mil</div><p data-i18n="res-2">Câmeras com IA entregues em 12 meses, 15% abaixo do orçamento de R$15M. O tempo de resposta a emergências policiais caiu 30%.</p></li>
+        <li class="card reveal"><span class="deco" aria-hidden="true"></span><h3 data-i18n="res-3h">CPTM</h3><div class="num" data-count data-i18n="res-3n">10 dias</div><p data-i18n="res-3">Operação de volta após ransomware, contra 30 previstos: 250 servidores e 300 aplicações recuperados, sem perda de dados.</p></li>
+        <li class="card reveal"><span class="deco" aria-hidden="true"></span><h3 data-i18n="res-4h">Porto Seguro</h3><div class="num" data-count data-i18n="res-4n">R$25M</div><p data-i18n="res-4">Programa que isolou a produção em 16 sites e corrigiu vulnerabilidades em 14 mil ativos, dentro da ISO 27001.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─── IA ─── -->
+  <section class="sec" id="ia">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="idx" aria-hidden="true">02</span><h2 data-i18n="h-ai">IA no dia a dia da gestão</h2></div>
+
+      <div class="ai-panel card live reveal">
+        <span class="deco" aria-hidden="true"></span>
+        <div>
+          <span class="ai-tag"><i aria-hidden="true"></i><span data-i18n="ai-tag">IA aplicada</span></span>
+          <p class="ai-lead" data-i18n="ai-lead">Uso IA para chegar às reuniões de diretoria com o portfólio já analisado. Também entreguei IA em produção: o Muralha Paulista tem 27 mil câmeras com reconhecimento facial e leitura de placas.</p>
+          <ul class="tools">
+            <li>ChatGPT</li><li>Claude</li><li>Copilot</li><li>Python</li><li>OpenAI API</li><li>Power Automate</li><li>Power BI Copilot</li>
+          </ul>
+        </div>
+
+        <div class="stack-wrap">
+          <p class="flow-cap" data-i18n="flow-cap">Do dado ao reporte</p>
+          <ol class="stack">
+            <li class="layer"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg><em>01</em><span data-i18n="p1">Bases e squads</span></li>
+            <li class="layer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg><em>02</em><span data-i18n="p2">Python + API da OpenAI</span></li>
+            <li class="layer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v3.5M11 14h.01"/></svg><em>03</em><span data-i18n="p3">Inconsistências apontadas</span></li>
+            <li class="layer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><em>04</em><span data-i18n="p4">Reporte executivo</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <ul class="ai-grid">
+        <li class="card reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12Z"/><path d="M9 11h6M9 14h4"/></svg></div>
+          <h3 data-i18n="ai-1h">Assistentes</h3>
+          <p data-i18n="ai-1">ChatGPT, Claude e Copilot para consolidar status, preparar reportes executivos e analisar o portfólio antes das reuniões de diretoria.</p>
+        </li>
+        <li class="card reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></div>
+          <h3 data-i18n="ai-2h">Integrações em Python</h3>
+          <p data-i18n="ai-2">Integrações com a API da OpenAI que cruzam dados de diferentes bases e squads e apontam inconsistências.</p>
+        </li>
+        <li class="card reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3-6.2"/><path d="M20 4v5h-5M12 8v4l3 2"/></svg></div>
+          <h3 data-i18n="ai-3h">Relatórios automáticos</h3>
+          <p data-i18n="ai-3">Relatórios recorrentes automatizados com Power Automate e Power BI Copilot.</p>
+        </li>
+        <li class="card reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="m16 10.5 5-3v9l-5-3"/></svg></div>
+          <h3 data-i18n="ai-4h">IA em produção</h3>
+          <p data-i18n="ai-4">Muralha Paulista: 27 mil câmeras com reconhecimento facial e leitura de placas (LPR), num portfólio de 15+ projetos de tecnologia e IA.</p>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- ─── Experiência ─── -->
   <section class="sec" id="experiencia">
-    <h2 data-i18n="h-exp">Experiência</h2>
-    <div>
-      <article class="job">
-        <div class="job-head"><h3>Serasa Experian</h3><span class="job-date" data-i18n="d1">02/2026 – atual</span></div>
-        <div class="job-role" data-i18n="r1">Gerente Executivo de Projetos, BU Identity &amp; Fraud</div>
-        <p class="job-scope" data-i18n="s1">Reporte direto à diretoria. Ponto focal do PMO corporativo para a BU: 40 squads de produto e tecnologia, cerca de 400 pessoas e R$100M+ em iniciativas.</p>
-        <ul class="bullets">
-          <li data-i18n="b1-1">Unifiquei as demandas de produto e tecnologia da BU em um único fluxo, com metodologia e padrão de entrega comuns aos 40 squads.</li>
-          <li data-i18n="b1-2">Criei os indicadores de prazo, custo e desempenho da BU e os liguei aos OKRs da empresa.</li>
-          <li data-i18n="b1-3">Priorizo o portfólio com base em business cases e acompanho com a diretoria o orçamento das iniciativas (CAPEX e OPEX).</li>
-        </ul>
-      </article>
-      <article class="job">
-        <div class="job-head"><h3 data-i18n="o2">Governo do Estado de São Paulo</h3><span class="job-date">06/2023 – 08/2025</span></div>
-        <div class="job-role" data-i18n="r2">Gerente da Fábrica de Software, Secretaria de Segurança Pública</div>
-        <p class="job-scope" data-i18n="s2">Portfólio de 15+ projetos de tecnologia e IA, orçamento total acima de R$50M, com participação no comitê de direção.</p>
-        <ul class="bullets">
-          <li data-i18n="b2-1">Preparei os business cases e levei ao comitê de direção as decisões críticas de escopo, prazo e custo, em alinhamento com Secretários de Estado.</li>
-          <li data-i18n="b2-2">Montei a governança do programa (charter, WBS, cronograma mestre, riscos) e um time próprio de mais de 20 pessoas, além dos fornecedores externos.</li>
-          <li data-i18n="b2-3">Muralha Paulista: 27.000 câmeras com IA em 12 meses, 15% abaixo do orçamento e com conformidade LGPD para dados biométricos.</li>
-        </ul>
-      </article>
-      <article class="job">
-        <div class="job-head"><h3 data-i18n="o3">CPTM (via PRODESP)</h3><span class="job-date">03/2022 – 06/2023</span></div>
-        <div class="job-role" data-i18n="r3">Gerente de Projetos e Coordenador de TI</div>
-        <ul class="bullets">
-          <li data-i18n="b3-1">Defini a estratégia de recuperação após o ataque de ransomware e coordenei 8 frentes e mais de 50 profissionais em regime 24x7.</li>
-          <li data-i18n="b3-2">Recuperamos 250 servidores e 300 aplicações em 10 dias, contra 30 previstos, sem perda de dados, numa operação de 3 milhões de passageiros por dia.</li>
-          <li data-i18n="b3-3">Controlei o orçamento (CAPEX e OPEX, incluindo R$2M+ de verba emergencial) e conduzi os projetos de Oracle Exadata e Disaster Recovery na AWS.</li>
-        </ul>
-      </article>
-      <article class="job">
-        <div class="job-head"><h3 data-i18n="o4">Secretaria de Agricultura e Abastecimento (via PRODESP)</h3><span class="job-date">10/2021 – 02/2022</span></div>
-        <div class="job-role" data-i18n="r4">Gerente de Projetos</div>
-      </article>
-      <article class="job">
-        <div class="job-head"><h3>Porto Seguro</h3><span class="job-date">11/2013 – 05/2015</span></div>
-        <div class="job-role" data-i18n="r5">Gerente de Projetos, Segurança da Informação e Infraestrutura</div>
-        <ul class="bullets">
-          <li data-i18n="b5-1">Programa de Isolamento da Produção: R$25M, 16 sites e correção de vulnerabilidades em 14.000 ativos, dentro da ISO 27001.</li>
-          <li data-i18n="b5-2">Individualizei o acesso de cerca de 1.000 usuários a aplicações e bancos de dados, num trabalho com 22 equipes.</li>
-        </ul>
-      </article>
-      <article class="job">
-        <div class="job-head"><h3 data-i18n="o6">Experiências anteriores</h3></div>
-        <ul class="other">
-          <li><div><b>DM Brasil&amp;Sabor</b> · <span data-i18n="x1">Sócio-proprietário. Negócio próprio com mais de 70 mil clientes; P&amp;L, equipe e operação.</span></div><time>2016 – 2021</time></li>
-          <li><div><b>Inbra Aerospace</b> · <span data-i18n="x2">Gerente de Projetos e Coordenador de TI</span></div><time>2011 – 2013</time></li>
-          <li><div><b>MR Consultoria</b> · <span data-i18n="x3">Gerente de Projetos e Consultor de Tecnologia</span></div><time>2006 – 2011</time></li>
-          <li><div><b>AOL</b> · <span data-i18n="x4">Consultor de Tecnologia</span></div><time>2003 – 2006</time></li>
-        </ul>
-      </article>
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="idx" aria-hidden="true">03</span><h2 data-i18n="h-exp">Experiência</h2></div>
+      <div class="timeline">
+        <div class="tl-fill" aria-hidden="true"></div>
+        <article class="job card reveal"><span class="node-dot" aria-hidden="true"></span>
+          <div class="job-head"><h3>Serasa Experian</h3><span class="job-date" data-i18n="d1">02/2026 – atual</span></div>
+          <div class="job-role" data-i18n="r1">Gerente Executivo de Projetos, BU Identity &amp; Fraud</div>
+          <p class="job-scope" data-i18n="s1">Reporte direto à diretoria. Ponto focal do PMO corporativo para a BU: 40 squads de produto e tecnologia, cerca de 400 pessoas e R$100M+ em iniciativas.</p>
+          <ul class="bullets">
+            <li data-i18n="b1-1">Unifiquei as demandas de produto e tecnologia da BU em um único fluxo, com metodologia e padrão de entrega comuns aos 40 squads.</li>
+            <li data-i18n="b1-2">Criei os indicadores de prazo, custo e desempenho da BU e os liguei aos OKRs da empresa.</li>
+            <li data-i18n="b1-3">Priorizo o portfólio com base em business cases e acompanho com a diretoria o orçamento das iniciativas (CAPEX e OPEX).</li>
+            <li data-i18n="b1-4">Com o novo modelo, as entregas no prazo subiram 30% e a eficiência operacional dobrou.</li>
+          </ul>
+        </article>
+        <article class="job card reveal"><span class="node-dot" aria-hidden="true"></span>
+          <div class="job-head"><h3 data-i18n="o2">Governo do Estado de São Paulo</h3><span class="job-date">06/2023 – 08/2025</span></div>
+          <div class="job-role" data-i18n="r2">Gerente da Fábrica de Software, Secretaria de Segurança Pública</div>
+          <p class="job-scope" data-i18n="s2">Portfólio de 15+ projetos de tecnologia e IA, orçamento total acima de R$50M, com participação no comitê de direção.</p>
+          <ul class="bullets">
+            <li data-i18n="b2-1">Preparei os business cases e levei ao comitê de direção as decisões críticas de escopo, prazo e custo, em alinhamento com Secretários de Estado.</li>
+            <li data-i18n="b2-2">Montei a governança do programa (charter, WBS, cronograma mestre, riscos) e um time próprio de mais de 20 pessoas, além dos fornecedores externos.</li>
+            <li data-i18n="b2-3">Muralha Paulista: 27.000 câmeras com IA em 12 meses, 15% abaixo do orçamento e com conformidade LGPD para dados biométricos.</li>
+          </ul>
+        </article>
+        <article class="job card reveal"><span class="node-dot" aria-hidden="true"></span>
+          <div class="job-head"><h3 data-i18n="o3">CPTM (via PRODESP)</h3><span class="job-date">03/2022 – 06/2023</span></div>
+          <div class="job-role" data-i18n="r3">Gerente de Projetos e Coordenador de TI</div>
+          <ul class="bullets">
+            <li data-i18n="b3-1">Defini a estratégia de recuperação após o ataque de ransomware e coordenei 8 frentes e mais de 50 profissionais em regime 24x7.</li>
+            <li data-i18n="b3-2">Recuperamos 250 servidores e 300 aplicações em 10 dias, contra 30 previstos, sem perda de dados, numa operação de 3 milhões de passageiros por dia.</li>
+            <li data-i18n="b3-3">Controlei o orçamento (CAPEX e OPEX, incluindo R$2M+ de verba emergencial) e conduzi os projetos de Oracle Exadata e Disaster Recovery na AWS.</li>
+          </ul>
+        </article>
+        <article class="job card reveal"><span class="node-dot" aria-hidden="true"></span>
+          <div class="job-head"><h3 data-i18n="o4">Secretaria de Agricultura e Abastecimento (via PRODESP)</h3><span class="job-date">10/2021 – 02/2022</span></div>
+          <div class="job-role" data-i18n="r4">Gerente de Projetos</div>
+        </article>
+        <article class="job card reveal"><span class="node-dot" aria-hidden="true"></span>
+          <div class="job-head"><h3>Porto Seguro</h3><span class="job-date">11/2013 – 05/2015</span></div>
+          <div class="job-role" data-i18n="r5">Gerente de Projetos, Segurança da Informação e Infraestrutura</div>
+          <ul class="bullets">
+            <li data-i18n="b5-1">Programa de Isolamento da Produção: R$25M, 16 sites e correção de vulnerabilidades em 14.000 ativos, dentro da ISO 27001.</li>
+            <li data-i18n="b5-2">Individualizei o acesso de cerca de 1.000 usuários a aplicações e bancos de dados, num trabalho com 22 equipes.</li>
+          </ul>
+        </article>
+        <article class="job card reveal"><span class="node-dot" aria-hidden="true"></span>
+          <div class="job-head"><h3 data-i18n="o6">Experiências anteriores</h3></div>
+          <ul class="other">
+            <li><div><b>DM Brasil&amp;Sabor</b> · <span data-i18n="x1">Sócio-proprietário. Negócio próprio com mais de 70 mil clientes; P&amp;L, equipe e operação.</span></div><time>2016 – 2021</time></li>
+            <li><div><b>Inbra Aerospace</b> · <span data-i18n="x2">Gerente de Projetos e Coordenador de TI</span></div><time>2011 – 2013</time></li>
+            <li><div><b>MR Consultoria</b> · <span data-i18n="x3">Gerente de Projetos e Consultor de Tecnologia</span></div><time>2006 – 2011</time></li>
+            <li><div><b>AOL</b> · <span data-i18n="x4">Consultor de Tecnologia</span></div><time>2003 – 2006</time></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Liderança ─── -->
+  <section class="sec" id="lideranca">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="idx" aria-hidden="true">04</span><h2 data-i18n="h-lead">Como formo e lidero times</h2></div>
+      <dl class="lead">
+        <div class="card reveal"><span class="step" aria-hidden="true">01</span><dt data-i18n="l1">Contratação</dt><dd data-i18n="lv1">Começo pela seleção técnica e comportamental. Contratei e desenvolvi mais de 50 profissionais, de analistas de desenvolvimento, infraestrutura e banco de dados a tech leads.</dd></div>
+        <div class="card reveal"><span class="step" aria-hidden="true">02</span><dt data-i18n="l2">Primeiros 90 dias</dt><dd data-i18n="lv2">Deixo claro o papel e a meta de cada pessoa e da squad e acompanho de perto os primeiros 90 dias de quem chega.</dd></div>
+        <div class="card reveal"><span class="step" aria-hidden="true">03</span><dt data-i18n="l3">Desenvolvimento</dt><dd data-i18n="lv3">Faço feedback contínuo em conversas individuais, com plano de desenvolvimento para cada pessoa, e preparo sucessores para as posições de liderança.</dd></div>
+        <div class="card reveal"><span class="step" aria-hidden="true">04</span><dt data-i18n="l4">Fornecedores</dt><dd data-i18n="lv4">Trabalhei com mais de 50 fornecedores, da alocação de profissionais a serviços técnicos e projetos, negociando escopo, prazo e custo dos contratos.</dd></div>
+        <div class="card reveal"><span class="step" aria-hidden="true">05</span><dt data-i18n="l5">Diretoria</dt><dd data-i18n="lv5">Nos três últimos empregos levei números de custo e performance aos comitês de diretoria e conduzi as decisões que dependiam deles.</dd></div>
+      </dl>
     </div>
   </section>
 
   <!-- ─── Competências ─── -->
   <section class="sec" id="competencias">
-    <h2 data-i18n="h-comp">Competências</h2>
-    <div>
-      <dl class="dl">
-        <div><dt data-i18n="k1">Portfólio e PMO</dt><dd data-i18n="v1">PMO corporativo, priorização de portfólio, business case, PMBOK 7, PRINCE2, Scrum, Kanban, modelo híbrido</dd></div>
-        <div><dt data-i18n="k2">Gestão executiva</dt><dd data-i18n="v2">Comitês de diretoria, stakeholders, OKR, KPIs, orçamento CAPEX/OPEX, fornecedores e contratos</dd></div>
-        <div><dt data-i18n="k3">Governança e riscos</dt><dd data-i18n="v3">COBIT, ITIL, gestão de riscos, LGPD, ISO 27001, BCP/DRP</dd></div>
-        <div><dt data-i18n="k4">Liderança</dt><dd data-i18n="v4">Mais de 50 profissionais contratados e formados, de analistas a tech leads, e mais de 50 fornecedores geridos</dd></div>
-        <div><dt data-i18n="k5">IA na gestão</dt><dd data-i18n="v5">ChatGPT, Claude e Copilot para status e reportes executivos; integrações em Python com a API da OpenAI; Power Automate e Power BI</dd></div>
-        <div><dt data-i18n="k6">Ferramentas</dt><dd>MS Project, Jira, Azure DevOps, Monday.com, Power BI, Tableau, AWS, SAP, Oracle, TOTVS</dd></div>
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="idx" aria-hidden="true">05</span><h2 data-i18n="h-comp">Competências</h2></div>
+      <dl class="skills">
+        <div class="card reveal"><dt data-i18n="k1">Portfólio e PMO</dt><dd data-chips data-i18n="v1">PMO corporativo, priorização de portfólio, business case, PMBOK 7, PRINCE2, Scrum, Kanban, modelo híbrido</dd></div>
+        <div class="card reveal"><dt data-i18n="k2">Gestão executiva</dt><dd data-chips data-i18n="v2">Comitês de diretoria, stakeholders, OKR, KPIs, orçamento CAPEX/OPEX, fornecedores e contratos</dd></div>
+        <div class="card reveal"><dt data-i18n="k3">Governança e riscos</dt><dd data-chips data-i18n="v3">COBIT, ITIL, gestão de riscos, LGPD, ISO 27001, BCP/DRP</dd></div>
+        <div class="card reveal"><dt data-i18n="k6">Ferramentas</dt><dd data-chips data-i18n="v6">MS Project, Jira, Azure DevOps, Monday.com, Power BI, Tableau, AWS, SAP, Oracle, TOTVS</dd></div>
       </dl>
     </div>
   </section>
 
   <!-- ─── Formação ─── -->
-  <section class="sec edu" id="formacao">
-    <h2 data-i18n="h-edu">Formação</h2>
-    <div>
-      <dl class="dl">
-        <div><dt>2024</dt><dd><b data-i18n="e1">MBA em Business Strategy &amp; Transformation</b>FIAP</dd></div>
-        <div><dt>2023</dt><dd><b data-i18n="e2">Pós-graduação em Business Intelligence &amp; Analytics</b><span data-i18n="ums">Universidade Metodista de São Paulo</span></dd></div>
-        <div><dt>2012</dt><dd><b data-i18n="e3">MBA em Gerenciamento de Projetos (PMI)</b>FIAP</dd></div>
-        <div><dt>2004</dt><dd><b data-i18n="e4">Graduação em Ciência da Computação</b><span data-i18n="ums2">Universidade Metodista de São Paulo</span></dd></div>
-      </dl>
-      <p class="note" data-i18n="certs"><b>Certificações:</b> PMP, CSPO, PRINCE2, ITIL, COBIT, CCNA, LPI, BIFPC, Design Thinking, Métricas Ágeis.</p>
-      <p class="note" data-i18n="langs"><b>Idiomas:</b> inglês intermediário avançado (B2), espanhol básico.</p>
+  <section class="sec" id="formacao">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="idx" aria-hidden="true">06</span><h2 data-i18n="h-edu">Formação</h2></div>
+      <div class="edu">
+        <ul class="edu-list card reveal">
+          <li><time>2024</time><div><b data-i18n="e1">MBA em Business Strategy &amp; Transformation</b><span>FIAP</span></div></li>
+          <li><time>2023</time><div><b data-i18n="e2">Pós-graduação em Business Intelligence &amp; Analytics</b><span data-i18n="ums">Universidade Metodista de São Paulo</span></div></li>
+          <li><time>2012</time><div><b data-i18n="e3">MBA em Gerenciamento de Projetos (PMI)</b><span>FIAP</span></div></li>
+          <li><time>2004</time><div><b data-i18n="e4">Graduação em Ciência da Computação</b><span data-i18n="ums2">Universidade Metodista de São Paulo</span></div></li>
+        </ul>
+        <div class="edu-side">
+          <div class="card reveal"><h3 data-i18n="certs-h">Certificações</h3><p data-chips data-i18n="certs-list">PMP, CSPO, PRINCE2, ITIL, COBIT, CCNA, LPI, BIFPC, Design Thinking, Métricas Ágeis</p></div>
+          <div class="card reveal"><h3 data-i18n="langs-h">Idiomas</h3><p data-chips data-i18n="langs">Inglês intermediário avançado (B2), espanhol básico</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ─── Contato ─── -->
   <section class="sec" id="contato">
-    <h2 data-i18n="h-contact">Contato</h2>
-    <ul class="contact-list">
-      <li><span>E-mail</span><a href="mailto:gustavofrigo@gmail.com">gustavofrigo@gmail.com</a></li>
-      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener">linkedin.com/in/gustavoffrigo</a></li>
-      <li><span>WhatsApp</span><a href="https://wa.me/5511944557729" target="_blank" rel="noopener" data-i18n="wa">Enviar mensagem</a></li>
-      <li><span data-i18n="cv-label">Currículos</span><div>
-        <a href="cv/Gustavo_Frigo_CV_Gerente_Projetos_PMO.pdf" download data-i18n="cv-1c">Gerente de Projetos e PMO</a> ·
-        <a href="cv/Gustavo_Frigo_CV_Gerente_TI.pdf" download data-i18n="cv-2c">Gerente de TI</a> ·
-        <a href="cv/Gustavo_Frigo_CV_Gerente_Engenharia.pdf" download data-i18n="cv-3c">Gerente de Engenharia</a>
-      </div></li>
-    </ul>
+    <div class="wrap">
+      <div class="contact card reveal">
+        <div class="gyro-wrap" aria-hidden="true"><div class="gyro"><i></i><i></i><i></i></div></div>
+        <h2 data-i18n="contact-h">Fale comigo</h2>
+        <p data-i18n="contact-p">Respondo por e-mail, LinkedIn ou WhatsApp.</p>
+        <div class="cta">
+          <a class="btn solid magnetic" href="mailto:gustavofrigo@gmail.com">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            gustavofrigo@gmail.com
+          </a>
+          <a class="btn magnetic" href="https://www.linkedin.com/in/gustavoffrigo" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn magnetic" href="https://wa.me/5511944557729" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="cv-row">
+          <span data-i18n="cv-label">Currículos</span>
+          <a href="cv/Gustavo_Frigo_CV_Gerente_Projetos_PMO.pdf" download data-i18n="cv-1c">Gerente de Projetos e PMO</a>
+          <a href="cv/Gustavo_Frigo_CV_Gerente_TI.pdf" download data-i18n="cv-2c">Gerente de TI</a>
+          <a href="cv/Gustavo_Frigo_CV_Gerente_Engenharia.pdf" download data-i18n="cv-3c">Gerente de Engenharia</a>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Gustavo Frigo</div>
+  <div class="wrap"><span>© 2026 Gustavo Frigo</span><span data-i18n="loc-f">São Paulo, SP</span></div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
+  var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // Fecha o menu de currículos ao clicar fora ou abrir outro
   var menus = document.querySelectorAll('.cv-menu');
   document.addEventListener('click', function (e) {
@@ -434,23 +823,35 @@
     if (e.key === 'Escape') menus.forEach(function (m) { m.removeAttribute('open'); });
   });
 
-  // ─── Idioma ───
+  // Faixa de empresas: a segunda cópia fecha o laço da animação
+  (function () {
+    var track = document.querySelector('.mq-track');
+    if (!track || reduceMotion) return;
+    var copy = track.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    track.parentNode.appendChild(copy);
+  })();
+
   var EN = {
-    'nav-1': 'Results', 'nav-2': 'Experience', 'nav-3': 'Skills', 'nav-4': 'Education', 'nav-5': 'Contact',
-    'cv-btn': 'Download CV', 'cv-btn2': 'Download résumé',
+    'nav-1': 'Results', 'nav-2': 'Experience', 'nav-3': 'Skills', 'nav-4': 'Education', 'nav-5': 'Contact', 'nav-6': 'Leadership', 'nav-7': 'AI',
+    'cv-btn': 'Download CV',
     'cv-1': 'Project Manager and PMO', 'cv-2': 'IT Manager', 'cv-3': 'Engineering Manager',
     'cv-pdf': 'PDF in Portuguese, 2 pages', 'cv-pdf2': 'PDF in Portuguese, 2 pages', 'cv-pdf3': 'PDF in Portuguese, 2 pages',
-    'cv-1b': 'Project Manager and PMO', 'cv-2b': 'IT Manager', 'cv-3b': 'Engineering Manager',
-    'cv-1s': 'Portfolio, PMO and executive management (in Portuguese)',
-    'cv-2s': 'Governance, risk and critical operations (in Portuguese)',
-    'cv-3s': 'Engineering teams, DevOps and metrics (in Portuguese)',
+    'cv-main': 'Download the Project Manager and PMO CV (in Portuguese)',
+    'eyebrow': 'Currently at Serasa Experian, Identity &amp; Fraud BU',
+    'lens-label': 'I am hiring for', 'lens-pmo': 'Projects and PMO', 'lens-ti': 'IT', 'lens-eng': 'Engineering',
     'title': 'Executive Project Manager · Corporate PMO and portfolio management',
-    'loc': 'São Paulo, Brazil',
+    'loc-f': 'São Paulo, Brazil',
     'sum-1': 'Over 15 years leading technology portfolios in credit and anti-fraud, insurance, public safety and transportation. At Serasa Experian I report to the board and am the PMO focal point for the Identity &amp; Fraud business unit: 40 squads, about 400 people and R$100M+ in initiatives.',
     'sum-2': 'My strength is getting different areas to decide together and on time. That is how Muralha Paulista was delivered 15% under budget, and how at CPTM I set the strategy that brought operations back in 10 days after a ransomware attack.',
     'cta-mail': 'Send an e-mail',
+    'hud-1': '<span><b>40 squads</b><small>about 400 people</small></span>',
+    'hud-2': '<span><b>R$100M+</b><small>in the portfolio</small></span>',
+    'hud-3': '<span><b>27k cameras</b><small>with AI in production</small></span>',
+    'drag': 'Drag to rotate', 'ai-tag': 'Applied AI',
     'f1': 'years managing technology projects', 'f2': 'squads under current governance, about 400 people',
     'f3': 'in initiatives in the current portfolio', 'f4': 'professionals hired and developed',
+    'mq-label': 'Where I have worked', 'mq-2': 'São Paulo State Government',
     'h-res': 'Key results',
     'res-1': 'One management standard for 40 squads and R$100M+ in initiatives. On-time delivery rose 30%.',
     'res-2n': '27k',
@@ -458,6 +859,14 @@
     'res-3n': '10 days',
     'res-3': 'To bring operations back after ransomware, against a 30-day estimate: 250 servers and 300 applications restored with no data loss.',
     'res-4': 'Program that isolated production across 16 sites and fixed vulnerabilities in 14,000 assets, within ISO 27001.',
+    'h-ai': 'AI in day-to-day management',
+    'ai-lead': 'I use AI to walk into board meetings with the portfolio already analyzed. I have also delivered AI in production: Muralha Paulista runs 27,000 cameras with facial recognition and license plate reading.',
+    'flow-cap': 'From data to report',
+    'p1': 'Data sources and squads', 'p2': 'Python + OpenAI API', 'p3': 'Inconsistencies flagged', 'p4': 'Executive report',
+    'ai-1h': 'Assistants', 'ai-1': 'ChatGPT, Claude and Copilot to consolidate status, prepare executive reports and analyze the portfolio before board meetings.',
+    'ai-2h': 'Python integrations', 'ai-2': 'Integrations with the OpenAI API that cross-check data from different bases and squads and flag inconsistencies.',
+    'ai-3h': 'Automated reports', 'ai-3': 'Recurring reports automated with Power Automate and Power BI Copilot.',
+    'ai-4h': 'AI in production', 'ai-4': 'Muralha Paulista: 27,000 cameras with facial recognition and license plate reading (LPR), in a portfolio of 15+ technology and AI projects.',
     'h-exp': 'Experience',
     'd1': '02/2026 – present',
     'r1': 'Executive Project Manager, Identity &amp; Fraud BU',
@@ -465,6 +874,7 @@
     'b1-1': 'Unified the BU\'s product and technology demand into a single flow, with a common method and delivery standard for all 40 squads.',
     'b1-2': 'Created the BU\'s schedule, cost and performance indicators and linked them to company OKRs.',
     'b1-3': 'Prioritize the portfolio based on business cases and track initiative budgets (CAPEX and OPEX) with the board.',
+    'b1-4': 'Under the new model, on-time delivery rose 30% and operational efficiency doubled.',
     'o2': 'São Paulo State Government',
     'r2': 'Software Factory Manager, Public Safety Department',
     's2': 'Portfolio of 15+ technology and AI projects, total budget above R$50M, with a seat on the steering committee.',
@@ -484,12 +894,16 @@
     'o6': 'Earlier experience',
     'x1': 'Co-owner. Own business with 70,000+ customers; P&amp;L, team and operations.',
     'x2': 'Project Manager and IT Coordinator', 'x3': 'Project Manager and Technology Consultant', 'x4': 'Technology Consultant',
+    'h-lead': 'How I build and lead teams',
+    'l1': 'Hiring', 'lv1': 'I start with technical and behavioral selection. I have hired and developed 50+ professionals, from development, infrastructure and database analysts to tech leads.',
+    'l2': 'First 90 days', 'lv2': 'I make each person\'s and each squad\'s role and goal clear and stay close during a newcomer\'s first 90 days.',
+    'l3': 'Development', 'lv3': 'I give continuous feedback in one-on-ones, with a development plan for each person, and prepare successors for leadership positions.',
+    'l4': 'Vendors', 'lv4': 'I have worked with 50+ vendors, from staff allocation to technical services and projects, negotiating contract scope, schedule and cost.',
+    'l5': 'Board', 'lv5': 'In my last three jobs I took cost and performance numbers to board committees and led the decisions that depended on them.',
     'h-comp': 'Skills',
     'k1': 'Portfolio and PMO', 'v1': 'Corporate PMO, portfolio prioritization, business case, PMBOK 7, PRINCE2, Scrum, Kanban, hybrid model',
     'k2': 'Executive management', 'v2': 'Board committees, stakeholders, OKR, KPIs, CAPEX/OPEX budgeting, vendors and contracts',
     'k3': 'Governance and risk', 'v3': 'COBIT, ITIL, risk management, LGPD, ISO 27001, BCP/DRP',
-    'k4': 'Leadership', 'v4': '50+ professionals hired and developed, from analysts to tech leads, and 50+ vendors managed',
-    'k5': 'AI in management', 'v5': 'ChatGPT, Claude and Copilot for status and executive reports; Python integrations with the OpenAI API; Power Automate and Power BI',
     'k6': 'Tools',
     'h-edu': 'Education',
     'e1': 'MBA in Business Strategy &amp; Transformation',
@@ -497,38 +911,519 @@
     'e3': 'MBA in Project Management (PMI)',
     'e4': 'B.Sc. in Computer Science',
     'ums': 'Methodist University of São Paulo', 'ums2': 'Methodist University of São Paulo',
-    'certs': '<b>Certifications:</b> PMP, CSPO, PRINCE2, ITIL, COBIT, CCNA, LPI, BIFPC, Design Thinking, Agile Metrics.',
-    'langs': '<b>Languages:</b> Portuguese (native), English upper-intermediate (B2), basic Spanish.',
-    'h-contact': 'Contact', 'wa': 'Send a message', 'cv-label': 'Résumés',
+    'certs-h': 'Certifications',
+    'certs-list': 'PMP, CSPO, PRINCE2, ITIL, COBIT, CCNA, LPI, BIFPC, Design Thinking, Agile Metrics',
+    'langs-h': 'Languages',
+    'langs': 'Portuguese (native), English upper-intermediate (B2), basic Spanish',
+    'contact-h': 'Get in touch', 'contact-p': 'I answer by e-mail, LinkedIn or WhatsApp.',
+    'cv-label': 'Résumés',
     'cv-1c': 'Project Manager and PMO', 'cv-2c': 'IT Manager', 'cv-3c': 'Engineering Manager'
+  };
+
+  // ─── Perfis ───
+  // Cada perfil troca só o que muda entre os três currículos. O que não está aqui vem do texto base (PMO).
+  var PROFILES = {
+    pmo: {
+      cv: 'cv/Gustavo_Frigo_CV_Gerente_Projetos_PMO.pdf',
+      doc: { pt: 'Gerente Executivo de Projetos, PMP', en: 'Executive Project Manager, PMP' },
+      pt: {}, en: {}
+    },
+    ti: {
+      cv: 'cv/Gustavo_Frigo_CV_Gerente_TI.pdf',
+      doc: { pt: 'Gerente de TI', en: 'IT Manager' },
+      pt: {
+        'title': 'Gerente de TI · Governança, riscos e operação crítica',
+        'sum-1': 'Mais de 15 anos em governança, segurança da informação e operação crítica. Na CPTM, defini a estratégia e conduzi a recuperação depois de um ransomware: 250 servidores e 300 aplicações de volta em 10 dias, sem perda de dados, numa operação que transporta 3 milhões de pessoas por dia. Na Porto Seguro, conduzi o programa de R$25M que isolou a produção em 16 sites.',
+        'sum-2': 'Hoje, na Serasa Experian, reporto à diretoria e respondo pela governança das entregas da BU Identity &amp; Fraud: 40 squads, cerca de 400 pessoas e R$100M+ em iniciativas. Sei explicar risco tecnológico para quem decide sem ser técnico.',
+        'cv-main': 'Baixar CV de Gerente de TI',
+        'f1': 'anos em governança, segurança da informação e operação crítica',
+        'f4': 'fornecedores geridos ao longo da carreira',
+        'res-1n': '10 dias', 'res-1h': 'CPTM',
+        'res-1': 'Operação de volta após ransomware, contra 30 previstos: 250 servidores e 300 aplicações recuperados, sem perda de dados.',
+        'res-2n': 'R$25M', 'res-2h': 'Porto Seguro',
+        'res-2': 'Programa que isolou a produção em 16 sites e corrigiu vulnerabilidades em 14 mil ativos, dentro da ISO 27001.',
+        'res-3n': '40 squads', 'res-3h': 'Serasa Experian',
+        'res-3': 'Indicadores de governança para 40 squads e R$100M+ em iniciativas, com reporte direto à diretoria.',
+        'res-4n': '27 mil', 'res-4h': 'Muralha Paulista · SSP-SP',
+        'res-4': 'Câmeras com IA entregues em 12 meses, 15% abaixo do orçamento, dentro das regras de LGPD e segurança de dados.',
+        'b1-1': 'Respondo pela governança das entregas da BU, com controle de riscos e compliance e acompanhamento do orçamento das iniciativas (CAPEX e OPEX).',
+        'b1-2': 'Criei indicadores de governança ligados aos OKRs, com painéis executivos de risco, custo e desempenho para a diretoria.',
+        'b1-3': 'Levo à diretoria os riscos tecnológicos, as prioridades de orçamento e os pontos de continuidade operacional.',
+        'b1-4': 'Depois do novo modelo de governança, as entregas no prazo subiram 30% e a eficiência operacional dobrou.',
+        'k1': 'Governança e riscos', 'v1': 'COBIT, ITIL, KPIs, KRIs, SLA/OLA, auditoria, LGPD, ISO 27001',
+        'k2': 'Continuidade', 'v2': 'Gestão de incidentes críticos, BCP/DRP, Disaster Recovery em AWS, Oracle Exadata',
+        'k3': 'Gestão', 'v3': 'Priorização de portfólio, business case, orçamento CAPEX/OPEX, fornecedores e contratos, comitês de diretoria, PMI, Scrum, Kanban',
+        'k6': 'Infraestrutura', 'v6': 'AWS, redes (CCNA), Linux (LPI), Windows Server, SQL Server, Oracle, Informix, ERP (SAP, Oracle, TOTVS)'
+      },
+      en: {
+        'title': 'IT Manager · Governance, risk and critical operations',
+        'sum-1': 'Over 15 years in governance, information security and critical operations. At CPTM I set the strategy and led the recovery after a ransomware attack: 250 servers and 300 applications back in 10 days, with no data loss, in an operation that carries 3 million people a day. At Porto Seguro I led the R$25M program that isolated production across 16 sites.',
+        'sum-2': 'Today at Serasa Experian I report to the board and answer for delivery governance in the Identity &amp; Fraud business unit: 40 squads, about 400 people and R$100M+ in initiatives. I can explain technology risk to decision-makers who are not technical.',
+        'cv-main': 'Download the IT Manager CV (in Portuguese)',
+        'f1': 'years in governance, information security and critical operations',
+        'f4': 'vendors managed over my career',
+        'res-1n': '10 days',
+        'res-1': 'To bring operations back after ransomware, against a 30-day estimate: 250 servers and 300 applications restored with no data loss.',
+        'res-2': 'Program that isolated production across 16 sites and fixed vulnerabilities in 14,000 assets, within ISO 27001.',
+        'res-3': 'Governance indicators for 40 squads and R$100M+ in initiatives, reporting directly to the board.',
+        'res-4n': '27k',
+        'res-4': 'AI-enabled cameras delivered in 12 months, 15% under budget, within LGPD and data security rules.',
+        'b1-1': 'Answer for delivery governance in the BU, with risk and compliance control and tracking of initiative budgets (CAPEX and OPEX).',
+        'b1-2': 'Created governance indicators linked to OKRs, with executive dashboards on risk, cost and performance for the board.',
+        'b1-3': 'Take technology risks, budget priorities and business continuity issues to the board.',
+        'b1-4': 'After the new governance model, on-time delivery rose 30% and operational efficiency doubled.',
+        'k1': 'Governance and risk', 'v1': 'COBIT, ITIL, KPIs, KRIs, SLA/OLA, audit, LGPD, ISO 27001',
+        'k2': 'Continuity', 'v2': 'Critical incident management, BCP/DRP, Disaster Recovery on AWS, Oracle Exadata',
+        'k3': 'Management', 'v3': 'Portfolio prioritization, business case, CAPEX/OPEX budgeting, vendors and contracts, board committees, PMI, Scrum, Kanban',
+        'k6': 'Infrastructure', 'v6': 'AWS, networking (CCNA), Linux (LPI), Windows Server, SQL Server, Oracle, Informix, ERP (SAP, Oracle, TOTVS)'
+      }
+    },
+    engenharia: {
+      cv: 'cv/Gustavo_Frigo_CV_Gerente_Engenharia.pdf',
+      doc: { pt: 'Gerente de Engenharia', en: 'Engineering Manager' },
+      pt: {
+        'title': 'Gerente de Engenharia · Times de engenharia, DevOps e métricas',
+        'sum-1': 'Mais de 15 anos montando e liderando times de tecnologia. Contratei e formei mais de 50 profissionais, de analistas de desenvolvimento, infraestrutura e banco de dados a tech leads, e sei transformar um grupo recém-formado em um time que entrega com previsibilidade.',
+        'sum-2': 'Na Serasa Experian, reporto à diretoria e padronizei a forma de trabalhar dos 40 squads de produto e tecnologia da BU Identity &amp; Fraud (cerca de 400 pessoas), com métricas de engenharia e práticas comuns de DevOps e CI/CD. Antes, liderei a fábrica de software da Secretaria de Segurança Pública, que entregou o Muralha Paulista. Sou formado em Ciência da Computação, com CCNA e LPI. Converso de arquitetura com o time e de investimento com a diretoria.',
+        'cv-main': 'Baixar CV de Gerente de Engenharia',
+        'f1': 'anos montando e liderando times de tecnologia',
+        'f2': 'squads com processo e métricas de engenharia comuns, cerca de 400 pessoas',
+        'res-1': 'Mais entregas no prazo nos 40 squads da BU, depois de padronizar processo, papéis e métricas de engenharia.',
+        'res-2': 'Câmeras em uma plataforma de IA com reconhecimento facial e leitura de placas (LPR), entregue 15% abaixo do orçamento.',
+        'res-3': '250 servidores e 300 aplicações de volta após ransomware, sem perda de dados.',
+        'res-4n': '50+', 'res-4h': 'Times de engenharia',
+        'res-4': 'Profissionais contratados e formados, de analistas a tech leads.',
+        's1': 'Reporte direto à diretoria e ponto focal do PMO corporativo. 40 squads de produto e tecnologia, cerca de 400 pessoas, incluindo os sub-pilares Documentoscopia, Orquestrador, LVS, Biometria, SDK e Observabilidade e as unidades ClearSale e IDWall.',
+        'b1-1': 'Padronizei processo, papéis e nomenclatura dos squads e as práticas de DevOps e CI/CD, com rastreabilidade entre ServiceNow, Jira, Dromer e BlueOptima.',
+        'b1-2': 'Implantei métricas de produtividade de engenharia com BlueOptima e liguei os indicadores dos squads aos OKRs da empresa.',
+        'b1-3': 'Conduzo com engenharia, produto e diretoria os alinhamentos de arquitetura de solução e roadmap e a priorização do portfólio.',
+        's2': 'Fábrica de software com 15+ projetos de engenharia e IA e orçamento total acima de R$50M.',
+        'b2-1': 'Montei e desenvolvi o time de engenharia (mais de 20 pessoas), com contratação de tech leads e analistas de desenvolvimento, e coordenei os fornecedores externos.',
+        'b2-2': 'Defini arquitetura de solução, WBS, cronograma mestre e dependências entre squads e projetos, com PMI e Scrum.',
+        'b2-3': 'Muralha Paulista: plataforma com 27.000 câmeras, reconhecimento facial e leitura de placas (LPR), entregue em 12 meses e 15% abaixo do orçamento.',
+        'k1': 'Engenharia e entrega', 'v1': 'DevOps, CI/CD, XP, Scrum, Kanban, observabilidade, roadmap e modernização de sistemas',
+        'k2': 'Gestão de pessoas', 'v2': 'Contratação, formação de times, feedback contínuo, plano de desenvolvimento, sucessão',
+        'k3': 'Métricas e gestão', 'v3': 'BlueOptima, OKR, KPIs de engenharia, business case, orçamento CAPEX/OPEX, ITIL, COBIT',
+        'k6': 'Plataformas', 'v6': 'AWS, Linux, Windows Server, SQL Server, Oracle, Informix, Exadata, Jira, Azure DevOps, Python'
+      },
+      en: {
+        'title': 'Engineering Manager · Engineering teams, DevOps and metrics',
+        'sum-1': 'Over 15 years building and leading technology teams. I have hired and developed 50+ professionals, from development, infrastructure and database analysts to tech leads, and I know how to turn a newly formed group into a team that delivers predictably.',
+        'sum-2': 'At Serasa Experian I report to the board and standardized how the 40 product and technology squads of the Identity &amp; Fraud business unit work (about 400 people), with engineering metrics and shared DevOps and CI/CD practices. Before that I led the software factory of the São Paulo Public Safety Department, which delivered Muralha Paulista. I have a degree in Computer Science, plus CCNA and LPI. I talk architecture with the team and investment with the board.',
+        'cv-main': 'Download the Engineering Manager CV (in Portuguese)',
+        'f1': 'years building and leading technology teams',
+        'f2': 'squads sharing one process and engineering metrics, about 400 people',
+        'res-1': 'More on-time deliveries across the BU\'s 40 squads, after standardizing process, roles and engineering metrics.',
+        'res-2': 'Cameras on an AI platform with facial recognition and license plate reading (LPR), delivered 15% under budget.',
+        'res-3': 'To bring 250 servers and 300 applications back after ransomware, with no data loss.',
+        'res-4h': 'Engineering teams',
+        'res-4': 'Professionals hired and developed, from analysts to tech leads.',
+        's1': 'Reports directly to the board and is the corporate PMO focal point. 40 product and technology squads, about 400 people, including the Document Verification, Orchestrator, LVS, Biometrics, SDK and Observability sub-pillars and the ClearSale and IDWall units.',
+        'b1-1': 'Standardized squad process, roles and naming and the DevOps and CI/CD practices, with traceability across ServiceNow, Jira, Dromer and BlueOptima.',
+        'b1-2': 'Rolled out engineering productivity metrics with BlueOptima and linked squad indicators to company OKRs.',
+        'b1-3': 'Lead solution architecture and roadmap alignment, and portfolio prioritization, with engineering, product and the board.',
+        's2': 'Software factory with 15+ engineering and AI projects and a total budget above R$50M.',
+        'b2-1': 'Built and developed the engineering team (20+ people), hiring tech leads and development analysts, and coordinated external vendors.',
+        'b2-2': 'Defined solution architecture, WBS, master schedule and dependencies between squads and projects, with PMI and Scrum.',
+        'b2-3': 'Muralha Paulista: platform with 27,000 cameras, facial recognition and license plate reading (LPR), delivered in 12 months and 15% under budget.',
+        'k1': 'Engineering and delivery', 'v1': 'DevOps, CI/CD, XP, Scrum, Kanban, observability, roadmap and systems modernization',
+        'k2': 'People management', 'v2': 'Hiring, team building, continuous feedback, development plans, succession',
+        'k3': 'Metrics and management', 'v3': 'BlueOptima, OKR, engineering KPIs, business case, CAPEX/OPEX budgeting, ITIL, COBIT',
+        'k6': 'Platforms', 'v6': 'AWS, Linux, Windows Server, SQL Server, Oracle, Informix, Exadata, Jira, Azure DevOps, Python'
+      }
+    }
   };
 
   var nodes = document.querySelectorAll('[data-i18n]');
   var PT = {};
   nodes.forEach(function (el) { PT[el.getAttribute('data-i18n')] = el.innerHTML; });
 
-  function setLang(lang) {
-    var dict = lang === 'en' ? EN : PT;
-    nodes.forEach(function (el) {
-      var k = el.getAttribute('data-i18n');
-      if (dict[k] != null) el.innerHTML = dict[k];
-    });
-    document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
-    document.getElementById('lang-label').textContent = lang === 'en' ? 'PT' : 'EN';
-    document.getElementById('lang-btn').setAttribute('aria-label', lang === 'en' ? 'Mudar para português' : 'Switch to English');
-    document.title = lang === 'en' ? 'Gustavo Frigo | Executive Project Manager, PMP' : 'Gustavo Frigo | Gerente Executivo de Projetos, PMP';
-    try { localStorage.setItem('lang', lang); } catch (e) {}
+  var lang = 'pt', profile = 'pmo';
+  var main = document.getElementById('inicio');
+  var segButtons = document.querySelectorAll('.seg button');
+
+  // Ordem: texto do perfil no idioma, texto do perfil em português (nomes e números iguais nos dois), texto base.
+  function text(k) {
+    var p = PROFILES[profile], v = p[lang][k];
+    if (v == null) v = p.pt[k];
+    if (v == null && lang === 'en') v = EN[k];
+    return v == null ? PT[k] : v;
   }
 
-  var current = 'pt';
-  try { current = localStorage.getItem('lang') || 'pt'; } catch (e) {}
-  if (location.hash === '#en') current = 'en';
-  if (current === 'en') setLang('en');
+  // Listas separadas por vírgula viram etiquetas; vírgulas dentro de parênteses ficam na mesma etiqueta.
+  function chips(v) {
+    return '<span class="chips">' + v.split(/,\s*(?![^()]*\))/).map(function (s) {
+      s = s.trim();
+      return '<span class="chip">' + s.charAt(0).toUpperCase() + s.slice(1) + '</span>';
+    }).join('') + '</span>';
+  }
+
+  // Números sobem de zero até o valor: "+30%", "27 mil", "R$25M".
+  function countUp(el, ms) {
+    var m = el.textContent.match(/^(\D*)(\d+)(.*)$/);
+    if (!m || reduceMotion) return;
+    cancelAnimationFrame(el._raf);
+    var target = +m[2], t0 = performance.now();
+    (function step(t) {
+      var k = Math.min(1, (t - t0) / ms), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = m[1] + Math.round(target * e) + m[3];
+      if (k < 1) el._raf = requestAnimationFrame(step);
+    })(t0);
+  }
+
+  function render(animate) {
+    nodes.forEach(function (el) {
+      var v = text(el.getAttribute('data-i18n'));
+      if (el._v === v) return;
+      el._v = v;
+      cancelAnimationFrame(el._raf);
+      el.innerHTML = el.hasAttribute('data-chips') ? chips(v) : v;
+      if (animate && el.hasAttribute('data-count') && el._seen) countUp(el, 700);
+    });
+    var en = lang === 'en';
+    document.documentElement.lang = en ? 'en' : 'pt-BR';
+    document.getElementById('lang-label').textContent = en ? 'PT' : 'EN';
+    document.getElementById('lang-btn').setAttribute('aria-label', en ? 'Mudar para português' : 'Switch to English');
+    document.title = 'Gustavo Frigo | ' + PROFILES[profile].doc[lang];
+    document.getElementById('cv-main').href = PROFILES[profile].cv;
+    segButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-profile') === profile)); });
+    movePill();
+    if (animate) {
+      main.classList.remove('swap');
+      void main.offsetWidth;
+      main.classList.add('swap');
+    }
+  }
+
+  // O endereço guarda perfil e idioma, para enviar o link já na versão certa: ?perfil=ti&lang=en
+  function saveState() {
+    var q = [];
+    if (profile !== 'pmo') q.push('perfil=' + profile);
+    if (lang === 'en') q.push('lang=en');
+    try {
+      history.replaceState(null, '', location.pathname + (q.length ? '?' + q.join('&') : '') + (location.hash === '#en' ? '' : location.hash));
+      localStorage.setItem('lang', lang);
+    } catch (e) {}
+  }
+
+  var params = new URLSearchParams(location.search);
+  try { lang = localStorage.getItem('lang') || 'pt'; } catch (e) {}
+  if (params.get('lang') === 'en' || location.hash === '#en') lang = 'en';
+  if (params.get('lang') === 'pt') lang = 'pt';
+  if (PROFILES[params.get('perfil')]) profile = params.get('perfil');
+  render(false);
 
   document.getElementById('lang-btn').addEventListener('click', function () {
-    current = current === 'en' ? 'pt' : 'en';
-    setLang(current);
+    lang = lang === 'en' ? 'pt' : 'en';
+    render(false);
+    saveState();
   });
+  segButtons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (b.getAttribute('data-profile') === profile) return;
+      profile = b.getAttribute('data-profile');
+      render(true);
+      saveState();
+    });
+  });
+
+  // ─── Seletor de perfil: a pílula desliza até o botão ativo ───
+  function movePill() {
+    var pill = document.querySelector('.seg-pill'), on = document.querySelector('.seg button[aria-pressed="true"]');
+    if (!pill || !on) return;
+    pill.style.width = on.offsetWidth + 'px';
+    pill.style.transform = 'translateX(' + on.offsetLeft + 'px)';
+  }
+  movePill();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(movePill);
+  addEventListener('resize', movePill);
+
+  // ─── Seção atual no menu ───
+  var nav = document.querySelector('.top-nav');
+  var navLinks = {};
+  nav.querySelectorAll('a').forEach(function (a) { navLinks[a.getAttribute('href').slice(1)] = a; });
+  var hasIO = 'IntersectionObserver' in window;
+  if (hasIO) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        for (var id in navLinks) navLinks[id].removeAttribute('aria-current');
+        var a = navLinks[e.target.id];
+        a.setAttribute('aria-current', 'true');
+        if (nav.scrollWidth > nav.clientWidth) nav.scrollLeft = a.offsetLeft - nav.offsetLeft - 20;
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    document.querySelectorAll('section[id]').forEach(function (s) { spy.observe(s); });
+  }
+
+  // ─── Entrada ao rolar e contagem dos números ───
+  var reveals = document.querySelectorAll('.reveal');
+  var counters = document.querySelectorAll('[data-count]');
+  function seen(el) { if (!el._seen) { el._seen = true; countUp(el, 1400); } }
+  if (hasIO) {
+    reveals.forEach(function (el) {
+      var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+      el.style.setProperty('--d', Math.min(i, 5) * 90 + 'ms');
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        el.classList.add('in');
+        io.unobserve(el);
+        // Depois da entrada, a inclinação responde sem o atraso escalonado
+        setTimeout(function () { el.style.setProperty('--d', '0ms'); }, 1500);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: .06 });
+    reveals.forEach(function (el) { io.observe(el); });
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        seen(e.target);
+        cio.unobserve(e.target);
+      });
+    }, { threshold: .4 });
+    counters.forEach(function (el) { cio.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  var finePointer = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  // ─── Cartões 3D: inclinam na direção do cursor ───
+  if (finePointer && !reduceMotion) {
+    document.querySelectorAll('.card:not(.contact):not(.ai-panel)').forEach(function (c) {
+      var big = c.offsetWidth > 520 ? 5 : 9;
+      c.addEventListener('pointermove', function (e) {
+        var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        c.classList.add('tilting');
+        c.style.setProperty('--ry', (x * big).toFixed(2) + 'deg');
+        c.style.setProperty('--rx', (-y * big).toFixed(2) + 'deg');
+        c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      }, { passive: true });
+      c.addEventListener('pointerleave', function () {
+        c.classList.remove('tilting');
+        c.style.removeProperty('--rx');
+        c.style.removeProperty('--ry');
+      });
+    });
+
+    // Botões magnéticos
+    document.querySelectorAll('.magnetic').forEach(function (b) {
+      b.addEventListener('pointermove', function (e) {
+        var r = b.getBoundingClientRect();
+        b.style.translate = ((e.clientX - r.left - r.width / 2) * .22).toFixed(1) + 'px ' + ((e.clientY - r.top - r.height / 2) * .3).toFixed(1) + 'px';
+      }, { passive: true });
+      b.addEventListener('pointerleave', function () { b.style.translate = ''; });
+    });
+
+    // Luz que segue o cursor
+    var glow = document.querySelector('.glow-cursor'), gx = innerWidth / 2, gy = innerHeight / 3, tx = gx, ty = gy, gRaf = 0;
+    function glowStep() {
+      gx += (tx - gx) * .12; gy += (ty - gy) * .12;
+      glow.style.transform = 'translate3d(' + gx + 'px,' + gy + 'px,0)';
+      gRaf = Math.abs(tx - gx) + Math.abs(ty - gy) > .5 ? requestAnimationFrame(glowStep) : 0;
+    }
+    document.addEventListener('pointermove', function (e) {
+      tx = e.clientX; ty = e.clientY;
+      glow.classList.add('on');
+      if (!gRaf) gRaf = requestAnimationFrame(glowStep);
+    }, { passive: true });
+    document.addEventListener('pointerleave', function () { glow.classList.remove('on'); });
+
+    // Pilha da IA gira levemente com o cursor
+    var sw = document.querySelector('.stack-wrap');
+    sw.addEventListener('pointermove', function (e) {
+      var r = sw.getBoundingClientRect();
+      sw.style.setProperty('--tx', (((e.clientX - r.left) / r.width - .5) * 24).toFixed(1) + 'deg');
+      sw.style.setProperty('--ty', (((e.clientY - r.top) / r.height - .5) * -14).toFixed(1) + 'deg');
+    }, { passive: true });
+    sw.addEventListener('pointerleave', function () { sw.style.removeProperty('--tx'); sw.style.removeProperty('--ty'); });
+  }
+
+  // ─── Progresso da página e da linha do tempo ───
+  var root = document.documentElement, topBar = document.querySelector('.top');
+  var timeline = document.querySelector('.timeline'), ticking = false;
+  function onScroll() {
+    ticking = false;
+    var max = root.scrollHeight - innerHeight;
+    root.style.setProperty('--scroll', max > 0 ? Math.min(1, scrollY / max) : 0);
+    topBar.classList.toggle('stuck', scrollY > 8);
+    var r = timeline.getBoundingClientRect();
+    timeline.style.setProperty('--p', Math.max(0, Math.min(1, (innerHeight * .62 - r.top) / r.height)));
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  addEventListener('resize', onScroll);
+  onScroll();
+
+  // ─── Globo 3D da abertura (WebGL) ───
+  (function () {
+    var box = document.getElementById('globe');
+    if (!box || !window.THREE) return;
+    var T = THREE, vis = box.parentNode, hero = document.querySelector('.hero'), renderer;
+    try { renderer = new T.WebGLRenderer({ antialias: true, alpha: true }); } catch (e) { return; }
+    if (!renderer.getContext()) return;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setClearColor(0x000000, 0);
+    box.appendChild(renderer.domElement);
+    vis.classList.add('globe-on');
+
+    var scene = new T.Scene(), camera = new T.PerspectiveCamera(36, 1, .1, 100);
+    camera.position.set(0, 0, 8.1);
+    var world = new T.Group(), globe = new T.Group();
+    world.rotation.set(.28, 0, -.16);
+    world.add(globe); scene.add(world);
+    var R = 1.6, small = innerWidth < 720;
+
+    // Pontos na superfície, em espiral de Fibonacci, com falhas que lembram continentes
+    var M = small ? 4200 : 7600, dirs = [], P = [], C = [], S = [];
+    var cA = new T.Color('#0b2470'), cB = new T.Color('#3b82f6'), cT = new T.Color();
+    for (var i = 0; i < M; i++) {
+      var y = 1 - (i + .5) / M * 2, rr = Math.sqrt(1 - y * y), th = i * 2.399963;
+      var v = new T.Vector3(Math.cos(th) * rr, y, Math.sin(th) * rr);
+      var n = Math.sin(v.x * 3.1 + 1.3) * Math.sin(v.y * 3.7 + .4) * Math.cos(v.z * 2.9 + .8) + .35 * Math.sin(v.x * 7.3 + v.z * 5.1);
+      if (n < -.08) continue;
+      dirs.push(v);
+      P.push(v.x * R, v.y * R, v.z * R);
+      cT.copy(cA).lerp(cB, Math.random());
+      C.push(cT.r, cT.g, cT.b);
+      S.push(Math.random() < .05 ? 2.8 + Math.random() * 1.6 : 1.2 + Math.random() * .9);
+    }
+    var pg = new T.BufferGeometry();
+    pg.setAttribute('position', new T.Float32BufferAttribute(P, 3));
+    pg.setAttribute('aColor', new T.Float32BufferAttribute(C, 3));
+    pg.setAttribute('aSize', new T.Float32BufferAttribute(S, 1));
+    var pm = new T.ShaderMaterial({
+      uniforms: { uPx: { value: renderer.getPixelRatio() } },
+      transparent: true, depthWrite: false,
+      vertexShader: [
+        'attribute float aSize; attribute vec3 aColor; uniform float uPx; varying vec3 vC; varying float vA;',
+        'void main() {',
+        '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
+        '  vec3 n = normalize(normalMatrix * position);',
+        '  vA = 0.1 + 0.9 * smoothstep(-0.3, 0.6, n.z);',
+        '  vC = aColor;',
+        '  gl_PointSize = aSize * uPx * 1.6 * (8.1 / -mv.z);',
+        '  gl_Position = projectionMatrix * mv;',
+        '}'
+      ].join('\n'),
+      fragmentShader: [
+        'varying vec3 vC; varying float vA;',
+        'void main() {',
+        '  float d = length(gl_PointCoord - 0.5);',
+        '  if (d > 0.5) discard;',
+        '  gl_FragColor = vec4(vC, vA * smoothstep(0.5, 0.28, d));',
+        '}'
+      ].join('\n')
+    });
+    globe.add(new T.Points(pg, pm));
+
+    // Atmosfera: corpo translúcido com borda azul
+    var atm = new T.Mesh(new T.SphereGeometry(R * .99, 64, 64), new T.ShaderMaterial({
+      transparent: true, depthWrite: false,
+      uniforms: { uC: { value: new T.Color('#2563eb') } },
+      vertexShader: 'varying vec3 vN; void main() { vN = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+      fragmentShader: 'uniform vec3 uC; varying vec3 vN; void main() { float f = 1.0 - abs(vN.z); gl_FragColor = vec4(uC, pow(f, 2.4) * 0.5 + 0.045); }'
+    }));
+    world.add(atm);
+
+    // Arcos entre pontos, com um pulso que percorre cada um
+    var arcs = [], arcMat = new T.LineBasicMaterial({ color: 0x1d4ed8, transparent: true, opacity: .6 });
+    var pulseGeo = new T.SphereGeometry(.032, 12, 12), pulseMat = new T.MeshBasicMaterial({ color: 0x1d4ed8 });
+    var endMat = new T.MeshBasicMaterial({ color: 0x3b82f6 });
+    function pick() { return dirs[Math.floor(Math.random() * dirs.length)]; }
+    for (var k = 0; k < (small ? 9 : 16); k++) {
+      var a = pick(), b = pick(), tries = 0;
+      while ((a.angleTo(b) < .6 || a.angleTo(b) > 2.1) && tries++ < 40) b = pick();
+      var ang = a.angleTo(b);
+      var mid = a.clone().add(b).normalize().multiplyScalar(R * (1.1 + ang * .24));
+      var curve = new T.QuadraticBezierCurve3(a.clone().multiplyScalar(R), mid, b.clone().multiplyScalar(R));
+      var geo = new T.BufferGeometry().setFromPoints(curve.getPoints(64));
+      geo.setDrawRange(0, 0);
+      globe.add(new T.Line(geo, arcMat));
+      var pulse = new T.Mesh(pulseGeo, pulseMat); globe.add(pulse);
+      [a, b].forEach(function (d) { var e = new T.Mesh(pulseGeo, endMat); e.position.copy(d).multiplyScalar(R); e.scale.setScalar(.75); globe.add(e); });
+      arcs.push({ curve: curve, geo: geo, pulse: pulse, t: Math.random() * 1.6, s: .32 + Math.random() * .28 });
+    }
+
+    // Órbitas com satélites
+    function orbit(radius, rx, rz, dashed) {
+      var g = new T.Group(); g.rotation.set(rx, 0, rz); world.add(g);
+      var pts = new T.EllipseCurve(0, 0, radius, radius, 0, Math.PI * 2).getPoints(180).map(function (p) { return new T.Vector3(p.x, p.y, 0); });
+      var mat = dashed ? new T.LineDashedMaterial({ color: 0x3b82f6, dashSize: .07, gapSize: .07, transparent: true, opacity: .6 }) : new T.LineBasicMaterial({ color: 0x60a5fa, transparent: true, opacity: .7 });
+      var line = new T.LineLoop(new T.BufferGeometry().setFromPoints(pts), mat);
+      if (dashed) line.computeLineDistances();
+      g.add(line);
+      var sat = new T.Mesh(new T.SphereGeometry(.07, 16, 16), new T.MeshBasicMaterial({ color: 0x1d4ed8 })); g.add(sat);
+      return { sat: sat, r: radius, a: Math.random() * 6, s: dashed ? -.35 : .5 };
+    }
+    var orbits = [orbit(R * 1.34, 1.22, .38, false), orbit(R * 1.56, 1.9, -.5, true)];
+
+    // Sólidos em arame flutuando ao redor
+    var shapes = [];
+    [[new T.IcosahedronGeometry(.24, 0), -2.35, 1.55, .3], [new T.OctahedronGeometry(.2, 0), 2.35, -1.25, .5], [new T.BoxGeometry(.26, .26, .26), 2.1, 1.85, -.3]].forEach(function (s, i) {
+      var m = new T.LineSegments(new T.EdgesGeometry(s[0]), new T.LineBasicMaterial({ color: 0x1d4ed8, transparent: true, opacity: .55 }));
+      m.position.set(s[1], s[2], s[3]); m.userData = { y: s[2], ph: i * 2 };
+      scene.add(m); shapes.push(m);
+    });
+
+    function size() {
+      var w = box.clientWidth, h = box.clientHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h; camera.updateProjectionMatrix();
+    }
+
+    // Cursor inclina o globo; arrastar gira com inércia
+    var tgt = { x: 0, y: 0 }, cur = { x: 0, y: 0 }, base = .14, vel = base, drag = null;
+    hero.addEventListener('pointermove', function (e) {
+      var r = vis.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width - .5, ny = (e.clientY - r.top) / r.height - .5;
+      tgt.x = Math.max(-.6, Math.min(.6, ny)) * .45; tgt.y = Math.max(-.6, Math.min(.6, nx)) * .55;
+      vis.style.setProperty('--px', nx.toFixed(3)); vis.style.setProperty('--py', ny.toFixed(3));
+    }, { passive: true });
+    hero.addEventListener('pointerleave', function () { tgt.x = tgt.y = 0; vis.style.setProperty('--px', 0); vis.style.setProperty('--py', 0); });
+    box.addEventListener('pointerdown', function (e) { drag = { x: e.clientX, t: performance.now() }; try { box.setPointerCapture(e.pointerId); } catch (err) {} });
+    box.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      var now = performance.now(), dx = e.clientX - drag.x, dt = Math.max(.008, (now - drag.t) / 1000);
+      globe.rotation.y += dx * .009;
+      vel = Math.max(-7, Math.min(7, dx * .009 / dt));
+      drag.x = e.clientX; drag.t = now;
+    });
+    function endDrag() { drag = null; }
+    box.addEventListener('pointerup', endDrag);
+    box.addEventListener('pointercancel', endDrag);
+
+    var raf = 0, last = performance.now(), onScreen = true, time = 0;
+    function frame(now) {
+      var dt = Math.min(.05, (now - last) / 1000); last = now; time += dt;
+      if (!drag) { vel += (base - vel) * (1 - Math.exp(-dt * 1.4)); globe.rotation.y += vel * dt; }
+      cur.x += (tgt.x - cur.x) * (1 - Math.exp(-dt * 4)); cur.y += (tgt.y - cur.y) * (1 - Math.exp(-dt * 4));
+      world.rotation.x = .28 + cur.x; world.rotation.y = cur.y;
+      arcs.forEach(function (a) {
+        a.t += dt * a.s;
+        if (a.t > 1.7) a.t = 0;
+        var t = Math.min(1, a.t);
+        a.geo.setDrawRange(0, Math.floor(t * 65));
+        a.pulse.visible = a.t < 1;
+        if (a.pulse.visible) a.pulse.position.copy(a.curve.getPoint(t));
+      });
+      orbits.forEach(function (o) { o.a += dt * o.s; o.sat.position.set(Math.cos(o.a) * o.r, Math.sin(o.a) * o.r, 0); });
+      shapes.forEach(function (m) { m.rotation.x += dt * .4; m.rotation.y += dt * .55; m.position.y = m.userData.y + Math.sin(time * .9 + m.userData.ph) * .12; });
+      renderer.render(scene, camera);
+      raf = !reduceMotion && onScreen && !document.hidden ? requestAnimationFrame(frame) : 0;
+    }
+    function start() { if (!raf) { last = performance.now(); raf = requestAnimationFrame(frame); } }
+
+    // Sem animação: desenha os arcos completos uma vez
+    if (reduceMotion) arcs.forEach(function (a) { a.t = .99; });
+    size(); start();
+    var rt;
+    addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { size(); start(); }, 120); });
+    document.addEventListener('visibilitychange', start);
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { onScreen = e[0].isIntersecting; if (onScreen) start(); }).observe(vis);
+  })();
 </script>
 </body>
 </html>
